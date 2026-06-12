@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Portfolio | MEROKIS Pharmaceutical Distribution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+    <!-- Floating Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Mérokis Logo" class="logo-img">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="products.html" class="nav-item active">Products</a>
+                <a href="index.html#section-4" class="nav-item">Certifications</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </nav>
+            <div class="header-cta">
+                <a href="contact.html" class="cta-btn">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section with Parallax -->
+    <section class="products-hero">
+        <div class="hero-parallax-bg" style="background-image: url('products-hero.png');"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <h1 class="reveal-text">Product Portfolio</h1>
+            <p class="reveal-subtext">Explore our comprehensive pharmaceutical product range serving global healthcare markets.</p>
+            <div class="hero-buttons fade-in-up">
+                <a href="#catalogues" class="btn btn-primary">View Catalogues</a>
+                <a href="#footer" class="btn btn-secondary">Contact Sales Team</a>
+            </div>
+        </div>
+        <div class="scroll-down-icon">
+            <span class="scroll-dot"></span>
+        </div>
+    </section>
+
+    <!-- 2. Product Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">OUR DIVISIONS</span>
+                <h2>Our Product Divisions</h2>
+                <p>Discover our specialized pharmaceutical lines, sourced and manufactured under strict regulatory approvals.</p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Card 1: Critical Care -->
+                <div class="category-card reveal-up">
+                    <div class="cat-icon-box">🧪</div>
+                    <h3>Critical Care</h3>
+                    <p>Injectables, ICU products, emergency medicines, and high-potency therapeutics.</p>
+                </div>
+                <!-- Card 2: General Medicine -->
+                <div class="category-card reveal-up" data-delay="0.05">
+                    <div class="cat-icon-box">💊</div>
+                    <h3>General Medicine</h3>
+                    <p>Tablets, capsules, syrups and daily healthcare formulations for general welfare.</p>
+                </div>
+                <!-- Card 3: Anti-Infectives -->
+                <div class="category-card reveal-up" data-delay="0.1">
+                    <div class="cat-icon-box">🧬</div>
+                    <h3>Anti-Infectives</h3>
+                    <p>Broad-spectrum antibiotics and advanced infection control formulations.</p>
+                </div>
+                <!-- Card 4: Anti-Viral -->
+                <div class="category-card reveal-up" data-delay="0.15">
+                    <div class="cat-icon-box">🛡️</div>
+                    <h3>Anti-Viral</h3>
+                    <p>Advanced antiviral pharmaceutical products targeting viral replication pathways.</p>
+                </div>
+                <!-- Card 5: Dermatology -->
+                <div class="category-card reveal-up" data-delay="0.2">
+                    <div class="cat-icon-box">🧴</div>
+                    <h3>Dermatology</h3>
+                    <p>Skin care formulations, therapeutic creams, and dermatological ointments.</p>
+                </div>
+                <!-- Card 6: Veterinary -->
+                <div class="category-card reveal-up" data-delay="0.25">
+                    <div class="cat-icon-box">🐾</div>
+                    <h3>Veterinary</h3>
+                    <p>Animal healthcare therapeutics, supplements, and wellness formulations.</p>
+                </div>
+                <!-- Card 7: Nutraceuticals -->
+                <div class="category-card reveal-up" data-delay="0.3">
+                    <div class="cat-icon-box">🥗</div>
+                    <h3>Nutraceuticals</h3>
+                    <p>Wellness supplements, vitamins, and preventive healthcare products.</p>
+                </div>
+                <!-- Card 8: Herbal & Ayurvedic -->
+                <div class="category-card reveal-up" data-delay="0.35">
+                    <div class="cat-icon-box">🌿</div>
+                    <h3>Herbal & Ayurvedic</h3>
+                    <p>Natural formulations and traditional healthcare products for holistic healing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Digital Catalogue Library Section -->
+    <section class="catalogue-section" id="catalogues">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">DIGITAL ARCHIVE</span>
+                <h2>Product Catalogue Library</h2>
+                <p>Browse, preview, and download our specialized booklets containing compliance certifications and product specifications.</p>
+            </div>
+
+            <div class="catalogue-grid">
+                <!-- Booklet 1: Critical Care -->
+                <div class="catalogue-card reveal-up" data-catalogue="critical-care">
+                    <div class="catalogue-cover grad-blue">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🧪</span>
+                        <h4 class="cover-title">Critical Care</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-blue">Critical Care</span>
+                        <h3>Critical Care Catalogue</h3>
+                        <p>Advanced critical care pharmaceutical solutions including ICU injectables and emergency therapeutics.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>42</strong> Products</span>
+                            <span class="meta-item">📄 PDF (2.4 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Critical Care PDF Catalogue...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 2: Anti-Viral -->
+                <div class="catalogue-card reveal-up" data-delay="0.1" data-catalogue="anti-viral">
+                    <div class="catalogue-cover grad-teal">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🛡️</span>
+                        <h4 class="cover-title">Anti-Viral</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-teal">Anti-Viral</span>
+                        <h3>Anti Viral Portfolio</h3>
+                        <p>Comprehensive antiviral treatment booklets with formulation metrics and drug interactions.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>28</strong> Products</span>
+                            <span class="meta-item">📄 PDF (1.8 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Anti Viral PDF Portfolio...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 3: Dermatology -->
+                <div class="catalogue-card reveal-up" data-delay="0.2" data-catalogue="dermatology">
+                    <div class="catalogue-cover grad-purple">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🧴</span>
+                        <h4 class="cover-title">Dermatology</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-purple">Dermatology</span>
+                        <h3>Dermatology Range</h3>
+                        <p>Premium skincare, dermatological formulations, and topical treatment catalogues.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>35</strong> Products</span>
+                            <span class="meta-item">📄 PDF (3.1 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Dermatology PDF Catalogue...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 4: Veterinary -->
+                <div class="catalogue-card reveal-up" data-delay="0.3" data-catalogue="veterinary">
+                    <div class="catalogue-cover grad-orange">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🐾</span>
+                        <h4 class="cover-title">Veterinary</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-orange">Veterinary</span>
+                        <h3>Veterinary Solutions</h3>
+                        <p>Animal healthcare, feed formulations, and livestock treatment directories.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>50</strong> Products</span>
+                            <span class="meta-item">📄 PDF (2.9 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Veterinary PDF Solutions...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 5: General Medicine -->
+                <div class="catalogue-card reveal-up" data-catalogue="general-med">
+                    <div class="catalogue-cover grad-blue-dark">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">💊</span>
+                        <h4 class="cover-title">General Med</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-blue">General Medicine</span>
+                        <h3>General Medicine</h3>
+                        <p>Complete medicine product guide containing tablets, capsules, and therapeutic syrups.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>120</strong> Products</span>
+                            <span class="meta-item">📄 PDF (4.8 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading General Medicine PDF Catalogue...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 6: Nutraceuticals -->
+                <div class="catalogue-card reveal-up" data-delay="0.1" data-catalogue="nutra">
+                    <div class="catalogue-cover grad-green">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🥗</span>
+                        <h4 class="cover-title">Nutra Range</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-green">Nutraceuticals</span>
+                        <h3>Nutraceutical Portfolio</h3>
+                        <p>Preventive healthcare formulations, vitamin blends, and wellness supplement tables.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>45</strong> Products</span>
+                            <span class="meta-item">📄 PDF (2.1 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Nutraceuticals PDF Portfolio...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 7: Herbal -->
+                <div class="catalogue-card reveal-up" data-delay="0.2" data-catalogue="herbal">
+                    <div class="catalogue-cover grad-green-dark">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🌿</span>
+                        <h4 class="cover-title">Herbal & Ayur</h4>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-green">Herbal & Ayurvedic</span>
+                        <h3>Herbal & Ayurvedic</h3>
+                        <p>Traditional natural wellness brochures and organic product formulations details.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>60</strong> Products</span>
+                            <span class="meta-item">📄 PDF (3.4 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Herbal & Ayurvedic PDF Catalogue...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booklet 8: Export Range -->
+                <div class="catalogue-card reveal-up" data-delay="0.3" data-catalogue="export-range">
+                    <div class="catalogue-cover grad-gold">
+                        <div class="cover-glow"></div>
+                        <span class="cover-icon">🌐</span>
+                        <h4 class="cover-title">Export Range</h4>
+                        <span class="cover-badge">Global Book</span>
+                    </div>
+                    <div class="catalogue-info">
+                        <span class="cat-tag tag-gold">Export Range</span>
+                        <h3>Export Product Range</h3>
+                        <p>International pharmaceutical directory outlining country-specific availability and drug classifications.</p>
+                        <div class="cat-meta">
+                            <span class="meta-item">📦 <strong>85</strong> Products</span>
+                            <span class="meta-item">📄 PDF (4.2 MB)</span>
+                        </div>
+                        <div class="cat-actions">
+                            <button class="btn-card btn-view">View Catalogue</button>
+                            <a href="#" class="btn-card btn-download" onclick="alert('Downloading Export Product Range PDF Catalogue...'); return false;">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Fullscreen Catalogue Modal Preview -->
+    <div class="catalogue-modal" id="catalogue-preview-modal">
+        <div class="modal-backdrop" id="modal-close-trigger"></div>
+        <div class="modal-wrapper">
+            <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+            <div class="modal-container">
+                <div class="modal-left">
+                    <div class="modal-cover-preview" id="modal-cover">
+                        <!-- Dynamic Cover Icon & Color Loaded via JS -->
+                        <span id="modal-cover-icon">🧪</span>
+                        <h3 id="modal-cover-title">Critical Care</h3>
+                        <span class="cover-badge">Spec Book</span>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <span class="modal-tag" id="modal-tag">Critical Care</span>
+                    <h2 class="modal-title" id="modal-title">Critical Care Catalogue</h2>
+                    <p class="modal-desc" id="modal-desc">Detailed product metrics for ICU injectables and clinical therapeutics.</p>
+                    
+                    <div class="modal-specs">
+                        <div class="spec-item">
+                            <strong>Regulatory Status</strong>
+                            <span>WHO-GMP, US-FDA Compliant Sourcing</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Total catalogued SKU</strong>
+                            <span id="modal-product-count">42 Items</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Standard Packaging</strong>
+                            <span>Ampoules, Vials, Blister Packs</span>
+                        </div>
+                    </div>
+
+                    <!-- Sample Products Table -->
+                    <div class="modal-product-sample">
+                        <h4>Sample Formulations Included</h4>
+                        <table class="sample-table">
+                            <thead>
+                                <tr>
+                                    <th>Generic Name</th>
+                                    <th>Strength</th>
+                                    <th>Dosage Form</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sample-table-rows">
+                                <!-- Dynamic rows loaded via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn-accent" id="modal-download-btn">Download Full Specification Booklet (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Featured Product Showcase Section -->
+    <section class="featured-showcase">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">PREMIUM SOLUTIONS</span>
+                <h2>Featured Healthcare Solutions</h2>
+            </div>
+
+            <div class="showcase-list">
+                <!-- Showcase Item 1: Meropenem Injectable -->
+                <div class="showcase-item reveal-up">
+                    <div class="showcase-graphic bg-grad-blue">
+                        <span class="showcase-icon-large">🧪</span>
+                        <div class="glow-ring"></div>
+                    </div>
+                    <div class="showcase-text">
+                        <span class="showcase-tag">Critical Care</span>
+                        <h3>MERO-Critical Injectable</h3>
+                        <p class="showcase-desc">High-potency carbapenem antibiotic formulation designed for severe nosocomial infections in intensive care units.</p>
+                        <div class="showcase-benefits">
+                            <div class="benefit"><span class="check-dot-green"></span> GMP Certified Manufacturing</div>
+                            <div class="benefit"><span class="check-dot-green"></span> Cold Chain Integrity Verified</div>
+                            <div class="benefit"><span class="check-dot-green"></span> Rapid Reconstitution Formula</div>
+                        </div>
+                        <div class="showcase-compliance">
+                            <span class="comp-badge">WHO-GMP</span>
+                            <span class="comp-badge">EU-Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Item 2: Antiviral replication inhibitor -->
+                <div class="showcase-item item-reverse reveal-up">
+                    <div class="showcase-graphic bg-grad-teal">
+                        <span class="showcase-icon-large">🛡️</span>
+                        <div class="glow-ring"></div>
+                    </div>
+                    <div class="showcase-text">
+                        <span class="showcase-tag">Anti-Viral</span>
+                        <h3>VIR-Shield Therapeutics</h3>
+                        <p class="showcase-desc">Advanced replication inhibitor targeting chronic viral infections, offering superior bio-availability and minimal therapeutic adverse effects.</p>
+                        <div class="showcase-benefits">
+                            <div class="benefit"><span class="check-dot-green"></span> Clinically Documented Bio-Equivalence</div>
+                            <div class="benefit"><span class="check-dot-green"></span> Multi-Continent Regulatory Approvals</div>
+                            <div class="benefit"><span class="check-dot-green"></span> Strict Quality Control Validation</div>
+                        </div>
+                        <div class="showcase-compliance">
+                            <span class="comp-badge">WHO-GMP</span>
+                            <span class="comp-badge">Export Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Item 3: Dermatology Ointment -->
+                <div class="showcase-item reveal-up">
+                    <div class="showcase-graphic bg-grad-purple">
+                        <span class="showcase-icon-large">🧴</span>
+                        <div class="glow-ring"></div>
+                    </div>
+                    <div class="showcase-text">
+                        <span class="showcase-tag">Dermatology</span>
+                        <h3>DERMA-Soft Cort Formulation</h3>
+                        <p class="showcase-desc">Highly stable dermatological topical cream designed for chronic inflammatory conditions, utilizing optimized skin-absorption vehicles.</p>
+                        <div class="showcase-benefits">
+                            <div class="benefit"><span class="check-dot-green"></span> Dermatalogically Tested & Non-Irritating</div>
+                            <div class="benefit"><span class="check-dot-green"></span> Preservative-Free Formulation</div>
+                            <div class="benefit"><span class="check-dot-green"></span> Long Shelf-Life Stability Profiles</div>
+                        </div>
+                        <div class="showcase-compliance">
+                            <span class="comp-badge">GMP Certified</span>
+                            <span class="comp-badge">Batch Tested</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Global Product Distribution Section -->
+    <section class="global-distribution">
+        <div class="distribution-map-overlay">
+            <div class="map-connection-dots"></div>
+        </div>
+        <div class="container grid-2">
+            <div class="distribution-content reveal-left">
+                <span class="section-label text-white">GLOBAL LOGISTICS</span>
+                <h2 class="text-white">Global Reach & Distribution</h2>
+                <p class="text-white-sub">Serving healthcare providers across multiple international markets through reliable pharmaceutical sourcing and distribution networks.</p>
+                
+                <!-- Animated Statistics Counters -->
+                <div class="distribution-stats">
+                    <div class="dist-stat-card">
+                        <h3 class="dist-num" id="stat-countries" data-target="15">0</h3>
+                        <p>Countries Served</p>
+                    </div>
+                    <div class="dist-stat-card">
+                        <h3 class="dist-num" id="stat-products" data-target="500">0</h3>
+                        <p>Products Managed</p>
+                    </div>
+                    <div class="dist-stat-card">
+                        <h3 class="dist-num" id="stat-partners" data-target="100">0</h3>
+                        <p>Global Partners</p>
+                    </div>
+                    <div class="dist-stat-card">
+                        <h3 class="dist-num" id="stat-accuracy" data-target="98">0</h3>
+                        <p>Fulfillment Rate %</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="distribution-visual reveal-right">
+                <div class="distribution-globe-card">
+                    <!-- Dynamic map/world grid layout with glowing routes -->
+                    <div class="globe-marker marker-1" style="top: 30%; left: 35%;"></div>
+                    <div class="globe-marker marker-2" style="top: 50%; left: 60%;"></div>
+                    <div class="globe-marker marker-3" style="top: 40%; left: 80%;"></div>
+                    <svg class="globe-routes" width="100%" height="100%">
+                        <path d="M 100 120 Q 180 60 250 160" stroke="rgba(46, 204, 113, 0.5)" stroke-width="2" fill="none" class="pulse-path"/>
+                        <path d="M 250 160 Q 280 200 320 180" stroke="rgba(46, 204, 113, 0.5)" stroke-width="2" fill="none" class="pulse-path"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Why Choose MEROKIS Products -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">OUR STANDARDS</span>
+                <h2>Why Choose MEROKIS Products</h2>
+                <p>We combine manufacturing audit systems with strict logistics governance to deliver premium medicine portfolios worldwide.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card reveal-up">
+                    <div class="benefit-icon">🏢</div>
+                    <h3>WHO-GMP Compliant</h3>
+                    <p>Every product is sourced exclusively from facilities audited and certified under WHO-GMP guidelines.</p>
+                </div>
+                <div class="benefit-card reveal-up" data-delay="0.05">
+                    <div class="benefit-icon">🧪</div>
+                    <h3>Quality Assured</h3>
+                    <p>Rigorous multi-stage batch analyses are performed to ensure identity, purity, and potency of pharmaceuticals.</p>
+                </div>
+                <div class="benefit-card reveal-up" data-delay="0.1">
+                    <div class="benefit-icon">⚖️</div>
+                    <h3>International Standards</h3>
+                    <p>Formulations comply with global pharmacopoeias (USP, BP, EP) to guarantee international clinical validity.</p>
+                </div>
+                <div class="benefit-card reveal-up" data-delay="0.15">
+                    <div class="benefit-icon">📦</div>
+                    <h3>Reliable Supply Chain</h3>
+                    <p>Proactive cold chain management systems protect sensitive liquid therapeutic packages during transit.</p>
+                </div>
+                <div class="benefit-card reveal-up" data-delay="0.2">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Export Ready</h3>
+                    <p>We provide full country dossier compilations in CTD format, expediting international import approvals.</p>
+                </div>
+                <div class="benefit-card reveal-up" data-delay="0.25">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Global Distribution</h3>
+                    <p>Established freight networks guarantee fast customs clearing and prompt delivery to ports worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Call To Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal-up">
+                <div class="cta-content">
+                    <h2>Looking for Reliable Pharmaceutical Products?</h2>
+                    <p>Partner with MEROKIS for trusted global pharmaceutical sourcing and distribution networks.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-accent" onclick="alert('Catalogue requested successfully! Our sales representative will email you shortly.'); return false;">Request Catalogue</a>
+                        <a href="#footer" class="btn btn-outline-light">Contact Team</a>
+                    </div>
+                </div>
+                <!-- Dynamic background floating shapes -->
+                <div class="cta-shapes-overlay">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Info -->
+                <div class="footer-col info-col">
+                    <div class="footer-logo">
+                        <strong>MEROKIS</strong>
+                    </div>
+                    <p class="footer-desc">Connecting global healthcare with pharmaceutical excellence since inception.</p>
+                </div>
+                
+                <!-- Column 2: Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#section-4">Certifications</a></li>
+                        <li><a href="about.html#global">Global Logistics</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Regulatory Affairs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#footer">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated on industry insights.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="submit-btn">→</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 MEROKIS Pharmaceutical Distribution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

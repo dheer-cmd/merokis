@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Motion | Cinematic Frame Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader Overlay -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-accent">ANTIGRAVITY</span> MOTION
+            </div>
+            <div class="spinner-box">
+                <div class="spinner-outer"></div>
+                <div class="spinner-inner"></div>
+                <div class="loader-percentage" id="loader-percentage">0%</div>
+            </div>
+            <div class="loader-status">Preloading 180 ultra-high quality frames...</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App Container (only visible when loaded) -->
+    <div id="app" class="app-hidden">
+        <!-- Floating Header -->
+        <header class="glass-header">
+            <div class="header-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Mérokis Logo" class="logo-img">
+                </div>
+                <nav class="nav-links">
+                    <a href="#section-1" class="nav-item active">Home</a>
+                    <a href="about.html" class="nav-item">About Us</a>
+                    <a href="products.html" class="nav-item">Products</a>
+                    <a href="#section-4" class="nav-item">Certifications</a>
+                    <a href="contact.html" class="nav-item">Contact Us</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="#" class="cta-btn">Contact Us</a>
+                </div>
+            </div>
+            <!-- Global Scroll Progress Indicator -->
+            <div class="scroll-progress-line" id="scroll-progress-line"></div>
+        </header>
+
+        <!-- Sticky Canvas Container -->
+        <div class="canvas-container">
+            <canvas id="animation-canvas"></canvas>
+            <div class="canvas-overlay"></div>
+        </div>
+
+        <!-- Scroll Indicator (Bottom Center) -->
+        <div class="scroll-hint" id="scroll-hint">
+            <span class="scroll-text">Scroll to animate</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Tracks (defines the scrolling depth) -->
+        <main class="scroll-track">
+            <!-- Section 1: Intro -->
+            <section class="scroll-section" id="section-1">
+                <div class="content-card">
+                    <span class="card-tag">Experience</span>
+                    <h2>Fluid Dynamics</h2>
+                    <p>Scrolled-controlled rendering maps your movement directly to each frame of our animation sequence.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: Canvas Tech -->
+            <section class="scroll-section" id="section-2">
+                <div class="content-card glass-card">
+                    <span class="card-tag">Technology</span>
+                    <h2>Canvas Performance</h2>
+                    <p>Preloaded buffers paint image sequences onto a high-performance 2D context, keeping transitions buttery smooth at 60fps.</p>
+                </div>
+            </section>
+
+            <!-- Section 3: Visual Precision -->
+            <section class="scroll-section" id="section-3">
+                <div class="content-card glass-card">
+                    <span class="card-tag">Precision</span>
+                    <h2>Cinematic Scrubbing</h2>
+                    <p>Scroll upwards, downwards, fast, or slow. Every single pixel of motion is perfectly in sync with your scroll position.</p>
+                </div>
+            </section>
+
+            <!-- Section 4: Outro -->
+            <section class="scroll-section" id="section-4">
+                <div class="content-card">
+                    <span class="card-tag">Interactive</span>
+                    <h2>Infinite Control</h2>
+                    <p>Every frame is compiled and optimized dynamically to fit your screen size without losing aspect ratio.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Dynamic Page Indicator -->
+        <div class="page-indicator">
+            <div class="indicator-dot active" data-section="0"></div>
+            <div class="indicator-dot" data-section="1"></div>
+            <div class="indicator-dot" data-section="2"></div>
+            <div class="indicator-dot" data-section="3"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

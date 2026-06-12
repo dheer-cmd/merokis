@@ -1,0 +1,538 @@
+/* ==========================================
+   DESIGN SYSTEM & VARIABLES
+   ========================================== */
+:root {
+    --bg-dark: #070709;
+    --card-bg: rgba(15, 15, 20, 0.45);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --accent: #6c5ce7;
+    --accent-glow: rgba(108, 92, 231, 0.4);
+    --text-primary: #f8f9fa;
+    --text-secondary: #a0a0a8;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --header-height: 100px;
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.3s ease;
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    transition: var(--transition-fast);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   PRELOADER & LOADER ANIMATIONS
+   ========================================== */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+}
+
+.loader-container.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: var(--text-primary);
+    margin-bottom: 2.5rem;
+    animation: pulseLogo 2s infinite ease-in-out;
+}
+
+.logo-accent {
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.spinner-box {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.spinner-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top-color: var(--accent);
+    border-bottom-color: var(--accent);
+    border-radius: 50%;
+    animation: spinClockwise 2.5s infinite linear;
+}
+
+.spinner-inner {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 2px solid transparent;
+    border-left-color: #a855f7;
+    border-right-color: #a855f7;
+    border-radius: 50%;
+    animation: spinCounterClockwise 1.5s infinite linear;
+}
+
+.loader-percentage {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.loader-status {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+    border-radius: 2px;
+    transition: width 0.2s cubic-bezier(0.1, 0.8, 0.2, 1);
+    box-shadow: 0 0 8px #6366f1;
+}
+
+@keyframes spinClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes pulseLogo {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* ==========================================
+   APP CONTENT (HIDDEN DURING LOAD)
+   ========================================== */
+.app-hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.app-visible {
+    opacity: 1;
+}
+
+/* ==========================================
+   PREMIUM FLOATING GLASS HEADER (LIGHT THEMED)
+   ========================================== */
+.glass-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--header-height);
+    background: rgba(248, 250, 253, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(15, 53, 108, 0.08);
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-img {
+    height: 86px; /* Increased by 20% to make the logo stand out even more */
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-fast);
+}
+
+.logo-img:hover {
+    transform: scale(1.02);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.25rem;
+    align-items: center;
+}
+
+.nav-item {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #5e6d82;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition-fast);
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #0f356c;
+}
+
+/* Precise underline animation matching user screenshot */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0f356c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-item.active::after,
+.nav-item:hover::after {
+    transform: scaleX(1);
+}
+
+/* Header CTA Button styling */
+.header-cta {
+    display: flex;
+    align-items: center;
+}
+
+.cta-btn {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #003366;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    border: 1px solid #003366;
+    box-shadow: 0 2px 4px rgba(0, 51, 102, 0.1);
+}
+
+.cta-btn:hover {
+    background-color: #0f356c;
+    border-color: #0f356c;
+    box-shadow: 0 4px 8px rgba(15, 53, 108, 0.2);
+    transform: translateY(-1px);
+}
+
+
+.scroll-progress-line {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, #6c5ce7, #a855f7);
+    transition: width 0.1s ease-out;
+}
+
+/* ==========================================
+   CANVAS BACKDROP (STICKY/FIXED)
+   ========================================== */
+.canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+}
+
+#animation-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Backed by dynamic canvas rendering */
+}
+
+.canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, rgba(7, 7, 9, 0.7) 100%),
+                linear-gradient(to bottom, rgba(7, 7, 9, 0.4) 0%, transparent 20%, transparent 80%, rgba(7, 7, 9, 0.6) 100%);
+    pointer-events: none;
+}
+
+/* ==========================================
+   SCROLL TRACK (CONTENT OVERLAYS)
+   ========================================== */
+.scroll-track {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.scroll-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    scroll-snap-align: start;
+}
+
+/* Offset sections to place text cards differently */
+#section-1 { justify-content: flex-start; }
+#section-2 { justify-content: flex-end; }
+#section-3 { justify-content: flex-start; }
+#section-4 { justify-content: flex-end; }
+
+/* Content Cards Style */
+.content-card {
+    max-width: 480px;
+    padding: 2.5rem;
+    border-radius: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom class added via JS when card is active */
+.content-card.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-tag {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.content-card h2 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.content-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* ==========================================
+   SCROLL HINT & DOTS
+   ========================================== */
+.scroll-hint {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.scroll-hint.fade-out {
+    opacity: 0;
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.scroll-mouse {
+    width: 24px;
+    height: 38px;
+    border: 2px solid var(--text-secondary);
+    border-radius: 12px;
+    position: relative;
+    opacity: 0.8;
+}
+
+.scroll-wheel {
+    width: 4px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollMouseWheel 1.6s infinite ease-in-out;
+}
+
+@keyframes scrollMouseWheel {
+    0% { transform: translate(-50%, 0); opacity: 0; }
+    30% { opacity: 1; }
+    80% { transform: translate(-50%, 12px); opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Page Indicator Dots */
+.page-indicator {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.indicator-dot:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.indicator-dot.active {
+    background-color: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    transform: scale(1.4);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .scroll-section {
+        justify-content: center !important;
+        padding: 0 1rem;
+    }
+    
+    .content-card {
+        padding: 1.75rem;
+        width: 100%;
+        max-width: 90vw;
+    }
+    
+    .content-card h2 {
+        font-size: 1.75rem;
+    }
+    
+    .page-indicator {
+        right: 1rem;
+    }
+}
