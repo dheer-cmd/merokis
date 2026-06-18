@@ -2,11 +2,11 @@
    ABOUT PAGE STYLE GUIDE & CONFIGURATION
    ========================================== */
 :root {
-    --primary: #0A3D91;
-    --primary-dark: #072a66;
-    --secondary: #123D8D;
-    --accent: #2ECC71;
-    --accent-glow: rgba(46, 204, 113, 0.4);
+    --primary: #003A99;
+    --primary-dark: #00286b;
+    --secondary: #003285;
+    --accent: #C89B2B;
+    --accent-glow: rgba(200, 155, 43, 0.4);
     --bg-light: #F8FAFC;
     --bg-card: rgba(255, 255, 255, 0.7);
     --border-color: rgba(15, 53, 108, 0.08);
@@ -1065,6 +1065,16 @@ html {
     margin-bottom: 1.5rem;
 }
 
+.footer-logo strong {
+    color: #ffffff;
+    transition: var(--transition-fast);
+    cursor: default;
+}
+
+.footer-logo strong:hover {
+    color: var(--accent);
+}
+
 .footer-desc {
     font-size: 0.9rem;
     line-height: 1.6;
@@ -1171,6 +1181,9 @@ html {
    RESPONSIVE DESIGN INTERFACES
    ========================================== */
 @media (max-width: 1024px) {
+    .logo-img {
+        height: 52px;
+    }
     .strategy-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1187,6 +1200,9 @@ html {
 }
 
 @media (max-width: 768px) {
+    .logo-img {
+        height: 44px;
+    }
     .grid-2 {
         grid-template-columns: 1fr;
         gap: 3rem;

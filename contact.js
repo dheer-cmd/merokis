@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // ==========================================
-    // WHY CONTACT MEROKIS CARD STAGGERED REVEAL
+    // WHY CONTACT Mérokis CARD STAGGERED REVEAL
     // ==========================================
     gsap.fromTo('.why-card.reveal-up', 
         { opacity: 0, y: 50 },
