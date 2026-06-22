@@ -80,124 +80,214 @@ document.addEventListener('DOMContentLoaded', () => {
     // CATALOGUE DETAILED LIBRARY DATABASE
     // ==========================================
     const catalogueDB = {
-        'critical-care': {
-            title: 'Critical Care Catalogue',
-            tag: 'Critical Care',
-            desc: 'Advanced critical care pharmaceutical solutions including ICU injectables, cardiovascular agents, and emergency therapeutics.',
-            icon: '🧪',
-            coverClass: 'grad-blue',
-            count: '42 Items',
-            downloadMsg: 'Critical Care Specification Booklet',
-            samples: [
-                { name: 'Meropenem Injection USP', strength: '1g', dosage: 'Vial (IV)' },
-                { name: 'Piperacillin & Tazobactam', strength: '4.5g', dosage: 'Vial (IV)' },
-                { name: 'Artesunate Injection', strength: '60mg', dosage: 'Vial (IV/IM)' },
-                { name: 'Adrenaline Bitartrate', strength: '1mg/ml', dosage: 'Ampoule (IV)' }
-            ]
-        },
-        'anti-viral': {
-            title: 'Anti Viral Portfolio',
+        'anti-viral-drugs': {
+            title: 'Anti-Viral Portfolio',
             tag: 'Anti-Viral',
-            desc: 'Comprehensive antiviral treatment booklets with formulation metrics, advanced nucleoside analogues, and drug interaction parameters.',
+            desc: 'Advanced antiviral formulations targeting viral replication pathways and supporting immune defence.',
             icon: '🛡️',
             coverClass: 'grad-teal',
             count: '28 Items',
-            downloadMsg: 'Anti Viral Portfolio Spec Booklet',
+            downloadMsg: 'Anti-Viral Drugs Specification Booklet',
             samples: [
-                { name: 'Sofosbuvir Tablets', strength: '400mg', dosage: 'Tablet' },
                 { name: 'Tenofovir Alafenamide', strength: '25mg', dosage: 'Tablet' },
+                { name: 'Sofosbuvir Tablets', strength: '400mg', dosage: 'Tablet' },
                 { name: 'Remdesivir Injection', strength: '100mg', dosage: 'Vial (IV)' },
                 { name: 'Entecavir Tablets USP', strength: '0.5mg', dosage: 'Tablet' }
             ]
         },
-        'dermatology': {
-            title: 'Dermatology Range',
+        'anti-tb-drugs': {
+            title: 'Anti-TB Regimen Guide',
+            tag: 'Anti-TB',
+            desc: 'First-line and second-line anti-tuberculosis regimens for comprehensive mycobacterial treatment.',
+            icon: '🫁',
+            coverClass: 'grad-orange',
+            count: '18 Items',
+            downloadMsg: 'Anti-TB Drugs Specification Booklet',
+            samples: [
+                { name: 'Rifampicin Capsules USP', strength: '300mg', dosage: 'Capsule' },
+                { name: 'Isoniazid Tablets', strength: '100mg', dosage: 'Tablet' },
+                { name: 'Pyrazinamide Tablets', strength: '500mg', dosage: 'Tablet' },
+                { name: 'Ethambutol Hydrochloride', strength: '400mg', dosage: 'Tablet' }
+            ]
+        },
+        'oncology-drugs': {
+            title: 'Oncology Therapeutics',
+            tag: 'Oncology',
+            desc: 'High-potency cytotoxic therapies, targeted monoclonal antibodies, and supportive care oncology drugs.',
+            icon: '🎗️',
+            coverClass: 'grad-purple',
+            count: '32 Items',
+            downloadMsg: 'Oncology Drugs Specification Booklet',
+            samples: [
+                { name: 'Doxorubicin Injection', strength: '50mg', dosage: 'Vial (IV)' },
+                { name: 'Paclitaxel Infusion', strength: '100mg', dosage: 'Vial (IV)' },
+                { name: 'Imatinib Mesylate Tablets', strength: '400mg', dosage: 'Tablet' },
+                { name: 'Gemcitabine Injection', strength: '1g', dosage: 'Vial (IV)' }
+            ]
+        },
+        'antibiotics': {
+            title: 'Antibiotic Catalogue',
+            tag: 'Antibiotics',
+            desc: 'Broad-spectrum and narrow-spectrum antibacterial formulations for systemic infection control.',
+            icon: '🧪',
+            coverClass: 'grad-blue',
+            count: '55 Items',
+            downloadMsg: 'Antibiotics Specification Booklet',
+            samples: [
+                { name: 'Amoxicillin & Clavulanate', strength: '1.2g', dosage: 'Vial (IV)' },
+                { name: 'Azithromycin Tablets USP', strength: '500mg', dosage: 'Tablet' },
+                { name: 'Ceftriaxone Injection USP', strength: '1g', dosage: 'Vial (IV)' },
+                { name: 'Ciprofloxacin Tablets', strength: '500mg', dosage: 'Tablet' }
+            ]
+        },
+        'cardiovascular-drugs': {
+            title: 'Cardiovascular Care',
+            tag: 'Cardiovascular',
+            desc: 'Antihypertensives, lipid-lowering agents, and anti-arrhythmics managing cardiac health.',
+            icon: '❤️',
+            coverClass: 'grad-blue-dark',
+            count: '45 Items',
+            downloadMsg: 'Cardiovascular Drugs Specification Booklet',
+            samples: [
+                { name: 'Atorvastatin Tablets USP', strength: '20mg', dosage: 'Tablet' },
+                { name: 'Amlodipine Tablets', strength: '5mg', dosage: 'Tablet' },
+                { name: 'Clopidogrel Bisulfate', strength: '75mg', dosage: 'Tablet' },
+                { name: 'Losartan Potassium', strength: '50mg', dosage: 'Tablet' }
+            ]
+        },
+        'anti-diabetic-drugs': {
+            title: 'Anti-Diabetic Portfolio',
+            tag: 'Anti-Diabetic',
+            desc: 'Oral hypoglycemics, insulin sensitizers, and advanced glycemic control therapies.',
+            icon: '🩸',
+            coverClass: 'grad-green',
+            count: '40 Items',
+            downloadMsg: 'Anti-Diabetic Drugs Specification Booklet',
+            samples: [
+                { name: 'Metformin Hydrochloride ER', strength: '500mg', dosage: 'Tablet' },
+                { name: 'Glimepiride Tablets', strength: '2mg', dosage: 'Tablet' },
+                { name: 'Sitagliptin Phosphate', strength: '100mg', dosage: 'Tablet' },
+                { name: 'Pioglitazone Tablets', strength: '15mg', dosage: 'Tablet' }
+            ]
+        },
+        'analgesics-antipyretics': {
+            title: 'Analgesics & Antipyretics',
+            tag: 'Analgesics',
+            desc: 'Non-steroidal anti-inflammatory drugs (NSAIDs) and antipyretics for effective pain and fever management.',
+            icon: '⚡',
+            coverClass: 'grad-teal',
+            count: '25 Items',
+            downloadMsg: 'Analgesics & Antipyretics Specification Booklet',
+            samples: [
+                { name: 'Paracetamol Tablets IP', strength: '650mg', dosage: 'Tablet' },
+                { name: 'Ibuprofen Tablets USP', strength: '400mg', dosage: 'Tablet' },
+                { name: 'Diclofenac Sodium SR', strength: '100mg', dosage: 'Tablet' },
+                { name: 'Tramadol Hydrochloride', strength: '50mg', dosage: 'Capsule' }
+            ]
+        },
+        'erectile-dysfunction-drugs': {
+            title: 'Erectile Dysfunction Care',
+            tag: 'Erectile Dysfunction',
+            desc: 'Selective phosphodiesterase type 5 (PDE5) inhibitors for the treatment of erectile dysfunction.',
+            icon: '💪',
+            coverClass: 'grad-gold',
+            count: '12 Items',
+            downloadMsg: 'Erectile Dysfunction Drugs Specification Booklet',
+            samples: [
+                { name: 'Sildenafil Citrate Tablets', strength: '100mg', dosage: 'Tablet' },
+                { name: 'Tadalafil Tablets USP', strength: '20mg', dosage: 'Tablet' },
+                { name: 'Vardenafil Tablets', strength: '20mg', dosage: 'Tablet' },
+                { name: 'Avanafil Tablets', strength: '100mg', dosage: 'Tablet' }
+            ]
+        },
+        'gastrointestinal-drugs': {
+            title: 'Gastrointestinal Care',
+            tag: 'Gastrointestinal',
+            desc: 'Proton pump inhibitors, antacids, and anti-emetics for comprehensive gastrointestinal care.',
+            icon: '🍽️',
+            coverClass: 'grad-orange',
+            count: '30 Items',
+            downloadMsg: 'Gastrointestinal Drugs Specification Booklet',
+            samples: [
+                { name: 'Omeprazole Capsules', strength: '20mg', dosage: 'Capsule' },
+                { name: 'Pantoprazole Sodium', strength: '40mg', dosage: 'Tablet' },
+                { name: 'Domperidone Tablets', strength: '10mg', dosage: 'Tablet' },
+                { name: 'Ondansetron Injection', strength: '2mg/ml', dosage: 'Ampoule' }
+            ]
+        },
+        'anti-asthma-respiratory-drugs': {
+            title: 'Respiratory Solutions',
+            tag: 'Respiratory',
+            desc: 'Bronchodilators, inhaled corticosteroids, and anti-asthmatic agents supporting respiratory function.',
+            icon: '💨',
+            coverClass: 'grad-blue',
+            count: '22 Items',
+            downloadMsg: 'Anti-Asthma & Respiratory Drugs Specification Booklet',
+            samples: [
+                { name: 'Salbutamol Inhaler', strength: '100mcg', dosage: 'Inhaler' },
+                { name: 'Montelukast Sodium', strength: '10mg', dosage: 'Tablet' },
+                { name: 'Fluticasone Propionate', strength: '250mcg', dosage: 'Rotacaps' },
+                { name: 'Budesonide Respules', strength: '0.5mg/2ml', dosage: 'Ampoule' }
+            ]
+        },
+        'dermatology-drugs': {
+            title: 'Dermatology Catalogue',
             tag: 'Dermatology',
-            desc: 'Premium skincare, dermatological formulations, topical corticosteroids, and antifungal treatment catalogues.',
+            desc: 'Topical corticosteroids, antifungal creams, and specialized formulations for advanced skin care.',
             icon: '🧴',
             coverClass: 'grad-purple',
             count: '35 Items',
-            downloadMsg: 'Dermatology Specification Booklet',
+            downloadMsg: 'Dermatology Drugs Specification Booklet',
             samples: [
-                { name: 'Clobetasol Propionate Cream', strength: '0.05% w/w', dosage: 'Tube (Topical)' },
-                { name: 'Ketoconazole Cream USP', strength: '2% w/w', dosage: 'Tube (Topical)' },
-                { name: 'Mupirocin Ointment USP', strength: '2% w/w', dosage: 'Tube (Topical)' },
-                { name: 'Adapalene Gel', strength: '0.1% w/w', dosage: 'Tube (Topical)' }
+                { name: 'Clobetasol Propionate Cream', strength: '0.05% w/w', dosage: 'Tube' },
+                { name: 'Mupirocin Ointment USP', strength: '2% w/w', dosage: 'Tube' },
+                { name: 'Adapalene Gel', strength: '0.1% w/w', dosage: 'Tube' },
+                { name: 'Hydrocortisone Cream', strength: '1% w/w', dosage: 'Tube' }
             ]
         },
-        'veterinary': {
-            title: 'Veterinary Solutions',
-            tag: 'Veterinary',
-            desc: 'Animal healthcare therapeutics, nutritional feed supplements, livestock antibiotics, and poultry wellness formulations.',
-            icon: '🐾',
-            coverClass: 'grad-orange',
-            count: '50 Items',
-            downloadMsg: 'Veterinary Solutions Booklet',
+        'anti-fungal-drugs': {
+            title: 'Anti-Fungal Portfolio',
+            tag: 'Anti-Fungal',
+            desc: 'Oral and topical antimycotics designed for effective treatment of fungal and yeast infections.',
+            icon: '🍄',
+            coverClass: 'grad-green-dark',
+            count: '20 Items',
+            downloadMsg: 'Anti-Fungal Drugs Specification Booklet',
             samples: [
-                { name: 'Ivermectin Oral Solution', strength: '0.8% w/v', dosage: 'Oral Liquid' },
-                { name: 'Oxy-Tetracycline Injection', strength: '100mg/ml', dosage: 'Vial (IM)' },
-                { name: 'Albendazole Oral Suspension', strength: '2.5% w/v', dosage: 'Suspension' },
-                { name: 'Calcium & Vit D3 Feed Premix', strength: 'Premium Blend', dosage: 'Powder Feed' }
+                { name: 'Fluconazole Capsules', strength: '150mg', dosage: 'Capsule' },
+                { name: 'Itraconazole Capsules', strength: '100mg', dosage: 'Capsule' },
+                { name: 'Terbinafine Tablets', strength: '250mg', dosage: 'Tablet' },
+                { name: 'Ketoconazole Cream USP', strength: '2% w/w', dosage: 'Tube' }
             ]
         },
-        'general-med': {
-            title: 'General Medicine Spec',
-            tag: 'General Medicine',
-            desc: 'Complete therapeutic pharmaceutical guide containing daily formulations, anti-diabetics, analgesics, and syrups.',
-            icon: '💊',
-            coverClass: 'grad-blue-dark',
-            count: '120 Items',
-            downloadMsg: 'General Medicine Catalog Booklet',
-            samples: [
-                { name: 'Paracetamol Tablets IP', strength: '650mg', dosage: 'Tablet' },
-                { name: 'Amoxicillin Trihydrate Caps', strength: '500mg', dosage: 'Capsule' },
-                { name: 'Metformin Hydrochloride ER', strength: '500mg', dosage: 'Tablet' },
-                { name: 'Multivitamin & Mineral Syrups', strength: 'Standard', dosage: 'Liquid Bottle' }
-            ]
-        },
-        'nutra': {
-            title: 'Nutraceutical Portfolio',
-            tag: 'Nutraceuticals',
-            desc: 'Preventive wellness supplements, specialized vitamin blends, bone-joint wellness tables, and antioxidants.',
-            icon: '🥗',
-            coverClass: 'grad-green',
-            count: '45 Items',
-            downloadMsg: 'Nutraceuticals Specification Booklet',
-            samples: [
-                { name: 'Omega-3 Fish Oil Capsules', strength: '1000mg', dosage: 'Softgel Capsule' },
-                { name: 'Glucosamine & Chondroitin', strength: '750/600mg', dosage: 'Tablet' },
-                { name: 'Vitamin D3 Chewable Tabs', strength: '60000 IU', dosage: 'Chewable Tablet' },
-                { name: 'Coenzyme Q10 Softgels', strength: '100mg', dosage: 'Softgel' }
-            ]
-        },
-        'herbal': {
+        'herbal-ayurvedic': {
             title: 'Herbal & Ayurvedic',
             tag: 'Herbal & Ayurvedic',
-            desc: 'Traditional natural therapeutic formulations, herbal extract capsules, cough remedies, and organic wellness syrups.',
+            desc: 'Standardized herbal extracts and traditional Ayurvedic formulations for holistic wellness.',
             icon: '🌿',
-            coverClass: 'grad-green-dark',
+            coverClass: 'grad-green',
             count: '60 Items',
             downloadMsg: 'Herbal & Ayurvedic Specification Booklet',
             samples: [
                 { name: 'Ashwagandha Extract Caps', strength: '500mg', dosage: 'Capsule' },
-                { name: 'Herbal Non-Drowsy Cough Syrup', strength: 'Standard', dosage: 'Liquid Bottle' },
-                { name: 'Turmeric Curcumin Tablets', strength: '95% Curcumin', dosage: 'Tablet' },
-                { name: 'Pure Tulsi Extracts Drops', strength: 'Concentrated', dosage: 'Liquid Drops' }
+                { name: 'Curcumin Tablets', strength: '95%', dosage: 'Tablet' },
+                { name: 'Triphala Capsules', strength: '500mg', dosage: 'Capsule' },
+                { name: 'Herbal Cough Syrup', strength: 'Standard', dosage: 'Bottle' }
             ]
         },
-        'export-range': {
-            title: 'Export Product Range',
-            tag: 'Export Range',
-            desc: 'Complete global directory detailing country-specific availability, regulatory filings, CTD dossiers, and drug classifications.',
-            icon: '🌐',
-            coverClass: 'grad-gold',
-            count: '85 Items',
-            downloadMsg: 'Export Product Range Spec Booklet',
+        'general-medicines': {
+            title: 'General Medicine Spec',
+            tag: 'General Medicine',
+            desc: 'Common therapeutic agents, multi-vitamins, and essential formulations for daily medical needs.',
+            icon: '💊',
+            coverClass: 'grad-blue-dark',
+            count: '120 Items',
+            downloadMsg: 'General Medicines Specification Booklet',
             samples: [
-                { name: 'CTD Dossier Formulations', strength: 'Various', dosage: 'Technical Files' },
-                { name: 'Cefotaxime Sodium Injection', strength: '1g', dosage: 'Vial (IV/IM)' },
-                { name: 'Atorvastatin Calcium Tabs', strength: '20mg', dosage: 'Tablet' },
-                { name: 'Esomeprazole Sodium Inj', strength: '40mg', dosage: 'Vial (IV)' }
+                { name: 'Multivitamin Capsules', strength: 'Premium', dosage: 'Capsule' },
+                { name: 'Vitamin D3 Chewable', strength: '60000 IU', dosage: 'Tablet' },
+                { name: 'Calcium & Vit D3 Tablets', strength: '500mg', dosage: 'Tablet' },
+                { name: 'Cough & Cold Syrups', strength: 'Various', dosage: 'Bottle' }
             ]
         }
     };
@@ -286,6 +376,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (viewBtn && catKey) {
             viewBtn.addEventListener('click', () => openModal(catKey));
         }
+    });
+
+    // Click Bindings for category cards (for premium interactivity)
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = card.getAttribute('href');
+            if (href) {
+                const catKey = href.replace('/products/', '');
+                openModal(catKey);
+            }
+        });
     });
 
     // Close Bindings

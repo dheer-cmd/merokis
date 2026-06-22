@@ -404,6 +404,8 @@ html {
     padding: 2.5rem 2rem;
     transition: var(--transition-smooth);
     cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 
 .category-card:hover {
