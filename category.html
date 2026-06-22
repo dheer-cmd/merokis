@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category | Mérokis Pharmaceutical Distribution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/products.css">
+    <link rel="stylesheet" href="/category.css">
+</head>
+<body>
+
+    <!-- Floating Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="/logo.png" alt="Mérokis Logo" class="logo-img">
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html" class="nav-item">Home</a>
+                <a href="/about.html" class="nav-item">About Us</a>
+                <a href="/products.html" class="nav-item active">Products</a>
+                <a href="/index.html#section-4" class="nav-item">Certifications</a>
+                <a href="/contact.html" class="nav-item">Contact Us</a>
+            </nav>
+            <div class="header-cta">
+                <a href="/contact.html" class="cta-btn">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Category Hero Section -->
+    <section class="products-hero category-hero">
+        <div class="hero-parallax-bg" style="background-image: url('/products-hero.png');"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <span class="category-icon-badge" id="category-badge">🛡️</span>
+            <h1 class="reveal-text" id="category-title">Loading Division...</h1>
+            <p class="reveal-subtext" id="category-desc">Exploring our global pharmaceutical products catalog.</p>
+        </div>
+        <div class="scroll-down-icon">
+            <span class="scroll-dot"></span>
+        </div>
+    </section>
+
+    <!-- 2. Main Catalog Filter Grid -->
+    <section class="catalog-filter-section" id="catalog-explorer">
+        <div class="container">
+            <div class="catalog-grid-wrapper">
+                
+                <!-- Desktop Sidebar Filters -->
+                <aside class="filter-sidebar">
+                    <div class="filter-card">
+                        <h3>Filter by Form</h3>
+                        <div class="filter-group" id="desktop-filter-form">
+                            <!-- Populated dynamically via category.js -->
+                        </div>
+                    </div>
+                    
+                    <div class="filter-card">
+                        <h3>Filter by Packaging</h3>
+                        <div class="filter-group" id="desktop-filter-packaging">
+                            <!-- Populated dynamically via category.js -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Listing Content Area -->
+                <main class="products-content-area">
+                    
+                    <!-- Filters Top Bar -->
+                    <div class="products-top-bar">
+                        <div class="product-count-box">
+                            <span id="product-count">Showing 0 Products</span>
+                        </div>
+                        <div class="active-chips-wrapper">
+                            <div class="active-chips" id="active-chips-container">
+                                <!-- Removable chips go here -->
+                            </div>
+                            <button class="clear-all-btn" id="clear-all-btn" style="display: none;">Clear All Filters</button>
+                        </div>
+                    </div>
+
+                    <!-- Skeleton Loader State -->
+                    <div class="skeleton-grid" id="skeleton-grid" style="display: none;">
+                        <div class="skeleton-card">
+                            <div class="skeleton-line skeleton-title"></div>
+                            <div class="skeleton-line skeleton-badge"></div>
+                            <div class="skeleton-line skeleton-body"></div>
+                            <div class="skeleton-line skeleton-btn"></div>
+                        </div>
+                        <div class="skeleton-card">
+                            <div class="skeleton-line skeleton-title"></div>
+                            <div class="skeleton-line skeleton-badge"></div>
+                            <div class="skeleton-line skeleton-body"></div>
+                            <div class="skeleton-line skeleton-btn"></div>
+                        </div>
+                        <div class="skeleton-card">
+                            <div class="skeleton-line skeleton-title"></div>
+                            <div class="skeleton-line skeleton-badge"></div>
+                            <div class="skeleton-line skeleton-body"></div>
+                            <div class="skeleton-line skeleton-btn"></div>
+                        </div>
+                    </div>
+
+                    <!-- Empty Results State -->
+                    <div class="empty-state-box" id="empty-state" style="display: none;">
+                        <div class="empty-icon">🔍</div>
+                        <h3>No Products Found</h3>
+                        <p>No products match your selected filters. Try clearing some filters or exploring other divisions.</p>
+                        <button class="btn btn-primary" onclick="clearAllFilters()">Reset Filters</button>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="category-products-grid" id="products-grid">
+                        <!-- Populated dynamically via category.js -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky Filter Bar (Bottom) -->
+    <div class="mobile-filter-sticky-bar">
+        <button class="mobile-filter-trigger" id="mobile-filter-open-btn">
+            <span class="btn-icon">🎛️</span>
+            <span class="btn-text">Filters</span>
+            <span class="mobile-active-filter-badge" id="mobile-active-count" style="display: none;">0</span>
+        </button>
+    </div>
+
+    <!-- Mobile Slide-In Filter Drawer -->
+    <div class="mobile-filter-drawer-overlay" id="mobile-filter-drawer">
+        <div class="mobile-filter-drawer-container">
+            <div class="drawer-header">
+                <h2>Filters</h2>
+                <button class="drawer-close-btn" id="mobile-filter-close-btn">&times;</button>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-filter-section">
+                    <h3>Form</h3>
+                    <div class="filter-group" id="mobile-filter-form">
+                        <!-- Dynamic checkboxes -->
+                    </div>
+                </div>
+                <div class="drawer-filter-section">
+                    <h3>Packaging</h3>
+                    <div class="filter-group" id="mobile-filter-packaging">
+                        <!-- Dynamic checkboxes -->
+                    </div>
+                </div>
+            </div>
+            <div class="drawer-footer">
+                <button class="btn btn-secondary" onclick="clearAllFilters()">Clear All</button>
+                <button class="btn btn-primary" id="mobile-filter-apply-btn">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Call To Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal-up">
+                <div class="cta-content">
+                    <h2>Looking for Reliable Pharmaceutical Products?</h2>
+                    <p>Partner with Mérokis for trusted global pharmaceutical sourcing and distribution networks.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-accent" onclick="alert('Catalogue requested successfully! Our sales representative will email you shortly.'); return false;">Request Catalogue</a>
+                        <a href="#footer" class="btn btn-outline-light">Contact Team</a>
+                    </div>
+                </div>
+                <div class="cta-shapes-overlay">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Info -->
+                <div class="footer-col info-col">
+                    <div class="footer-logo">
+                        <strong>Mérokis</strong>
+                    </div>
+                    <p class="footer-desc">Connecting global healthcare with pharmaceutical excellence since inception.</p>
+                </div>
+                
+                <!-- Column 2: Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="/index.html#section-4">Certifications</a></li>
+                        <li><a href="/about.html#global">Global Logistics</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Regulatory Affairs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#footer">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated on industry insights.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="submit-btn">→</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mérokis Pharmaceutical Distribution. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS CDN Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/products-data.js"></script>
+    <script src="/category.js" defer></script>
+</body>
+</html>

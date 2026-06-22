@@ -1,0 +1,609 @@
+/* ==========================================
+   MÉROKIS CATEGORY FILTERS SYSTEM STYLES
+   ========================================== */
+
+/* Main layout grid */
+.catalog-grid-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding: 60px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 1. Desktop Filter Sidebar */
+.filter-sidebar {
+    position: sticky;
+    top: 120px;
+    z-index: 10;
+}
+
+.filter-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 58, 153, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.filter-card:hover {
+    border-color: rgba(0, 58, 153, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 58, 153, 0.03);
+}
+
+.filter-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    color: #003A99;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Custom Checkboxes */
+.filter-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #4b5563;
+    transition: color 0.2s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.filter-item:hover {
+    color: #003A99;
+    transform: translateX(2px);
+}
+
+.filter-item input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    margin-right: 12px;
+    outline: none;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease;
+}
+
+.filter-item input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: #ffffff;
+    clip-path: polygon(14% 44%, 0 58%, 38% 96%, 100% 16%, 86% 2%, 38% 68%);
+}
+
+.filter-item input[type="checkbox"]:checked {
+    border-color: #003A99;
+    background-color: #003A99;
+}
+
+.filter-item input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.filter-item input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 3px rgba(0, 58, 153, 0.15);
+}
+
+/* 2. Top Navigation & Filters Bar */
+.products-content-area {
+    min-width: 0; /* Prevents flex items from breaking layouts */
+}
+
+.products-top-bar {
+    background: #ffffff;
+    border: 1px solid rgba(0, 58, 153, 0.06);
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+}
+
+.product-count-box {
+    font-weight: 700;
+    color: #003A99;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+.active-chips-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.active-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-chip {
+    background: #f3f4f6;
+    color: #374151;
+    border-radius: 30px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Outfit', sans-serif;
+}
+
+.filter-chip:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fca5a5;
+    transform: translateY(-1px);
+}
+
+.clear-all-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.2s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.clear-all-btn:hover {
+    color: #dc2626;
+    text-decoration: underline;
+}
+
+/* 3. Product Listing Grid & Cards */
+.category-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 58, 153, 0.05);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 58, 153, 0.08);
+    border-color: rgba(0, 58, 153, 0.15);
+}
+
+.product-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.product-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.badge-form {
+    background: rgba(0, 58, 153, 0.07);
+    color: #003A99;
+}
+
+.badge-packaging {
+    background: rgba(200, 155, 43, 0.08);
+    color: #C89B2B;
+}
+
+.product-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    color: #0b132b;
+    margin-bottom: 6px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.product-strength {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 14px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.btn-card-enquire {
+    display: block;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #003A99;
+    color: #003A99;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+.btn-card-enquire:hover {
+    background: #003A99;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 58, 153, 0.2);
+}
+
+/* 4. Skeleton Loader Card & Grids */
+.skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.skeleton-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    padding: 28px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skeleton-line {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 6px;
+}
+
+.skeleton-title {
+    height: 24px;
+    width: 70%;
+    margin-bottom: 12px;
+}
+
+.skeleton-badge {
+    height: 18px;
+    width: 45%;
+    margin-bottom: 24px;
+}
+
+.skeleton-body {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.skeleton-btn {
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* 5. Empty States */
+.empty-state-box {
+    text-align: center;
+    padding: 60px 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 58, 153, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+    font-family: 'Outfit', sans-serif;
+    margin-top: 20px;
+}
+
+.empty-icon {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+
+.empty-state-box h3 {
+    color: #0b132b;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.empty-state-box p {
+    color: #6b7280;
+    margin-bottom: 24px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.empty-state-box .btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+}
+
+/* 6. Mobile Sticky Filter Drawer & Overlay */
+.mobile-filter-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    width: auto;
+}
+
+.mobile-filter-trigger {
+    background: #003A99;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0, 58, 153, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-size: 0.95rem;
+}
+
+.mobile-filter-trigger:hover {
+    transform: translateY(-2px) translateX(0);
+    background: #002e7a;
+    box-shadow: 0 12px 30px rgba(0, 58, 153, 0.35);
+}
+
+.mobile-filter-trigger:active {
+    transform: translateY(0) translateX(0);
+}
+
+.mobile-active-filter-badge {
+    background: #C89B2B;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-content: center;
+}
+
+/* Mobile Filter Drawer Overlay */
+.mobile-filter-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 19, 43, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: none; /* Controlled via active class */
+    opacity: 0;
+}
+
+.mobile-filter-drawer-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+.mobile-filter-drawer-container {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    max-height: 82vh;
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -10px 40px rgba(11, 19, 43, 0.15);
+    transition: bottom 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-filter-drawer-overlay.active .mobile-filter-drawer-container {
+    bottom: 0;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 14px;
+}
+
+.drawer-header h2 {
+    font-family: 'Outfit', sans-serif;
+    color: #003A99;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.drawer-close-btn {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #9ca3af;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+}
+
+.drawer-body {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-bottom: 24px;
+}
+
+.drawer-filter-section {
+    margin-bottom: 28px;
+}
+
+.drawer-filter-section h3 {
+    font-family: 'Outfit', sans-serif;
+    color: #0b132b;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.drawer-footer {
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 20px;
+}
+
+.drawer-footer .btn {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Category Badge specific layout */
+.category-icon-badge {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-content: center;
+    margin: 0 auto 20px;
+    backdrop-filter: blur(8px);
+}
+
+.category-hero {
+    min-height: 380px;
+    height: 380px;
+}
+
+.category-hero .hero-content {
+    top: 55%;
+}
+
+/* ==========================================
+   RESPONSIVENESS (Media Queries)
+   ========================================== */
+@media (max-width: 1024px) {
+    .catalog-grid-wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px 0;
+    }
+    
+    .filter-sidebar {
+        display: none;
+    }
+    
+    .mobile-filter-sticky-bar {
+        display: block;
+    }
+    
+    .products-top-bar {
+        padding: 14px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .category-products-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .category-hero {
+        min-height: 320px;
+        height: 320px;
+    }
+    
+    .category-hero .hero-content {
+        top: 52%;
+    }
+    
+    .category-icon-badge {
+        font-size: 2.5rem;
+        width: 68px;
+        height: 68px;
+        margin-bottom: 14px;
+    }
+    
+    .products-top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .active-chips-wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .product-card {
+        padding: 20px;
+    }
+}
