@@ -163,7 +163,7 @@ html {
 }
 
 .logo-img {
-    height: 86px;
+    height: 68px; /* Increased to 68px (approx 40-60% from original template size) for a premium, prominent brand presence */
     width: auto;
     object-fit: contain;
     transition: var(--transition-fast);
@@ -947,7 +947,7 @@ html {
    ========================================== */
 @media (max-width: 1024px) {
     .logo-img {
-        height: 52px;
+        height: 56px; /* Increased to 56px for tablet screens */
     }
     .contact-grid {
         grid-template-columns: 1fr;
@@ -966,7 +966,7 @@ html {
 
 @media (max-width: 768px) {
     .logo-img {
-        height: 44px;
+        height: 46px; /* Increased to 46px for mobile screens */
     }
     .grid-2 {
         grid-template-columns: 1fr;

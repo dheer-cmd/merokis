@@ -227,7 +227,7 @@ body {
 }
 
 .logo-img {
-    height: 86px; /* Increased by 20% to make the logo stand out even more */
+    height: 68px; /* Increased to 68px (approx 40-60% from original template size) for a premium, prominent brand presence */
     width: auto;
     object-fit: contain;
     transition: var(--transition-fast);
@@ -514,13 +514,13 @@ body {
    ========================================== */
 @media (max-width: 1024px) {
     .logo-img {
-        height: 52px;
+        height: 56px; /* Increased to 56px for tablet screens */
     }
 }
 
 @media (max-width: 768px) {
     .logo-img {
-        height: 44px;
+        height: 46px; /* Increased to 46px for mobile screens */
     }
     .header-container {
         padding: 0 1rem;
