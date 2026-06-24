@@ -1,0 +1,102 @@
+/* ==========================================
+   MÉROKIS WHATSAPP FLOATING BUTTON STYLES
+   ========================================== */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+    z-index: 9999; /* Ensure it stays above everything else */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: wa-pulse-glow 2s infinite;
+    cursor: pointer;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 10px 25px rgba(18, 140, 126, 0.45);
+}
+
+.wa-icon {
+    width: 32px;
+    height: 32px;
+    fill: #ffffff;
+}
+
+/* Tooltip element */
+.wa-tooltip {
+    visibility: hidden;
+    width: 110px;
+    background-color: #0b132b;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 12px;
+    position: absolute;
+    z-index: 10000;
+    right: 75px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    pointer-events: none; /* Ignore pointer interactions */
+}
+
+.wa-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0b132b;
+}
+
+.whatsapp-float:hover .wa-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Pulse Glow Keyframes */
+@keyframes wa-pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .whatsapp-float {
+        bottom: 88px; /* Positioned above the mobile sticky actions bar */
+        width: 52px;
+        height: 52px;
+        right: 20px;
+    }
+    .wa-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .wa-tooltip {
+        display: none; /* tooltips are hidden on mobile touch devices */
+    }
+}

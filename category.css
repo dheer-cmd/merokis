@@ -5,12 +5,131 @@
 /* Main layout grid */
 .catalog-grid-wrapper {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 40px;
+    grid-template-columns: 260px 1fr 280px;
+    gap: 30px;
     align-items: start;
     padding: 60px 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+/* 1.1 Desktop Right Sidebar CTA & General WhatsApp Styles */
+.cta-sidebar {
+    position: sticky;
+    top: 120px;
+    z-index: 10;
+}
+
+.whatsapp-sidebar-card {
+    background: #ffffff;
+    border: 1px solid rgba(37, 211, 102, 0.15) !important;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-sidebar-card:hover {
+    border-color: rgba(37, 211, 102, 0.3) !important;
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.05) !important;
+}
+
+.whatsapp-sidebar-card h3 {
+    color: #25d366 !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.btn-whatsapp-sidebar {
+    background: #25d366 !important;
+    border-color: #25d366 !important;
+    color: #ffffff !important;
+    transition: all 0.25s ease !important;
+}
+
+.btn-whatsapp-sidebar:hover {
+    background: #128c7e !important;
+    border-color: #128c7e !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25) !important;
+}
+
+/* Product Card Actions */
+.product-card-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.product-card-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.btn-send-inquiry {
+    background: transparent;
+    border: 2px solid #003A99;
+    color: #003A99;
+}
+
+.btn-send-inquiry:hover {
+    background: #003A99;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 58, 153, 0.15);
+}
+
+.btn-whatsapp-now {
+    background: #25d366;
+    border: 2px solid #25d366;
+    color: #ffffff;
+}
+
+.btn-whatsapp-now:hover {
+    background: #128c7e;
+    border-color: #128c7e;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+}
+
+/* Mobile Sticky WhatsApp Bar */
+.mobile-whatsapp-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 12px 20px;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.08);
+    z-index: 998;
+}
+
+.btn-whatsapp-sticky {
+    background: #25d366 !important;
+    border-color: #25d366 !important;
+    color: #ffffff !important;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.btn-whatsapp-sticky:hover {
+    background: #128c7e !important;
+    border-color: #128c7e !important;
+}
+
 
 /* 1. Desktop Filter Sidebar */
 .filter-sidebar {
@@ -557,11 +676,16 @@
         padding: 40px 0;
     }
     
-    .filter-sidebar {
+    .filter-sidebar, .cta-sidebar {
         display: none;
     }
     
     .mobile-filter-sticky-bar {
+        display: block;
+        bottom: 80px !important; /* Shifted up to sit above mobile sticky WhatsApp bar */
+    }
+    
+    .mobile-whatsapp-sticky-bar {
         display: block;
     }
     

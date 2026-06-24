@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('category-title').textContent = catData.title;
     document.getElementById('category-desc').textContent = catData.desc;
 
+    // Set Category-level WhatsApp links (Auto-fills category name)
+    const categoryEnquiryText = `Hello Mérokis,
+
+I would like to request product information regarding the following category:
+
+Category: ${catData.title}
+
+Please share the complete product list, availability, export options, and pricing.
+
+Thank you.`;
+    const categoryWaURL = `https://wa.me/919820051797?text=${encodeURIComponent(categoryEnquiryText)}`;
+    document.getElementById('sidebar-whatsapp-btn').href = categoryWaURL;
+    document.getElementById('mobile-whatsapp-btn').href = categoryWaURL;
+
+
     // 3. Define Data-driven Filter Options (Configurable/Extensible)
     const formsList = ['Tablets', 'Capsules', 'Injectables', 'Syrups', 'Topicals/Creams'];
     const packagingsList = ['10×10 Strips', '10×15 Strips', 'Bottles', 'IV Bags'];
@@ -243,6 +258,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 filteredProducts.forEach(product => {
                     const card = document.createElement('div');
                     card.className = 'product-card';
+
+                    // Dynamic WhatsApp pre-filled template message for product inquiries
+                    const productInquiryText = `Hello Mérokis,
+
+I am interested in the following product:
+
+Product: ${product.name}
+Category: ${catData.tag}
+Form: ${product.form}
+Packaging: ${product.packaging}
+
+Please share product details, availability, export options, MOQ, and pricing.
+
+Thank you.`;
+                    const productWaURL = `https://wa.me/919820051797?text=${encodeURIComponent(productInquiryText)}`;
+
                     card.innerHTML = `
                         <div>
                             <div class="product-badges">
@@ -253,8 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="product-strength">${product.strength}</span>
                             <p>${product.desc}</p>
                         </div>
-                        <div>
-                            <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn-card-enquire">Enquire Now</a>
+                        <div class="product-card-actions">
+                            <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn btn-send-inquiry">Send Inquiry</a>
+                            <a href="${productWaURL}" target="_blank" class="btn btn-whatsapp-now">WhatsApp Now</a>
                         </div>
                     `;
                     productsGrid.appendChild(card);
