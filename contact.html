@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="/whatsapp.css">
-    <script src="/whatsapp.js" defer></script>
+    <link rel="stylesheet" href="whatsapp.css">
 </head>
 <body>
 
@@ -175,22 +174,29 @@
                         </div>
                     </div>
 
-                    <!-- WhatsApp Business Card -->
-                    <div class="contact-info-card whatsapp-contact-card" style="margin-top: 30px;">
+                    <!-- Dedicated WhatsApp Business Card -->
+                    <div class="contact-info-card whatsapp-card reveal-right" style="margin-top: 24px;">
                         <div class="info-header">
-                            <span class="vertical-line"></span>
-                            <h2>WHATSAPP BUSINESS</h2>
+                            <span class="vertical-line" style="background-color: #25D366;"></span>
+                            <h2 style="color: #25D366;">WHATSAPP BUSINESS</h2>
                         </div>
-                        <div class="info-item">
-                            <span class="info-icon" style="font-size: 1.8rem; line-height: 1;">💬</span>
+                        
+                        <div class="info-item" style="margin-top: 20px;">
+                            <span class="info-icon">💬</span>
                             <div class="info-details">
-                                <strong>CHAT WITH US ON WHATSAPP</strong>
-                                <p>Get instant response on product details, MOQs, export filings, and pricing from our sales team.</p>
-                                <a href="https://wa.me/919820051797" target="_blank" class="info-link" style="font-size: 1.25rem; font-weight: 700; color: #C89B2B; margin-top: 4px; display: block;">+91-9820051797</a>
+                                <strong>WHATSAPP BUSINESS</strong>
+                                <a href="https://wa.me/919892133098" target="_blank" rel="noopener noreferrer" class="info-link" style="font-size: 1.2rem; font-weight: 700; color: #25D366; text-decoration: none; display: inline-block; margin-top: 4px;">+91 9892133098</a>
+                                <p style="margin-top: 8px; font-size: 0.9rem; line-height: 1.5; color: #4b5563;">Chat directly with our team for quick pharmaceutical inquiries, product availability, and B2B ordering support.</p>
                             </div>
                         </div>
-                        <div style="margin-top: 20px;">
-                            <a href="https://wa.me/919820051797" target="_blank" class="btn btn-accent btn-whatsapp-chat" style="display: block; text-align: center; text-decoration: none; padding: 14px 20px;">Chat on WhatsApp</a>
+
+                        <div style="margin-top: 24px;">
+                            <a href="https://wa.me/919892133098" target="_blank" rel="noopener noreferrer" class="btn btn-accent whatsapp-btn" style="background-color: #25D366; border-color: #25D366; color: #ffffff; display: inline-flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; padding: 12px 24px; border-radius: 12px; font-size: 0.95rem;">
+                                <svg style="width: 20px; height: 20px; fill: currentColor; display: block;" viewBox="0 0 24 24">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                </svg>
+                                Chat on WhatsApp
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -366,5 +372,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="contact.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919892133098" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-tooltip">Chat With Us</span>
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
 </body>
 </html>

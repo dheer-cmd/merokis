@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/products.css">
     <link rel="stylesheet" href="/category.css">
     <link rel="stylesheet" href="/whatsapp.css">
-    <script src="/whatsapp.js" defer></script>
 </head>
 <body>
 
@@ -121,34 +120,36 @@
                     </div>
                 </main>
 
-                <!-- Desktop Right Sidebar CTA -->
+                <!-- Desktop Right Sidebar WhatsApp CTA -->
                 <aside class="cta-sidebar">
-                    <div class="filter-card whatsapp-sidebar-card">
-                        <h3>WhatsApp Enquiry</h3>
-                        <p>Need custom packaging, special strengths, or bulk pricing? Request category-specific information directly on WhatsApp Business.</p>
-                        <a href="https://wa.me/919820051797" target="_blank" id="sidebar-whatsapp-btn" class="btn btn-primary btn-whatsapp-sidebar" style="display: block; text-align: center; text-decoration: none; padding: 12px; margin-top: 15px; font-weight: 700; font-size: 0.85rem; line-height: 1.4;">
-                            Request Product Information on WhatsApp
+                    <div class="cta-card sticky-cta">
+                        <span class="cta-icon">💬</span>
+                        <h3>Direct WhatsApp Inquiry</h3>
+                        <p>Looking for pricing, bulk quantities, export options, or COA documents for this division? Chat directly with our sales team.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-accent whatsapp-sidebar-btn" id="whatsapp-sidebar-link" style="display: inline-flex; align-items: center; gap: 8px; justify-content: center; font-weight: 700; text-decoration: none;">
+                            <svg style="width: 18px; height: 18px; fill: currentColor; display: block;" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            </svg>
+                            Request Product Info
                         </a>
                     </div>
                 </aside>
-
             </div>
         </div>
     </section>
 
     <!-- Mobile Sticky Filter Bar (Bottom) -->
     <div class="mobile-filter-sticky-bar">
-        <button class="mobile-filter-trigger" id="mobile-filter-open-btn">
+        <button class="mobile-filter-trigger" id="mobile-filter-open-btn" style="flex: 1;">
             <span class="btn-icon">🎛️</span>
             <span class="btn-text">Filters</span>
             <span class="mobile-active-filter-badge" id="mobile-active-count" style="display: none;">0</span>
         </button>
-    </div>
-
-    <!-- Mobile Bottom Sticky WhatsApp Bar -->
-    <div class="mobile-whatsapp-sticky-bar">
-        <a href="https://wa.me/919820051797" target="_blank" id="mobile-whatsapp-btn" class="btn btn-primary btn-whatsapp-sticky" style="display: block; text-align: center; text-decoration: none; font-weight: 700; width: 100%;">
-            Request Product Information on WhatsApp
+        <a href="#" target="_blank" rel="noopener noreferrer" class="mobile-whatsapp-sticky-trigger" id="mobile-whatsapp-sticky-link" style="flex: 1.5; text-decoration: none; display: flex; align-items: center; gap: 8px; justify-content: center; background-color: #25D366; color: #ffffff; padding: 12px 18px; border-radius: 30px; font-weight: 600; font-family: 'Outfit', sans-serif; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.15);">
+            <svg style="width: 16px; height: 16px; fill: currentColor; display: block;" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            </svg>
+            <span class="btn-text">WhatsApp Inquiry</span>
         </a>
     </div>
 
@@ -256,5 +257,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/products-data.js"></script>
     <script src="/category.js" defer></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919892133098" class="whatsapp-float hide-category-mobile" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-tooltip">Chat With Us</span>
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
 </body>
 </html>

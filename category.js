@@ -22,20 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('category-title').textContent = catData.title;
     document.getElementById('category-desc').textContent = catData.desc;
 
-    // Set Category-level WhatsApp links (Auto-fills category name)
-    const categoryEnquiryText = `Hello Mérokis,
+    // Category-level WhatsApp Link Setup
+    const categoryMessage = `Hello Mérokis,
 
-I would like to request product information regarding the following category:
+I am interested in requesting product information for the following category:
 
 Category: ${catData.title}
 
-Please share the complete product list, availability, export options, and pricing.
+Please share the full product list, availability, export options, and MOQ details.
 
 Thank you.`;
-    const categoryWaURL = `https://wa.me/919820051797?text=${encodeURIComponent(categoryEnquiryText)}`;
-    document.getElementById('sidebar-whatsapp-btn').href = categoryWaURL;
-    document.getElementById('mobile-whatsapp-btn').href = categoryWaURL;
 
+    const encodedCategoryMessage = encodeURIComponent(categoryMessage);
+    const categoryWhatsappUrl = `https://wa.me/919892133098?text=${encodedCategoryMessage}`;
+    
+    document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
+    document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
     // 3. Define Data-driven Filter Options (Configurable/Extensible)
     const formsList = ['Tablets', 'Capsules', 'Injectables', 'Syrups', 'Topicals/Creams'];
@@ -259,20 +261,22 @@ Thank you.`;
                     const card = document.createElement('div');
                     card.className = 'product-card';
 
-                    // Dynamic WhatsApp pre-filled template message for product inquiries
-                    const productInquiryText = `Hello Mérokis,
+                    // Product-level WhatsApp Link Setup
+                    const productMessage = `Hello Mérokis,
 
 I am interested in the following product:
 
 Product: ${product.name}
-Category: ${catData.tag}
+Category: ${catData.title}
 Form: ${product.form}
 Packaging: ${product.packaging}
 
 Please share product details, availability, export options, MOQ, and pricing.
 
 Thank you.`;
-                    const productWaURL = `https://wa.me/919820051797?text=${encodeURIComponent(productInquiryText)}`;
+
+                    const encodedProductMessage = encodeURIComponent(productMessage);
+                    const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
                     card.innerHTML = `
                         <div>
@@ -284,9 +288,14 @@ Thank you.`;
                             <span class="product-strength">${product.strength}</span>
                             <p>${product.desc}</p>
                         </div>
-                        <div class="product-card-actions">
-                            <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn btn-send-inquiry">Send Inquiry</a>
-                            <a href="${productWaURL}" target="_blank" class="btn btn-whatsapp-now">WhatsApp Now</a>
+                        <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto;">
+                            <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn-card-enquire" style="font-size: 0.85rem; padding: 10px 4px;">Send Inquiry</a>
+                            <a href="${productWhatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-card-whatsapp" style="font-size: 0.85rem; padding: 10px 4px; display: inline-flex; align-items: center; gap: 4px; justify-content: center;">
+                                <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                </svg>
+                                WhatsApp Now
+                            </a>
                         </div>
                     `;
                     productsGrid.appendChild(card);
