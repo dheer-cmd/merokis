@@ -227,7 +227,7 @@ body {
 }
 
 .logo-img {
-    height: 68px; /* Increased to 68px (approx 40-60% from original template size) for a premium, prominent brand presence */
+    height: 72px; /* Set to 72px for cropped logo (corresponds to ~60px text height) */
     width: auto;
     object-fit: contain;
     transition: var(--transition-fast);
@@ -514,13 +514,13 @@ body {
    ========================================== */
 @media (max-width: 1024px) {
     .logo-img {
-        height: 56px; /* Increased to 56px for tablet screens */
+        height: 62px; /* Set to 62px for tablet screens */
     }
 }
 
 @media (max-width: 768px) {
     .logo-img {
-        height: 46px; /* Increased to 46px for mobile screens */
+        height: 50px; /* Set to 50px for mobile screens */
     }
     .header-container {
         padding: 0 1rem;
