@@ -351,7 +351,7 @@ const catalogueDB = {
         desc: 'Comprehensive range of high-quality antibiotic formulations manufactured to international standards for the treatment of bacterial infections across multiple therapeutic areas.',
         icon: '🧪',
         coverClass: 'grad-blue',
-        count: '12 Items',
+        count: '24 Items',
         downloadMsg: 'Antibiotics Specification Booklet',
         samples: [
             {
@@ -437,6 +437,90 @@ const catalogueDB = {
                 form: 'Tablet',
                 packaging: '10×1×6, 10×1×10',
                 desc: 'Combination antibiotic with beta-lactamase inhibitor and probiotic support.'
+            },
+            {
+                name: 'Ampicillin Injection',
+                strength: '250 mg, 500 mg, 1 g, 2 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Broad-spectrum penicillin antibiotic indicated for moderate to severe bacterial infections.'
+            },
+            {
+                name: 'Ampicillin + Cloxacillin Capsules',
+                strength: 'Ampicillin 250 mg + Cloxacillin 250 mg',
+                form: 'Capsule',
+                packaging: '10×10, 20×10',
+                desc: 'Combination penicillin antibiotic effective against Gram-positive and Gram-negative bacterial infections.'
+            },
+            {
+                name: 'Ampicillin + Sulbactam Injection',
+                strength: '750 mg, 1.5 g, 3 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Broad-spectrum beta-lactam antibiotic with beta-lactamase inhibitor for resistant bacterial infections.'
+            },
+            {
+                name: 'Azithromycin Tablets',
+                strength: '250 mg, 500 mg',
+                form: 'Tablet',
+                packaging: '3×10, 10×3, 10×5',
+                desc: 'Macrolide antibiotic used for respiratory, ENT, skin and soft tissue infections.'
+            },
+            {
+                name: 'Azithromycin Capsules',
+                strength: '250 mg, 500 mg',
+                form: 'Capsule',
+                packaging: '10×6',
+                desc: 'Oral macrolide antibiotic for bacterial infections.'
+            },
+            {
+                name: 'Azithromycin Oral Suspension',
+                strength: '100 mg / 5 ml, 200 mg / 5 ml',
+                form: 'Dry Syrup',
+                packaging: '15 ml, 30 ml',
+                desc: 'Paediatric oral antibiotic suspension.'
+            },
+            {
+                name: 'Azithromycin Injection',
+                strength: '500 mg',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Intravenous macrolide antibiotic for severe bacterial infections.'
+            },
+            {
+                name: 'Aztreonam Injection',
+                strength: '500 mg, 1 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Monobactam antibiotic used for serious Gram-negative bacterial infections.'
+            },
+            {
+                name: 'Bacitracin Ointment',
+                strength: 'Standard formulation',
+                form: 'Ointment',
+                packaging: 'Tube',
+                desc: 'Topical antibiotic used for prevention and treatment of minor skin infections.'
+            },
+            {
+                name: 'Benzathine Penicillin Injection',
+                strength: '6 lakh IU, 12 lakh IU, 24 lakh IU',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Long-acting penicillin antibiotic indicated for susceptible bacterial infections.'
+            },
+            {
+                name: 'Cefaclor Capsules',
+                strength: '250 mg, 500 mg',
+                form: 'Capsule',
+                packaging: '10×10',
+                desc: 'Second-generation cephalosporin antibiotic for respiratory and urinary tract infections.'
+            },
+            {
+                name: 'Cefaclor Dry Syrup',
+                strength: '125 mg / 5 ml, 250 mg / 5 ml',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric cephalosporin antibiotic suspension.'
             }
         ]
     },

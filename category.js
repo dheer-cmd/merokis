@@ -257,8 +257,8 @@ Thank you.`;
         formsList = ['Tablet', 'Injection', 'Dry Syrup'];
         packagingsList = ['10×1×60 mg', '10×1×120 mg', '10×1×6×1 ml', '1×6', '60 ml', '10×10'];
     } else if (catKey === 'antibiotics') {
-        formsList = ['Tablet', 'Capsule', 'Injection', 'Dry Syrup', 'Dispersible Tablet'];
-        packagingsList = ['30×1', '10×10', 'Vial', '2 ml', 'Each Vial', '20×1×1.2 g', '10×6', '30 ml', '30×10', '20×10', '10×1×6', '10×1×10'];
+        formsList = ['Tablet', 'Capsule', 'Injection', 'Dry Syrup', 'Dispersible Tablet', 'Ointment'];
+        packagingsList = ['30×1', '10×10', 'Vial', '2 ml', 'Each Vial', '20×1×1.2 g', '10×6', '30 ml', '30×10', '20×10', '10×1×6', '10×1×10', '3×10', '10×3', '10×5', '15 ml', 'Tube'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
