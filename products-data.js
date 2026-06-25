@@ -351,7 +351,7 @@ const catalogueDB = {
         desc: 'Comprehensive range of high-quality antibiotic formulations manufactured to international standards for the treatment of bacterial infections across multiple therapeutic areas.',
         icon: '🧪',
         coverClass: 'grad-blue',
-        count: '66 Items',
+        count: '85 Items',
         downloadMsg: 'Antibiotics Specification Booklet',
         samples: [
             {
@@ -815,6 +815,139 @@ const catalogueDB = {
                 form: 'Injection',
                 packaging: 'Vial',
                 desc: 'Glycopeptide antibiotic used for serious multidrug-resistant Gram-positive infections.'
+            },
+            {
+                name: 'Cephalexin',
+                strength: '250 mg, 500 mg',
+                form: 'Tablet / Capsule',
+                packaging: '10×10',
+                desc: 'First-generation cephalosporin antibiotic for skin, respiratory, urinary tract, and soft tissue infections.'
+            },
+            {
+                name: 'Chloramphenicol',
+                strength: 'Tablet: 250 mg, Injection: 1 g',
+                form: 'Tablet / Injection',
+                packaging: '30×10, 20×1×1 g',
+                desc: 'Broad-spectrum antibiotic used for serious bacterial infections when clinically indicated.'
+            },
+            {
+                name: 'Ciprofloxacin Eye Drops',
+                strength: 'Ciprofloxacin 0.3% w/v + Dexamethasone 0.05% w/v',
+                form: 'Eye Drops',
+                packaging: '10 ml',
+                desc: 'Sterile ophthalmic antibiotic and corticosteroid combination for bacterial eye infections.'
+            },
+            {
+                name: 'Clindamycin Injection',
+                strength: '300 mg / 2 ml, 600 mg / 4 ml',
+                form: 'Injection',
+                packaging: '25×1×2 ml, 25×1×4 ml',
+                desc: 'Lincosamide antibiotic for severe anaerobic and Gram-positive bacterial infections.'
+            },
+            {
+                name: 'Colistimethate Sodium Injection',
+                strength: '1 Million IU, 2 Million IU, 3 Million IU, 4.5 Million IU',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Polymyxin antibiotic indicated for multidrug-resistant Gram-negative bacterial infections.'
+            },
+            {
+                name: 'Colistin Sodium Injection',
+                strength: '2 Million IU',
+                form: 'Injection',
+                packaging: 'Each Vial',
+                desc: 'Critical care antibiotic for resistant Gram-negative infections.'
+            },
+            {
+                name: 'Doxycycline Injection',
+                strength: '100 mg',
+                form: 'Injection',
+                packaging: '12×1×100 mg',
+                desc: 'Intravenous tetracycline antibiotic for severe bacterial infections.'
+            },
+            {
+                name: 'Doxycycline + Lactic Acid Bacillus Capsules',
+                strength: 'Doxycycline 100 mg + Lactic Acid Bacillus 5 Billion Spores',
+                form: 'Capsule',
+                packaging: '10×10',
+                desc: 'Combination antibiotic with probiotic support to improve gastrointestinal tolerance.'
+            },
+            {
+                name: 'Fluconazole Infusion',
+                strength: '200 mg / 100 ml',
+                form: 'Infusion',
+                packaging: '100 ml Bottle',
+                desc: 'Intravenous antifungal infusion for systemic fungal infections.'
+            },
+            {
+                name: 'Fosfomycin Trometamol',
+                strength: '3 g',
+                form: 'Sachet',
+                packaging: '10×1×8 g',
+                desc: 'Oral antibiotic for uncomplicated urinary tract infections.'
+            },
+            {
+                name: 'Gentamicin Ear Drops',
+                strength: 'Gentamicin + Beclomethasone + Clotrimazole + Lignocaine',
+                form: 'Ear Drops',
+                packaging: '10 ml',
+                desc: 'Combination ear drop formulation for bacterial and fungal ear infections with pain relief.'
+            },
+            {
+                name: 'Imipenem + Cilastatin Injection',
+                strength: 'Imipenem 500 mg + Cilastatin 500 mg',
+                form: 'Injection',
+                packaging: '1 g Vial',
+                desc: 'Carbapenem antibiotic for severe multidrug-resistant bacterial infections.'
+            },
+            {
+                name: 'Meropenem + Sulbactam Injection',
+                strength: 'Meropenem 1000 mg + Sulbactam 500 mg',
+                form: 'Injection',
+                packaging: '1.5 g Vial',
+                desc: 'Advanced carbapenem combination for resistant bacterial infections.'
+            },
+            {
+                name: 'Ofloxacin + Ornidazole Tablets',
+                strength: 'Ofloxacin 100 mg + Ornidazole 250 mg, Ofloxacin 200 mg + Ornidazole 500 mg',
+                form: 'Tablet',
+                packaging: '10×10, 20×10',
+                desc: 'Combination antibacterial and antiprotozoal therapy for gastrointestinal and mixed infections.'
+            },
+            {
+                name: 'Ofloxacin + Metronidazole Suspension',
+                strength: 'Ofloxacin 50 mg + Metronidazole 120 mg + Simethicone 10 mg',
+                form: 'Oral Suspension',
+                packaging: '30 ml',
+                desc: 'Paediatric antibacterial suspension for gastrointestinal infections.'
+            },
+            {
+                name: 'Polymyxin B Injection',
+                strength: '500,000 Units',
+                form: 'Injection',
+                packaging: '5×1×500000 IU',
+                desc: 'Polypeptide antibiotic for severe multidrug-resistant Gram-negative infections.'
+            },
+            {
+                name: 'Rifaximin',
+                strength: '200 mg, 400 mg',
+                form: 'Tablet',
+                packaging: '10×10, 5×10',
+                desc: 'Broad-spectrum gastrointestinal antibiotic indicated for traveller\'s diarrhoea and hepatic encephalopathy.'
+            },
+            {
+                name: 'Co-Trimoxazole Concentrate',
+                strength: 'Trimethoprim 80 mg + Sulphamethoxazole 400 mg',
+                form: 'Injection',
+                packaging: '10×1×5×5 ml',
+                desc: 'Sterile antibacterial concentrate for intravenous administration.'
+            },
+            {
+                name: 'Tigecycline Injection',
+                strength: '50 mg',
+                form: 'Injection',
+                packaging: '10×1×50 mg',
+                desc: 'Glycylcycline antibiotic for complicated multidrug-resistant bacterial infections.'
             }
         ]
     },
