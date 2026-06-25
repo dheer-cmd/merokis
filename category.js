@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria and Antibiotics Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics and Antidiabetic Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -259,6 +259,9 @@ Thank you.`;
     } else if (catKey === 'antibiotics') {
         formsList = ['Tablet', 'Capsule', 'Injection', 'Dry Syrup', 'Dispersible Tablet', 'Ointment', 'Infusion', 'Eye Drops', 'Ear Drops', 'Sachet', 'Oral Suspension'];
         packagingsList = ['30×1', '10×10', 'Vial', '2 ml', 'Each Vial', '20×1×1.2 g', '10×6', '30 ml', '30×10', '20×10', '10×1×6', '10×1×10', '3×10', '10×3', '10×5', '15 ml', 'Tube', '10×1×1 g', '5×10', '1.5 g Vial', '20×1×1.5 g', '20×1×1 g Vial', '9×1×2.5 g', '25×1×1 g', '10×1×1.5 g', '100 ml Bottle', 'Ampoule', '300 ml Bag', '5×5', '20×1×1 g', '25×1×2 ml', '25×1×4 ml', '12×1×100 mg', '10×1×8 g', '5×1×500000 IU', '10×1×5×5 ml', '10×1×50 mg'];
+    } else if (catKey === 'antidiabetic') {
+        formsList = ['Tablet', 'Extended Release Tablet', 'Sustained Release Tablet'];
+        packagingsList = ['10×10 Tablets', '10×15 Tablets', '10×2×10 Tablets'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -491,7 +494,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic') {
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">

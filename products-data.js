@@ -952,19 +952,105 @@ const catalogueDB = {
         ]
     },
     'antidiabetic': {
-        title: 'Antidiabetic Portfolio',
+        title: 'Antidiabetic',
         tag: 'Antidiabetic',
-        desc: 'Advanced oral hypoglycemics and glycemic management therapies for diabetes care.',
+        desc: 'Comprehensive antidiabetic pharmaceutical solutions for effective blood glucose management, manufactured according to international quality standards.',
         icon: '🩸',
         coverClass: 'grad-blue-dark',
-        count: '40 Items',
+        count: '13 Items',
         downloadMsg: 'Antidiabetic Specification Booklet',
         samples: [
-            { name: 'Metformin Hydrochloride ER', strength: '500mg', form: 'Tablets', packaging: 'Bottles', desc: 'First-line biguanide antihyperglycemic improving insulin sensitivity.' },
-            { name: 'Glimepiride Tablets', strength: '2mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Sulfonylurea stimulating pancreatic beta cells to release more insulin.' },
-            { name: 'Sitagliptin Phosphate', strength: '100mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'DPP-4 inhibitor maintaining higher levels of active incretin hormones.' },
-            { name: 'Pioglitazone Tablets', strength: '15mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Thiazolidinedione acting as a selective agonist for PPAR-gamma receptors.' },
-            { name: 'Dapagliflozin Tablets', strength: '10mg', form: 'Tablets', packaging: 'Bottles', desc: 'SGLT2 inhibitor promoting urinary glucose excretion.' }
+            {
+                name: 'Dapagliflozin Tablets',
+                strength: '5 mg, 10 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'SGLT2 inhibitor used for the management of Type 2 Diabetes Mellitus.'
+            },
+            {
+                name: 'Dapagliflozin + Metformin Extended Release Tablets',
+                strength: 'Dapagliflozin 10 mg + Metformin 500 mg',
+                form: 'Extended Release Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Combination therapy for improved glycaemic control in Type 2 Diabetes.'
+            },
+            {
+                name: 'Dapagliflozin + Sitagliptin + Metformin Tablets',
+                strength: 'Dapagliflozin 10 mg + Sitagliptin 100 mg + Metformin 500 mg, Dapagliflozin 10 mg + Sitagliptin 100 mg + Metformin 1000 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Triple combination antidiabetic therapy providing comprehensive blood glucose control.'
+            },
+            {
+                name: 'Empagliflozin Tablets',
+                strength: '10 mg, 25 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'SGLT2 inhibitor indicated for Type 2 Diabetes Mellitus.'
+            },
+            {
+                name: 'Empagliflozin + Metformin Tablets',
+                strength: 'Empagliflozin 12.5 mg + Metformin 500 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Combination therapy for enhanced glycaemic control.'
+            },
+            {
+                name: 'Glimepiride + Metformin Tablets',
+                strength: 'Glimepiride 1 mg + Metformin 500 mg, Glimepiride 2 mg + Metformin 500 mg',
+                form: 'Tablet',
+                packaging: '10×15 Tablets, 10×2×10 Tablets',
+                desc: 'Sulfonylurea and biguanide combination for effective blood glucose management.'
+            },
+            {
+                name: 'Glimepiride + Metformin + Voglibose Tablets',
+                strength: 'Glimepiride 1 mg + Metformin 500 mg + Voglibose 0.3 mg, Glimepiride 3 mg + Metformin 500 mg + Voglibose 0.3 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Triple combination therapy for improved postprandial and fasting glucose control.'
+            },
+            {
+                name: 'Gliclazide + Metformin Tablets',
+                strength: 'Gliclazide 80 mg + Metformin 500 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Combination antidiabetic formulation for Type 2 Diabetes Mellitus.'
+            },
+            {
+                name: 'Metformin HCl SR Tablets',
+                strength: '850 mg, 1000 mg',
+                form: 'Sustained Release Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Sustained-release metformin formulation for long-term glycaemic management.'
+            },
+            {
+                name: 'Sitagliptin Tablets',
+                strength: '50 mg, 100 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'DPP-4 inhibitor for blood glucose management in Type 2 Diabetes.'
+            },
+            {
+                name: 'Sitagliptin + Metformin Tablets',
+                strength: 'Sitagliptin 50 mg + Metformin 500 mg',
+                form: 'Tablet',
+                packaging: '10×15 Tablets',
+                desc: 'Combination therapy for improved glycaemic control.'
+            },
+            {
+                name: 'Vildagliptin Tablets',
+                strength: '50 mg, 100 mg SR',
+                form: 'Tablet',
+                packaging: '10×15 Tablets',
+                desc: 'DPP-4 inhibitor for effective blood glucose control.'
+            },
+            {
+                name: 'Vildagliptin + Metformin Tablets',
+                strength: 'Vildagliptin 50 mg + Metformin 500 mg',
+                form: 'Tablet',
+                packaging: '10×15 Tablets',
+                desc: 'Combination therapy for patients requiring dual antidiabetic treatment.'
+            }
         ]
     },
     'antifungal': {
