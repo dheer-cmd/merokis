@@ -47,8 +47,8 @@ Thank you.`;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                border-top: 1px solid rgba(255,255,255,0.1);
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid rgba(0, 58, 153, 0.15);
+                border-bottom: 1px solid rgba(0, 58, 153, 0.15);
                 padding: 10px 0;
             }
             .onc-spec-row {
@@ -57,13 +57,25 @@ Thank you.`;
                 font-size: 0.88rem;
             }
             .onc-spec-label {
-                color: rgba(255,255,255,0.6);
                 font-weight: 500;
             }
             .onc-spec-value {
-                color: #ffffff;
                 font-weight: 600;
                 text-align: right;
+            }
+            /* Card spec colors */
+            .product-card .onc-spec-label {
+                color: #4b5563;
+            }
+            .product-card .onc-spec-value {
+                color: #0b132b;
+            }
+            /* Modal spec colors */
+            .onc-details-modal .onc-spec-label {
+                color: rgba(255,255,255,0.6);
+            }
+            .onc-details-modal .onc-spec-value {
+                color: #ffffff;
             }
             .btn-card-details {
                 border: 1px solid #C89B2B;
@@ -487,7 +499,7 @@ Thank you.`;
                                         <span class="onc-spec-value">${product.packaging}</span>
                                     </div>
                                 </div>
-                                <p class="product-desc-short" style="font-size: 0.9rem; line-height: 1.5; color: rgba(255,255,255,0.7); margin-bottom: 20px;">${product.desc}</p>
+                                <p class="product-desc-short" style="font-size: 0.9rem; line-height: 1.5; color: #4b5563; margin-bottom: 20px;">${product.desc}</p>
                             </div>
                             <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: auto;">
                                 <button class="btn-card-details" onclick="openProductDetailsModal('${product.name.replace(/'/g, "\\'")}')" style="font-size: 0.85rem; padding: 10px 4px; border: 1px solid #C89B2B; background: transparent; color: #C89B2B; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; height: 38px;">View Details</button>
