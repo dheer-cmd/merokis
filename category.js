@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics and Antidiabetic Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic and Antifungal Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -262,6 +262,9 @@ Thank you.`;
     } else if (catKey === 'antidiabetic') {
         formsList = ['Tablet', 'Extended Release Tablet', 'Sustained Release Tablet'];
         packagingsList = ['10×10 Tablets', '10×15 Tablets', '10×2×10 Tablets'];
+    } else if (catKey === 'antifungal') {
+        formsList = ['Cream', 'Capsule', 'Injection'];
+        packagingsList = ['20×1×15 g', '10×1×10 Capsules', '10×1×200 mg'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -494,7 +497,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal') {
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">

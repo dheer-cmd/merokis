@@ -1054,19 +1054,35 @@ const catalogueDB = {
         ]
     },
     'antifungal': {
-        title: 'Antifungal Portfolio',
+        title: 'Antifungal',
         tag: 'Antifungal',
-        desc: 'Oral and topical antimycotics for targeted treatment of fungal skin and systemic infections.',
+        desc: 'High-quality antifungal pharmaceutical formulations for the treatment of fungal infections, manufactured according to international quality standards.',
         icon: '🍄',
         coverClass: 'grad-green',
-        count: '20 Items',
+        count: '3 Items',
         downloadMsg: 'Antifungal Specification Booklet',
         samples: [
-            { name: 'Fluconazole Capsules', strength: '150mg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Systemic triazole antifungal for cryptococcal meningitis and candida.' },
-            { name: 'Itraconazole Capsules', strength: '100mg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Broad-spectrum triazole antifungal active against deep-seated mycoses.' },
-            { name: 'Terbinafine Tablets', strength: '250mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Allylamine antifungal agent concentrating in skin and nails.' },
-            { name: 'Luliconazole Cream', strength: '1% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Imidazole antifungal cream for tinea pedis, cruris, and corporis.' },
-            { name: 'Ketoconazole Cream', strength: '2% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Topical broad-spectrum imidazole antifungal agent.' }
+            {
+                name: 'Clotrimazole Cream IP',
+                strength: '1% w/w',
+                form: 'Cream',
+                packaging: '20×1×15 g',
+                desc: 'Topical antifungal cream indicated for the treatment of fungal skin infections including ringworm, athlete\'s foot, and candidiasis.'
+            },
+            {
+                name: 'Itraconazole Capsules',
+                strength: '100 mg, 200 mg',
+                form: 'Capsule',
+                packaging: '10×1×10 Capsules',
+                desc: 'Broad-spectrum triazole antifungal used for systemic and superficial fungal infections.'
+            },
+            {
+                name: 'Voriconazole for Injection IP',
+                strength: '200 mg',
+                form: 'Injection',
+                packaging: '10×1×200 mg',
+                desc: 'Broad-spectrum injectable antifungal indicated for serious invasive fungal infections.'
+            }
         ]
     },
     'antipsychotic': {
