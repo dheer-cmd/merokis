@@ -40,8 +40,26 @@ Thank you.`;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
     // 3. Define Data-driven Filter Options (Configurable/Extensible)
-    const formsList = ['Tablets', 'Capsules', 'Injectables', 'Syrups', 'Topicals/Creams'];
-    const packagingsList = ['10×10 Strips', '10×15 Strips', 'Bottles', 'IV Bags'];
+    let formsList = ['Tablets', 'Capsules', 'Injectables', 'Syrups', 'Topicals/Creams'];
+    let packagingsList = ['10×10 Strips', '10×15 Strips', 'Bottles', 'IV Bags'];
+
+    if (catKey === 'oncology-drugs') {
+        formsList = ['Tablet', 'Capsule', 'Injection'];
+        packagingsList = [];
+        
+        // Hide packaging filter sidebar card on desktop
+        document.querySelectorAll('.filter-card').forEach((card, idx) => {
+            if (idx === 1) card.style.display = 'none';
+        });
+        
+        // Hide mobile drawer packaging section
+        setTimeout(() => {
+            const mobileSections = document.querySelectorAll('.drawer-filter-section');
+            if (mobileSections.length > 1) {
+                mobileSections[1].style.display = 'none';
+            }
+        }, 50);
+    }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
     const renderFilterCheckboxes = () => {
@@ -278,26 +296,52 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    card.innerHTML = `
-                        <div>
-                            <div class="product-badges">
-                                <span class="product-badge badge-form">${product.form}</span>
-                                <span class="product-badge badge-packaging">${product.packaging}</span>
+                    if (catKey === 'oncology-drugs') {
+                        // Oncology specific card: display Product Name (combined with strength), Dosage Form, Pack Size,
+                        // "View Details" button, "Send Inquiry" button, and "WhatsApp Now" button
+                        card.innerHTML = `
+                            <div>
+                                <div class="product-badges">
+                                    <span class="product-badge badge-form">${product.form}</span>
+                                    <span class="product-badge badge-packaging">${product.packaging}</span>
+                                </div>
+                                <h3 style="margin-top: 10px; font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: #080b11;">${product.name} ${product.strength}</h3>
                             </div>
-                            <h3>${product.name}</h3>
-                            <span class="product-strength">${product.strength}</span>
-                            <p>${product.desc}</p>
-                        </div>
-                        <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto;">
-                            <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn-card-enquire" style="font-size: 0.85rem; padding: 10px 4px;">Send Inquiry</a>
-                            <a href="${productWhatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-card-whatsapp" style="font-size: 0.85rem; padding: 10px 4px; display: inline-flex; align-items: center; gap: 4px; justify-content: center;">
-                                <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24">
-                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                                </svg>
-                                WhatsApp Now
-                            </a>
-                        </div>
-                    `;
+                            <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: auto; padding-top: 15px; width: 100%;">
+                                <button onclick="showProductDetailsModal('${product.name.replace(/'/g, "\\'")}', '${product.form}', '${product.packaging}', '${(product.desc || '').replace(/'/g, "\\'")}', '${product.strength}')" class="btn-card-details" style="font-size: 0.85rem; padding: 10px 4px; background-color: #f7fafc; color: #4a5568; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; font-weight: 600; text-align: center; display: inline-flex; align-items: center; justify-content: center; width: 100%; transition: all 0.3s; font-family: 'Outfit', sans-serif;">View Details</button>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%;">
+                                    <a href="/contact.html?enquiry=Product Inquiry: ${product.name} ${product.strength}" class="btn-card-enquire" style="font-size: 0.85rem; padding: 10px 4px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; border: 1px solid var(--primary-color, #003A99); display: inline-flex; align-items: center; justify-content: center;">Send Inquiry</a>
+                                    <a href="${productWhatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-card-whatsapp" style="font-size: 0.85rem; padding: 10px 4px; display: inline-flex; align-items: center; gap: 4px; justify-content: center; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                                        <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24">
+                                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                        </svg>
+                                        WhatsApp Now
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        card.innerHTML = `
+                            <div>
+                                <div class="product-badges">
+                                    <span class="product-badge badge-form">${product.form}</span>
+                                    <span class="product-badge badge-packaging">${product.packaging}</span>
+                                </div>
+                                <h3>${product.name}</h3>
+                                <span class="product-strength">${product.strength}</span>
+                                <p>${product.desc}</p>
+                            </div>
+                            <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto;">
+                                <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn-card-enquire" style="font-size: 0.85rem; padding: 10px 4px;">Send Inquiry</a>
+                                <a href="${productWhatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-card-whatsapp" style="font-size: 0.85rem; padding: 10px 4px; display: inline-flex; align-items: center; gap: 4px; justify-content: center;">
+                                    <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24">
+                                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                    </svg>
+                                    WhatsApp Now
+                                </a>
+                            </div>
+                        `;
+                    }
                     productsGrid.appendChild(card);
                 });
 
@@ -391,3 +435,70 @@ Thank you.`;
     syncStateFromURL();
     applyFilters(false);
 });
+
+// Dynamic Product Details Modal for Oncology Drugs
+window.showProductDetailsModal = (name, form, packaging, desc, strength) => {
+    let detailModal = document.getElementById('product-detail-modal');
+    if (!detailModal) {
+        detailModal = document.createElement('div');
+        detailModal.id = 'product-detail-modal';
+        detailModal.className = 'catalogue-modal';
+        document.body.appendChild(detailModal);
+    }
+    
+    const productMessage = `Hello Mérokis,
+
+I am interested in the following product:
+
+Product: ${name} ${strength}
+Category: Oncology Drugs
+Form: ${form}
+Packaging: ${packaging}
+
+Please share product details, availability, export options, MOQ, and pricing.
+
+Thank you.`;
+
+    const encodedProductMessage = encodeURIComponent(productMessage);
+    const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
+
+    detailModal.innerHTML = `
+        <div class="modal-backdrop" onclick="closeProductDetailsModal()"></div>
+        <div class="modal-wrapper" style="max-width: 600px; padding: 40px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.05);">
+            <button class="modal-close-btn" onclick="closeProductDetailsModal()" style="top: 20px; right: 20px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #a0aec0; transition: color 0.2s;">&times;</button>
+            <div style="margin-bottom: 20px;">
+                <span class="product-badge badge-form" style="background-color: rgba(0, 58, 153, 0.08); color: #003A99; font-weight: 600; padding: 6px 12px; border-radius: 12px; font-size: 0.8rem; text-transform: uppercase; font-family: 'Outfit', sans-serif;">${form}</span>
+                <span class="product-badge badge-packaging" style="background-color: rgba(200, 155, 43, 0.08); color: #c89b2b; font-weight: 600; padding: 6px 12px; border-radius: 12px; font-size: 0.8rem; margin-left: 8px; font-family: 'Outfit', sans-serif;">Pack Size: ${packaging}</span>
+            </div>
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; color: #080b11; margin-bottom: 8px; font-weight: 700; line-height: 1.25;">${name} ${strength}</h2>
+            
+            <div style="border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; padding: 20px 0; margin-bottom: 24px; margin-top: 20px;">
+                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: #718096; margin-bottom: 8px; margin-top: 0;">Product Overview</h4>
+                <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #4a5568; margin: 0;">${desc}</p>
+            </div>
+            
+            <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%;">
+                <a href="/contact.html?enquiry=Product Inquiry: ${name} ${strength}" class="btn-card-enquire" style="font-size: 0.95rem; padding: 12px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: 600; border: 1px solid var(--primary-color, #003A99); display: inline-flex; align-items: center; justify-content: center; height: 45px; box-sizing: border-box;">Send Inquiry</a>
+                <a href="${productWhatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-card-whatsapp" style="font-size: 0.95rem; padding: 12px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; justify-content: center; height: 45px; box-sizing: border-box;">
+                    <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                    </svg>
+                    WhatsApp Now
+                </a>
+            </div>
+        </div>
+    `;
+
+    setTimeout(() => {
+        detailModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }, 10);
+};
+
+window.closeProductDetailsModal = () => {
+    const detailModal = document.getElementById('product-detail-modal');
+    if (detailModal) {
+        detailModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};

@@ -278,19 +278,33 @@ const catalogueDB = {
         ]
     },
     'oncology-drugs': {
-        title: 'Oncology Therapeutics',
+        title: 'Oncology Drugs',
         tag: 'Oncology',
-        desc: 'Cytotoxic chemotherapies, targeted biologics, and supportive oncology care.',
+        desc: 'Comprehensive oncology pharmaceutical solutions designed for cancer treatment and supportive care, manufactured to international quality standards.',
         icon: '🎗️',
         coverClass: 'grad-orange',
-        count: '32 Items',
+        count: '19 Items',
         downloadMsg: 'Oncology Drugs Specification Booklet',
         samples: [
-            { name: 'Doxorubicin Injection', strength: '50mg', form: 'Injectables', packaging: 'IV Bags', desc: 'Anthracycline topoisomerase II inhibitor for various solid tumors.' },
-            { name: 'Paclitaxel Infusion', strength: '100mg', form: 'Injectables', packaging: 'IV Bags', desc: 'Microtubule stabilizer indicated for breast, ovarian, and lung cancers.' },
-            { name: 'Imatinib Mesylate Tablets', strength: '400mg', form: 'Tablets', packaging: 'Bottles', desc: 'Tyrosine kinase inhibitor targeting BCR-ABL in Philadelphia+ leukemia.' },
-            { name: 'Gemcitabine Injection', strength: '1g', form: 'Injectables', packaging: 'IV Bags', desc: 'Nucleoside metabolic inhibitor for pancreatic and lung carcinomas.' },
-            { name: 'Erlotinib Tablets', strength: '150mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'EGFR tyrosine kinase inhibitor for non-small cell lung cancer.' }
+            { name: 'Abiraterone Acetate Tablets IP', strength: '250 mg', form: 'Tablet', packaging: '1×120', desc: 'Androgen biosynthesis inhibitor indicated for use in combination with prednisone for the treatment of metastatic castration-resistant prostate cancer.' },
+            { name: 'Abiraterone Acetate Tablets IP', strength: '500 mg', form: 'Tablet', packaging: '1×60', desc: 'High-strength androgen biosynthesis inhibitor for combination therapy in patients with metastatic castration-resistant prostate cancer.' },
+            { name: 'Azathioprine Tablets IP', strength: '50 mg', form: 'Tablet', packaging: '10×10', desc: 'Immunosuppressive purine antimetabolite indicated as an adjunct for the prevention of rejection in renal homotransplants and management of severe rheumatoid arthritis.' },
+            { name: 'Bicalutamide Tablets IP', strength: '50 mg', form: 'Tablet', packaging: '3×10', desc: 'Non-steroidal androgen receptor inhibitor indicated for use in combination therapy for the treatment of metastatic prostate carcinoma.' },
+            { name: 'Capecitabine Tablets IP', strength: '500 mg', form: 'Tablet', packaging: '10×10', desc: 'Fluoropyrimidine carbamate nucleoside analog indicated as monotherapy or combination therapy for adjuvant colon cancer, colorectal cancer, and metastatic breast cancer.' },
+            { name: 'Gefitinib Tablets IP', strength: '250 mg', form: 'Tablet', packaging: '3×10', desc: 'Kinase inhibitor indicated for the first-line treatment of patients with metastatic non-small cell lung cancer (NSCLC) harboring EGFR mutations.' },
+            { name: 'Hydroxyurea Capsules IP', strength: '250 mg', form: 'Capsule', packaging: '10×10', desc: 'Antineoplastic agent indicated for resistant chronic myelogenous leukemia, melanoma, and recurrent squamous cell carcinoma of the head and neck.' },
+            { name: 'Hydroxyurea Capsules IP', strength: '500 mg', form: 'Capsule', packaging: '10×10', desc: 'Standard-strength antineoplastic capsule indicated for myeloproliferative disorders, chronic myeloid leukemia, and sickle cell anemia management.' },
+            { name: 'Imatinib Tablets IP', strength: '400 mg', form: 'Tablet', packaging: '3×10', desc: 'Tyrosine kinase inhibitor indicated for Philadelphia chromosome-positive chronic myeloid leukemia (Ph+ CML) and gastrointestinal stromal tumors (GIST).' },
+            { name: 'Lenalidomide Capsules IP', strength: '10 mg', form: 'Capsule', packaging: '1×30', desc: 'Thalidomide analogue indicated for the treatment of patients with multiple myeloma in combination with dexamethasone.' },
+            { name: 'Lenalidomide Capsules IP', strength: '25 mg', form: 'Capsule', packaging: '1×30', desc: 'Immunomodulatory agent indicated for patients with transfusion-dependent anemia due to low- or intermediate-1-risk myelodysplastic syndromes.' },
+            { name: 'Methotrexate Injection IP', strength: '50 mg / 2 ml', form: 'Injection', packaging: '25×1×2 ml', desc: 'Antimetabolite indicated for gestational choriocarcinoma, leukemia, active rheumatoid arthritis, and severe psoriasis control.' },
+            { name: 'Methylprednisolone Sodium Succinate for Injection USP', strength: '40 mg + SWFI', form: 'Injection', packaging: '20×1×40 mg', desc: 'Corticosteroid indicated as an anti-inflammatory or immunosuppressive agent for acute allergic, dermatologic, or neoplastic conditions.' },
+            { name: 'Methylprednisolone Sodium Succinate for Injection USP', strength: '125 mg + SWFI', form: 'Injection', packaging: '25×1×125 mg', desc: 'Intravenous corticosteroid solution providing systemic anti-inflammatory support in acute autoimmune and oncology treatments.' },
+            { name: 'Methylprednisolone Sodium Succinate for Injection USP', strength: '500 mg + SWFI', form: 'Injection', packaging: '16×1×500 mg', desc: 'High-dose glucocorticoid injection for pulse therapy in severe inflammatory exacerbations and adjunctive oncology care.' },
+            { name: 'Methylprednisolone Sodium Succinate for Injection USP', strength: '1000 mg + SWFI', form: 'Injection', packaging: '10×1×1 g', desc: 'Maximum-dose systemic corticosteroid sterile powder for injection in severe acute inflammatory and immunosuppressive therapies.' },
+            { name: 'Tamoxifen Citrate Tablets IP', strength: '10 mg', form: 'Tablet', packaging: '10×10', desc: 'Selective estrogen receptor modulator (SERM) indicated for the treatment of breast cancer and risk reduction in high-risk women.' },
+            { name: 'Tamoxifen Citrate Tablets IP', strength: '20 mg', form: 'Tablet', packaging: '10×10', desc: 'Standard-strength SERM indicated for adjuvant treatment of node-positive or node-negative breast cancer in women and men.' },
+            { name: 'Zoledronic Acid Injection IP', strength: '4 mg + SWFI (Lyophilized)', form: 'Injection', packaging: '12×1×4 mg', desc: 'Bisphosphonate indicated for the treatment of hypercalcemia of malignancy and multiple myeloma bone metastases.' }
         ]
     },
     'orthopaedic-rehabilitation': {
