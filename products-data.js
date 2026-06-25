@@ -351,7 +351,7 @@ const catalogueDB = {
         desc: 'Comprehensive range of high-quality antibiotic formulations manufactured to international standards for the treatment of bacterial infections across multiple therapeutic areas.',
         icon: '🧪',
         coverClass: 'grad-blue',
-        count: '43 Items',
+        count: '66 Items',
         downloadMsg: 'Antibiotics Specification Booklet',
         samples: [
             {
@@ -654,6 +654,167 @@ const catalogueDB = {
                 form: 'Injection',
                 packaging: 'Vial, 10×1×1.5 g',
                 desc: 'Combination injectable antibiotic for resistant bacterial infections.'
+            },
+            {
+                name: 'Cefuroxime Tablets',
+                strength: '250 mg, 500 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Second-generation cephalosporin antibiotic used for respiratory, urinary tract, skin, and soft tissue infections.'
+            },
+            {
+                name: 'Cefuroxime Axetil Dry Syrup',
+                strength: '125 mg / 5 ml',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric cephalosporin suspension for bacterial infections.'
+            },
+            {
+                name: 'Ciprofloxacin Tablets',
+                strength: '250 mg, 500 mg, 750 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Fluoroquinolone antibiotic for respiratory, urinary tract, gastrointestinal, and systemic bacterial infections.'
+            },
+            {
+                name: 'Ciprofloxacin Infusion',
+                strength: '200 mg / 100 ml',
+                form: 'Infusion',
+                packaging: '100 ml Bottle',
+                desc: 'Intravenous fluoroquinolone antibiotic for hospitalized patients.'
+            },
+            {
+                name: 'Clindamycin Capsules',
+                strength: '150 mg, 300 mg',
+                form: 'Capsule',
+                packaging: '10×10',
+                desc: 'Lincosamide antibiotic used for anaerobic and Gram-positive bacterial infections.'
+            },
+            {
+                name: 'Clarithromycin Tablets',
+                strength: '250 mg, 500 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Macrolide antibiotic indicated for respiratory tract and skin infections.'
+            },
+            {
+                name: 'Doxycycline Capsules',
+                strength: '100 mg',
+                form: 'Capsule',
+                packaging: '10×10',
+                desc: 'Broad-spectrum tetracycline antibiotic for respiratory, skin, and sexually transmitted infections.'
+            },
+            {
+                name: 'Ertapenem Injection',
+                strength: '1 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Carbapenem antibiotic for complicated bacterial infections.'
+            },
+            {
+                name: 'Faropenem Tablets',
+                strength: '200 mg, 300 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Oral carbapenem antibiotic with broad-spectrum antibacterial activity.'
+            },
+            {
+                name: 'Gentamicin Injection',
+                strength: '40 mg / 2 ml, 80 mg / 2 ml',
+                form: 'Injection',
+                packaging: 'Ampoule',
+                desc: 'Aminoglycoside antibiotic for severe bacterial infections.'
+            },
+            {
+                name: 'Levofloxacin Tablets',
+                strength: '250 mg, 500 mg, 750 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Broad-spectrum fluoroquinolone antibiotic for respiratory and urinary tract infections.'
+            },
+            {
+                name: 'Levofloxacin Infusion',
+                strength: '500 mg / 100 ml',
+                form: 'Infusion',
+                packaging: '100 ml Bottle',
+                desc: 'Intravenous fluoroquinolone therapy for hospitalized patients.'
+            },
+            {
+                name: 'Linezolid Tablets',
+                strength: '600 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Oxazolidinone antibiotic effective against resistant Gram-positive organisms.'
+            },
+            {
+                name: 'Linezolid Infusion',
+                strength: '600 mg / 300 ml',
+                form: 'Infusion',
+                packaging: '300 ml Bag',
+                desc: 'Intravenous formulation for multidrug-resistant bacterial infections.'
+            },
+            {
+                name: 'Meropenem Injection',
+                strength: '500 mg, 1 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Broad-spectrum carbapenem antibiotic for severe hospital-acquired infections.'
+            },
+            {
+                name: 'Metronidazole Tablets',
+                strength: '200 mg, 400 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Antibacterial and antiprotozoal medicine for anaerobic bacterial infections.'
+            },
+            {
+                name: 'Metronidazole Infusion',
+                strength: '500 mg / 100 ml',
+                form: 'Infusion',
+                packaging: '100 ml Bottle',
+                desc: 'Intravenous therapy for anaerobic bacterial infections.'
+            },
+            {
+                name: 'Moxifloxacin Tablets',
+                strength: '400 mg',
+                form: 'Tablet',
+                packaging: '5×5, 10×5',
+                desc: 'Fourth-generation fluoroquinolone antibiotic for respiratory tract infections.'
+            },
+            {
+                name: 'Nitrofurantoin Capsules',
+                strength: '100 mg',
+                form: 'Capsule',
+                packaging: '10×10',
+                desc: 'Urinary tract antibacterial agent.'
+            },
+            {
+                name: 'Ofloxacin Tablets',
+                strength: '200 mg, 400 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Fluoroquinolone antibiotic for respiratory, urinary, and gastrointestinal infections.'
+            },
+            {
+                name: 'Piperacillin + Tazobactam Injection',
+                strength: '2.25 g, 4.5 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Broad-spectrum penicillin with beta-lactamase inhibitor for severe infections.'
+            },
+            {
+                name: 'Teicoplanin Injection',
+                strength: '200 mg, 400 mg',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Glycopeptide antibiotic for resistant Gram-positive bacterial infections.'
+            },
+            {
+                name: 'Vancomycin Injection',
+                strength: '500 mg, 1 g',
+                form: 'Injection',
+                packaging: 'Vial',
+                desc: 'Glycopeptide antibiotic used for serious multidrug-resistant Gram-positive infections.'
             }
         ]
     },

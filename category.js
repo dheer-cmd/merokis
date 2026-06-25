@@ -257,8 +257,8 @@ Thank you.`;
         formsList = ['Tablet', 'Injection', 'Dry Syrup'];
         packagingsList = ['10×1×60 mg', '10×1×120 mg', '10×1×6×1 ml', '1×6', '60 ml', '10×10'];
     } else if (catKey === 'antibiotics') {
-        formsList = ['Tablet', 'Capsule', 'Injection', 'Dry Syrup', 'Dispersible Tablet', 'Ointment'];
-        packagingsList = ['30×1', '10×10', 'Vial', '2 ml', 'Each Vial', '20×1×1.2 g', '10×6', '30 ml', '30×10', '20×10', '10×1×6', '10×1×10', '3×10', '10×3', '10×5', '15 ml', 'Tube', '10×1×1 g', '5×10', '1.5 g Vial', '20×1×1.5 g', '20×1×1 g Vial', '9×1×2.5 g', '25×1×1 g', '10×1×1.5 g'];
+        formsList = ['Tablet', 'Capsule', 'Injection', 'Dry Syrup', 'Dispersible Tablet', 'Ointment', 'Infusion'];
+        packagingsList = ['30×1', '10×10', 'Vial', '2 ml', 'Each Vial', '20×1×1.2 g', '10×6', '30 ml', '30×10', '20×10', '10×1×6', '10×1×10', '3×10', '10×3', '10×5', '15 ml', 'Tube', '10×1×1 g', '5×10', '1.5 g Vial', '20×1×1.5 g', '20×1×1 g Vial', '9×1×2.5 g', '25×1×1 g', '10×1×1.5 g', '100 ml Bottle', 'Ampoule', '300 ml Bag', '5×5'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
