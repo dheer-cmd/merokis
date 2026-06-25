@@ -346,20 +346,98 @@ const catalogueDB = {
         ]
     },
     'antibiotics': {
-        title: 'Antibiotics Portfolio',
+        title: 'Antibiotics',
         tag: 'Antibiotics',
-        desc: 'Broad and narrow-spectrum antibacterial formulations for robust systemic infection control.',
+        desc: 'Comprehensive range of high-quality antibiotic formulations manufactured to international standards for the treatment of bacterial infections across multiple therapeutic areas.',
         icon: '🧪',
         coverClass: 'grad-blue',
-        count: '55 Items',
+        count: '12 Items',
         downloadMsg: 'Antibiotics Specification Booklet',
         samples: [
-            { name: 'Amoxicillin & Clavulanate', strength: '625mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Combination beta-lactamase inhibitor and penicillin for systemic infections.' },
-            { name: 'Azithromycin Tablets USP', strength: '500mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Macrolide antibiotic targeting bacterial protein synthesis.' },
-            { name: 'Ceftriaxone Injection USP', strength: '1g', form: 'Injectables', packaging: 'IV Bags', desc: 'Third-generation cephalosporin for severe respiratory, urinary, and skin infections.' },
-            { name: 'Ciprofloxacin Tablets', strength: '500mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Fluoroquinolone broad-spectrum antibacterial targeting DNA gyrase.' },
-            { name: 'Meropenem Injection', strength: '1g', form: 'Injectables', packaging: 'IV Bags', desc: 'Ultra-broad spectrum carbapenem antibiotic for severe nosocomial infections.' },
-            { name: 'Doxycycline Capsules', strength: '100mg', form: 'Capsules', packaging: '10×15 Strips', desc: 'Tetracycline antibiotic for bacterial acne, Lyme disease, and chlamydia.' }
+            {
+                name: 'Albendazole Tablets',
+                strength: '400 mg',
+                form: 'Tablet',
+                packaging: '30×1, 10×10',
+                desc: 'Broad-spectrum anthelmintic medicine used for the treatment of intestinal worm infections.'
+            },
+            {
+                name: 'Albendazole + Ivermectin Tablets',
+                strength: 'Albendazole 400 mg + Ivermectin 6 mg',
+                form: 'Tablet',
+                packaging: '30×1, 10×10',
+                desc: 'Combination antiparasitic therapy for mixed helminthic infestations.'
+            },
+            {
+                name: 'Amikacin Injection',
+                strength: '100 mg, 250 mg, 500 mg, 500 mg / 2 ml',
+                form: 'Injection',
+                packaging: 'Vial, 2 ml',
+                desc: 'Aminoglycoside antibiotic indicated for severe bacterial infections caused by susceptible organisms.'
+            },
+            {
+                name: 'Amoxicillin + Clavulanic Acid Injection',
+                strength: '1000 mg + 200 mg, 1.2 g',
+                form: 'Injection',
+                packaging: 'Each Vial, 20×1×1.2 g',
+                desc: 'Broad-spectrum beta-lactam antibiotic combined with beta-lactamase inhibitor for resistant bacterial infections.'
+            },
+            {
+                name: 'Amoxicillin + Clavulanic Acid Tablets',
+                strength: '500 mg + 125 mg',
+                form: 'Tablet',
+                packaging: '10×10, 10×6',
+                desc: 'Combination antibiotic for respiratory, urinary tract, skin, and soft tissue infections.'
+            },
+            {
+                name: 'Amoxicillin + Clavulanic Acid Dry Syrup',
+                strength: '200 mg + 28.5 mg, 400 mg + 57 mg',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric oral suspension formulated for bacterial infections in children.'
+            },
+            {
+                name: 'Amoxycillin Capsules',
+                strength: '250 mg, 500 mg',
+                form: 'Capsule',
+                packaging: '30×10, 20×10',
+                desc: 'Broad-spectrum penicillin antibiotic for susceptible bacterial infections.'
+            },
+            {
+                name: 'Amoxycillin Tablets',
+                strength: '250 mg, 500 mg',
+                form: 'Tablet',
+                packaging: '30×10, 20×10',
+                desc: 'Broad-spectrum oral penicillin antibiotic.'
+            },
+            {
+                name: 'Amoxycillin Dispersible Tablets',
+                strength: '250 mg',
+                form: 'Dispersible Tablet',
+                packaging: '20×10',
+                desc: 'Dispersible oral antibiotic formulation suitable for paediatric use.'
+            },
+            {
+                name: 'Amoxycillin Dry Syrup',
+                strength: '125 mg / 5 ml, 250 mg / 5 ml',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric dry syrup for the treatment of bacterial infections.'
+            },
+            {
+                name: 'Amoxycillin + Cloxacillin + Lactic Acid Bacillus Capsules',
+                strength: 'Amoxycillin 250 mg + Cloxacillin 250 mg + Lactic Acid Bacillus',
+                form: 'Capsule',
+                packaging: '10×10, 20×10',
+                desc: 'Combination antibacterial therapy with probiotic support.'
+            },
+            {
+                name: 'Amoxycillin + Potassium Clavulanate + Lactic Acid Bacillus Tablets',
+                strength: 'Amoxycillin 500 mg + Potassium Clavulanate 125 mg + Lactic Acid Bacillus',
+                form: 'Tablet',
+                packaging: '10×1×6, 10×1×10',
+                desc: 'Combination antibiotic with beta-lactamase inhibitor and probiotic support.'
+            }
         ]
     },
     'antidiabetic': {
