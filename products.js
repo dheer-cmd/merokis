@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.innerHTML = `
                 <td><strong>${row.name}</strong></td>
                 <td>${row.strength}</td>
-                <td>${row.dosage}</td>
+                <td>${row.form}</td>
             `;
             mTableRows.appendChild(tr);
         });
