@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology and Anaesthesia Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia and Analgesic Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -250,6 +250,9 @@ Thank you.`;
     } else if (catKey === 'anaesthesia') {
         formsList = ['Injection', 'Cream', 'Gel', 'Spray'];
         packagingsList = ['4 ml', '20 ml', '1 ml', '30 g', '1.8 ml', '50 ml', '30 ml', '10 ml', '500 mg', '1 g'];
+    } else if (catKey === 'analgesic-antipyretic') {
+        formsList = ['Tablet', 'Capsule', 'Injection', 'Syrup', 'Gel', 'Oil', 'Suppository', 'Infusion'];
+        packagingsList = ['10×10', '20×10', '20×15', '10×20', '10×1×2×5', '1 ml', '3 ml', '30 g', '55 g', '60 ml', '100 ml', '1×100 ml', '20×5×1 ml', '10×1×10×2 ml'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -446,7 +449,9 @@ Thank you.`;
         // Filter operations against database
         const filteredProducts = catData.samples.filter(product => {
             const matchesForm = selectedFilters.forms.length === 0 || 
-                               selectedFilters.forms.includes(product.form.toLowerCase());
+                               selectedFilters.forms.some(filterForm => {
+                                   return product.form.toLowerCase().split(/[,/]/).map(f => f.trim()).includes(filterForm);
+                               });
             
             const matchesPkg = selectedFilters.packagings.length === 0 || 
                               selectedFilters.packagings.some(filterPkg => {
@@ -480,7 +485,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic') {
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">

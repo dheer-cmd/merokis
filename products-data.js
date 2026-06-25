@@ -101,19 +101,195 @@ const catalogueDB = {
     },
     'analgesic-antipyretic': {
         title: 'Analgesic & Antipyretic',
-        tag: 'Analgesics',
-        desc: 'Effective NSAIDs and antipyretics for systemic pain relief and fever management.',
+        tag: 'Analgesic & Antipyretic',
+        desc: 'Comprehensive pain management, anti-inflammatory, muscle relaxant, and fever reduction pharmaceutical solutions manufactured to international quality standards.',
         icon: '⚡',
         coverClass: 'grad-orange',
-        count: '35 Items',
+        count: '26 Items',
         downloadMsg: 'Analgesic & Antipyretic Specification Booklet',
         samples: [
-            { name: 'Paracetamol Tablets IP', strength: '650mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Analgesic and antipyretic drug for systemic pain and fever reduction.' },
-            { name: 'Ibuprofen Tablets USP', strength: '400mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Non-steroidal anti-inflammatory drug (NSAID) relieving pain and swelling.' },
-            { name: 'Diclofenac Sodium SR', strength: '100mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Sustained-release formulation for chronic arthritic pain management.' },
-            { name: 'Aceclofenac Tablets', strength: '100mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'NSAID with anti-inflammatory properties, ideal for rheumatoid arthritis.' },
-            { name: 'Tramadol Hydrochloride', strength: '50mg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Centrally acting synthetic opioid analgesic for moderate-to-severe pain.' },
-            { name: 'Mefenamic Acid Tablets', strength: '500mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'NSAID indicated for short-term relief of mild-to-moderate pain.' }
+            {
+                name: 'Aceclofenac + Paracetamol Tablets',
+                strength: 'Aceclofenac 100 mg + Paracetamol 325 mg',
+                form: 'Tablet',
+                packaging: '10×10, 20×10, 20×15',
+                desc: 'A powerful combination of Aceclofenac (NSAID) and Paracetamol (analgesic-antipyretic) for effective relief of pain, inflammation, and fever in conditions like osteoarthritis and rheumatoid arthritis.'
+            },
+            {
+                name: 'Aceclofenac + Paracetamol + Chlorzoxazone Tablets',
+                strength: 'Aceclofenac 100 mg + Paracetamol 325 mg + Chlorzoxazone 250 mg',
+                form: 'Tablet',
+                packaging: '10×10, 20×10',
+                desc: 'Muscle relaxant and analgesic formulation combining Chlorzoxazone, Paracetamol, and Aceclofenac to relieve muscle spasms, pain, and associated discomfort.'
+            },
+            {
+                name: 'Aceclofenac + Paracetamol + Serratiopeptidase Tablets',
+                strength: 'Serratiopeptidase 10 mg, Serratiopeptidase 15 mg',
+                form: 'Tablet',
+                packaging: '10×10, 20×10',
+                desc: 'Triple action anti-inflammatory, analgesic, and enzyme formulation for tissue repair, edema reduction, and intense pain relief.'
+            },
+            {
+                name: 'Aceclofenac + Paracetamol + Thiocolchicoside Tablets',
+                strength: 'Aceclofenac 100 mg + Paracetamol 325 mg + Thiocolchicoside 4 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combination of muscle relaxant (Thiocolchicoside) and NSAIDs to alleviate acute painful spasms and skeletal muscle pain.'
+            },
+            {
+                name: 'Aceclofenac + Thiocolchicoside Tablets',
+                strength: 'Aceclofenac 100 mg + Thiocolchicoside 4 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Designed for spasm relief and musculoskeletal pain, combining muscle relaxant Thiocolchicoside with anti-inflammatory Aceclofenac.'
+            },
+            {
+                name: 'Aceclofenac + Rabeprazole Tablets',
+                strength: 'Aceclofenac 200 mg + Rabeprazole 20 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combines Aceclofenac with acid-reducing Rabeprazole to prevent gastric irritation and mucosal damage during pain therapy.'
+            },
+            {
+                name: 'Aceclofenac Sustained Release Tablets',
+                strength: '200 mg SR',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Sustained-release tablets designed for once-daily dosing to manage chronic pain and inflammation in arthritis.'
+            },
+            {
+                name: 'Acetaminophen Suppositories USP',
+                strength: '80 mg, 125 mg, 170 mg, 250 mg',
+                form: 'Suppository',
+                packaging: '10×1×2×5',
+                desc: 'Antipyretic and analgesic rectal suppositories for effective fever reduction and pain management, particularly for pediatric patients.'
+            },
+            {
+                name: 'Dexamethasone Tablets IP',
+                strength: '4 mg, 8 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Corticosteroid medication used to treat anti-inflammatory and immunosuppressive conditions, including severe allergies, arthritis, and breathing problems.'
+            },
+            {
+                name: 'Diclofenac Product Range',
+                strength: 'Diclofenac Sodium (75 mg/ml, 25 mg/ml, 75 mg/3 ml, 50 mg), Diclofenac Potassium (50 mg), combinations with Paracetamol and Chlorzoxazone, Suppositories (12.5 mg, 100 mg)',
+                form: 'Tablet / Injection / Suppository',
+                packaging: '1 ml, 3 ml, 10×5×1 ml, 10×5×3 ml, 20×5×1 ml, 20×10, 50×10, 10×10, 10×1×2×5',
+                desc: 'A versatile range of Diclofenac anti-inflammatory formulations in injection, tablet, and suppository forms. Indicated for management of acute and chronic pain, postoperative pain, osteoarthritis, and rheumatoid arthritis.'
+            },
+            {
+                name: 'Dicyclomine Product Range',
+                strength: 'Dicyclomine HCl 20 mg + Paracetamol 325 mg, Dicyclomine HCl 10 mg + Diclofenac Sodium 25 mg, Dicyclomine 20 mg + Mefenamic Acid 250 mg',
+                form: 'Tablet / Injection',
+                packaging: '10×5×10, 10×10×2 ml, 20×10',
+                desc: 'Antispasmodic and analgesic range designed to relieve gastrointestinal and smooth muscle spasms, cramps, and abdominal pain.'
+            },
+            {
+                name: 'Drotaverine Product Range',
+                strength: 'Drotaverine HCl 40 mg/2 ml, Drotaverine 80 mg + Mefenamic Acid 250 mg, Drotaverine 80 mg + Aceclofenac 100 mg',
+                form: 'Tablet / Injection',
+                packaging: '10×1×10×2 ml, 25×10, 10×10',
+                desc: 'Smooth muscle antispasmodic range combining Drotaverine with NSAIDs (Mefenamic Acid or Aceclofenac) or as monotherapy injection for renal colic, biliary colic, and dysmenorrhea.'
+            },
+            {
+                name: 'Mefenamic Acid Product Range',
+                strength: 'Mefenamic Acid 500 mg + Paracetamol 325 mg; Suspension: Mefenamic Acid 50 mg + Paracetamol 125 mg / 5 ml, Mefenamic Acid 100 mg + Paracetamol 250 mg / 5 ml',
+                form: 'Tablet / Syrup',
+                packaging: '10×10, 60 ml',
+                desc: 'Mefenamic acid and paracetamol combinations in tablet and suspension forms, commonly used for symptomatic relief of dental pain, inflammatory pain, and pediatric fever.'
+            },
+            {
+                name: 'Etoricoxib Product Range',
+                strength: 'Etoricoxib 60 mg + Paracetamol 325 mg, Etoricoxib 60 mg + Thiocolchicoside 4 mg, Etoricoxib 90 mg',
+                form: 'Tablet',
+                packaging: '20×10, 10×1×10, 10×10',
+                desc: 'Selective COX-2 inhibitor range for intense anti-inflammatory action, combined with paracetamol or thiocolchicoside muscle relaxant for joint pain, gout, and postoperative pain.'
+            },
+            {
+                name: 'Ibuprofen Product Range',
+                strength: 'Ibuprofen 400 mg; Suspension: Ibuprofen 48 mg + Paracetamol 125 mg / 5 ml; Infusion: Ibuprofen 400 mg / 100 ml',
+                form: 'Tablet / Syrup / Infusion',
+                packaging: '20×2×15, 20×10, 10×1×10, 60 ml, 100 ml',
+                desc: 'Broad range of Ibuprofen formulations including oral tablets, pediatric suspensions, and intravenous infusions for anti-inflammatory, antipyretic, and analgesic therapies.'
+            },
+            {
+                name: 'Ketorolac Tromethamine Injection IP',
+                strength: '30 mg/ml',
+                form: 'Injection',
+                packaging: '20×5×1 ml',
+                desc: 'A potent NSAID administered intravenously or intramuscularly for short-term management of moderate-to-severe acute postoperative pain.'
+            },
+            {
+                name: 'Linseed Oil + Diclofenac Gel Range',
+                strength: 'Linseed Oil 3.0% + Diclofenac Diethylamine 1.16% + Methyl Salicylate 10% + Menthol 5% + Benzyl Alcohol 1%, Diclofenac Diethylamine 2.32% + Methyl Salicylate 10% + Linseed oil 3% + Menthol 5%, Diclofenac 1.16mg + Thiocolchicoside 0.125% + Linseed oil 3% + Methyl salicylate 10% + Menthol 5%, Diclofenac gel IP (30 g), Diclofenac 2% + Linseed oil 3% + Methyl salicylate 10% + Menthol 5% (Spray)',
+                form: 'Gel / Spray',
+                packaging: '30 g, 55 g, 6×55 g',
+                desc: 'A range of topical anti-inflammatory gel and spray formulations designed for fast relief from muscular pain, joint stiffness, sprains, and sports injuries.'
+            },
+            {
+                name: 'Herbal Pain Relief Oil',
+                strength: 'Pure Ayurvedic Formulation',
+                form: 'Oil',
+                packaging: '100 ml',
+                desc: 'Traditional Ayurvedic herbal blend formulated to treat musculoskeletal disorders, joint pain, arthritic stiffness, and backaches.'
+            },
+            {
+                name: 'Nimesulide Product Range',
+                strength: 'Nimesulide 100 mg (Mouth Dissolving), Nimesulide 100 mg + Paracetamol 325 mg, Paracetamol 325 mg + Nimesulide 100 mg + Serratiopeptidase 10 mg',
+                form: 'Tablet',
+                packaging: '20×10, 10×10',
+                desc: 'NSAID range featuring Nimesulide, ideal for acute pain, osteoarthritis pain, and primary dysmenorrhea, combined with paracetamol or serratiopeptidase for maximum efficacy.'
+            },
+            {
+                name: 'Paracetamol Product Range',
+                strength: 'Paracetamol 500 mg, 650 mg (Dispersible), 1000 mg (1 g), Paracetamol 500 mg + Domperidone 10 mg; Suspension: 125 mg / 5 ml, 250 mg / 5 ml, cold formula; Injection: 300 mg / 2 ml; Infusion: 1000 mg / 100 ml',
+                form: 'Tablet / Injection / Infusion / Syrup',
+                packaging: '20×10, 20×15, 10×10, 10×15, 10×1×10×2 ml, 1×100 ml, 60 ml',
+                desc: 'Comprehensive paracetamol portfolio spanning oral tablets, pediatric suspensions, intravenous infusions, and intramuscular injections for global anti-pyretic and analgesic therapy.'
+            },
+            {
+                name: 'Piroxicam Product Range',
+                strength: 'Piroxicam 20 mg (Mouth Dissolving), Piroxicam 20 mg + Benzyl Alcohol 20 mg / 2 ml',
+                form: 'Tablet / Injection',
+                packaging: '10×10, 10×2 ml',
+                desc: 'Piroxicam anti-inflammatory formulations in oral dispersible tablet and injectable forms, primarily indicated for chronic rheumatologic disorders.'
+            },
+            {
+                name: 'Polmacoxib Capsules',
+                strength: '2 mg',
+                form: 'Capsule',
+                packaging: '10×10',
+                desc: 'A novel selective COX-2 inhibitor capsule used at low doses to treat pain and stiffness caused by osteoarthritis.'
+            },
+            {
+                name: 'Serratiopeptidase + Diclofenac Tablets',
+                strength: 'Serratiopeptidase 10 mg + Diclofenac Sodium 50 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combines proteolytic enzyme Serratiopeptidase with Diclofenac for synergistic relief of painful inflammatory conditions, swelling, and musculoskeletal pain.'
+            },
+            {
+                name: 'Thiocolchicoside Injection',
+                strength: '4 mg/2 ml',
+                form: 'Injection',
+                packaging: '10×1×5×2 ml',
+                desc: 'Muscle relaxant injection indicated for adjunctive treatment of painful muscle spasms in acute spinal pathology.'
+            },
+            {
+                name: 'Trypsin-Chymotrypsin Tablets',
+                strength: '100,000 Units (1 Lac Units)',
+                form: 'Tablet',
+                packaging: '10×20',
+                desc: 'Proteolytic enzyme combination tablets to speed up healing of surgical wounds, post-traumatic edema, and acute inflammation.'
+            },
+            {
+                name: 'Valethamate Bromide Injection',
+                strength: '8 mg/ml',
+                form: 'Injection',
+                packaging: '10×1×10×1 ml',
+                desc: 'Anticholinergic spasmolytic injection primarily used in obstetric care to facilitate smooth cervical dilation during labor.'
+            }
         ]
     },
     'anti-malaria': {
