@@ -1086,19 +1086,133 @@ const catalogueDB = {
         ]
     },
     'antipsychotic': {
-        title: 'Antipsychotic Portfolio',
+        title: 'Antipsychotic',
         tag: 'Antipsychotic',
-        desc: 'Specialized psychotropic medications managing schizophrenia, bipolar disorder, and mood stability.',
+        desc: 'Comprehensive neuropsychiatric pharmaceutical solutions for the management of psychiatric and neurological disorders, manufactured according to international quality standards.',
         icon: '🧠',
         coverClass: 'grad-gold',
-        count: '18 Items',
+        count: '17 Items',
         downloadMsg: 'Antipsychotic Specification Booklet',
         samples: [
-            { name: 'Olanzapine Tablets', strength: '10mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Atypical antipsychotic for treatment of schizophrenia and acute bipolar episodes.' },
-            { name: 'Risperidone Tablets', strength: '2mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Benzisoxazole atypical antipsychotic indicated for delusional psychoses.' },
-            { name: 'Haloperidol Injection', strength: '5mg/ml', form: 'Injectables', packaging: 'Bottles', desc: 'Conventional butyrophenone neuroleptic for chronic psychoses and emergencies.' },
-            { name: 'Quetiapine Fumarate', strength: '100mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Atypical agent for schizophrenia, bipolar mania, and major depressive disorder.' },
-            { name: 'Aripiprazole Tablets', strength: '15mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Quinolinone atypical antipsychotic acting as partial dopamine agonist.' }
+            {
+                name: 'Amitriptyline Tablets IP',
+                strength: '10 mg, 25 mg',
+                form: 'Tablet',
+                packaging: '20×10 Tablets, 10×10 Tablets',
+                desc: 'Tricyclic antidepressant indicated for depression, neuropathic pain, and anxiety disorders.'
+            },
+            {
+                name: 'Buspirone Tablets',
+                strength: '10 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Anxiolytic medication indicated for generalized anxiety disorder.'
+            },
+            {
+                name: 'Carbamazepine Extended Release Tablets IP',
+                strength: '200 mg, 400 mg',
+                form: 'Extended Release Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Anticonvulsant and mood stabilizer used in epilepsy and bipolar disorder.'
+            },
+            {
+                name: 'Cerebroprotein Hydrolysate for Injection',
+                strength: '60 mg',
+                form: 'Injection',
+                packaging: '12×1×60 mg',
+                desc: 'Neurotrophic injectable therapy used in neurological rehabilitation.'
+            },
+            {
+                name: 'Chlorpromazine Injection IP',
+                strength: '50 mg / 2 ml',
+                form: 'Injection',
+                packaging: '10×1×10×2 ml',
+                desc: 'Typical antipsychotic injection used for acute psychotic disorders.'
+            },
+            {
+                name: 'Citalopram Hydrobromide Tablets IP',
+                strength: '20 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Selective serotonin reuptake inhibitor (SSRI) indicated for depression and anxiety.'
+            },
+            {
+                name: 'Citicoline Injection IP',
+                strength: '500 mg / 2 ml, 1000 mg / 4 ml',
+                form: 'Injection',
+                packaging: '25×1×2 ml, 25×1×4 ml',
+                desc: 'Neuroprotective injectable therapy used in stroke recovery and cognitive impairment.'
+            },
+            {
+                name: 'Fluoxetine Capsules IP',
+                strength: '10 mg, 20 mg, 60 mg',
+                form: 'Capsule',
+                packaging: '20×10 Capsules, 10×10 Capsules',
+                desc: 'SSRI antidepressant used for depression, OCD, panic disorder, and anxiety.'
+            },
+            {
+                name: 'Flupentixol Injection IP',
+                strength: '40 mg / 2 ml',
+                form: 'Injection',
+                packaging: '10×1×10×2 ml',
+                desc: 'Long-acting antipsychotic injection supplied with syringe and needle.'
+            },
+            {
+                name: 'Fluphenazine Decanoate Injection IP',
+                strength: '25 mg / ml',
+                form: 'Injection',
+                packaging: '10×1×10×1 ml',
+                desc: 'Depot antipsychotic injection for long-term schizophrenia management.'
+            },
+            {
+                name: 'Haloperidol Injection IP',
+                strength: '5 mg / 1 ml',
+                form: 'Injection',
+                packaging: '10×1×10×1 ml',
+                desc: 'Rapid-acting antipsychotic injection for acute psychotic episodes.'
+            },
+            {
+                name: 'Haloperidol Decanoate Injection',
+                strength: '50 mg / 1 ml',
+                form: 'Injection',
+                packaging: '10×1×10×1 ml',
+                desc: 'Long-acting depot antipsychotic for maintenance therapy.'
+            },
+            {
+                name: 'Haloperidol Tablets IP',
+                strength: '5 mg, 10 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Typical antipsychotic for schizophrenia and other psychotic disorders.'
+            },
+            {
+                name: 'Lamotrigine Dispersible Tablets IP',
+                strength: '100 mg',
+                form: 'Dispersible Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Antiepileptic medication also indicated for bipolar disorder.'
+            },
+            {
+                name: 'Levetiracetam Injection USP',
+                strength: '500 mg / 5 ml',
+                form: 'Injection',
+                packaging: '20×1×5 ml',
+                desc: 'Intravenous antiepileptic therapy for seizure management.'
+            },
+            {
+                name: 'Levetiracetam Tablets IP',
+                strength: '500 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'Broad-spectrum antiepileptic medicine used in seizure disorders.'
+            },
+            {
+                name: 'Memantine HCl Tablets IP',
+                strength: '5 mg, 10 mg',
+                form: 'Tablet',
+                packaging: '10×10 Tablets',
+                desc: 'NMDA receptor antagonist indicated for Alzheimer\'s disease and cognitive impairment.'
+            }
         ]
     },
     'antiviral': {

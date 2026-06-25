@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic and Antifungal Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal and Antipsychotic Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -265,6 +265,9 @@ Thank you.`;
     } else if (catKey === 'antifungal') {
         formsList = ['Cream', 'Capsule', 'Injection'];
         packagingsList = ['20×1×15 g', '10×1×10 Capsules', '10×1×200 mg'];
+    } else if (catKey === 'antipsychotic') {
+        formsList = ['Tablet', 'Capsule', 'Injection', 'Extended Release Tablet', 'Dispersible Tablet'];
+        packagingsList = ['20×10 Tablets', '10×10 Tablets', '12×1×60 mg', '10×1×10×2 ml', '25×1×2 ml', '25×1×4 ml', '20×10 Capsules', '10×10 Capsules', '10×1×10×1 ml', '20×1×5 ml'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -497,7 +500,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic') {
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">
