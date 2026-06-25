@@ -351,7 +351,7 @@ const catalogueDB = {
         desc: 'Comprehensive range of high-quality antibiotic formulations manufactured to international standards for the treatment of bacterial infections across multiple therapeutic areas.',
         icon: '🧪',
         coverClass: 'grad-blue',
-        count: '24 Items',
+        count: '43 Items',
         downloadMsg: 'Antibiotics Specification Booklet',
         samples: [
             {
@@ -521,6 +521,139 @@ const catalogueDB = {
                 form: 'Dry Syrup',
                 packaging: '30 ml',
                 desc: 'Paediatric cephalosporin antibiotic suspension.'
+            },
+            {
+                name: 'Cefepime for Injection',
+                strength: '1 g',
+                form: 'Injection',
+                packaging: '10×1×1 g',
+                desc: 'Fourth-generation cephalosporin injection used for severe Gram-positive and Gram-negative bacterial infections.'
+            },
+            {
+                name: 'Cefixime Tablets',
+                strength: '200 mg',
+                form: 'Tablet',
+                packaging: '20×10',
+                desc: 'Third-generation cephalosporin antibiotic for respiratory, ENT, urinary tract, and gastrointestinal infections.'
+            },
+            {
+                name: 'Cefixime Oral Suspension',
+                strength: '50 mg / 5 ml, 100 mg / 5 ml',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric cephalosporin suspension for bacterial infections.'
+            },
+            {
+                name: 'Cefixime + Clavulanic Acid Tablets',
+                strength: 'Cefixime 200 mg + Clavulanic Acid 125 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combination cephalosporin antibiotic with beta-lactamase inhibitor.'
+            },
+            {
+                name: 'Cefixime + Ofloxacin Tablets',
+                strength: 'Cefixime 200 mg + Ofloxacin 200 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combination antibiotic for mixed bacterial infections.'
+            },
+            {
+                name: 'Cefixime + Ofloxacin Oral Suspension',
+                strength: 'Cefixime 50 mg + Ofloxacin 50 mg',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric combination antibiotic suspension.'
+            },
+            {
+                name: 'Cefixime + Lactic Acid Bacillus Tablets',
+                strength: 'Cefixime 100 mg, Cefixime 200 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Cefixime formulation with probiotic support for improved gastrointestinal tolerance.'
+            },
+            {
+                name: 'Cefixime + Azithromycin + Lactic Acid Bacillus Tablets',
+                strength: 'Cefixime 200 mg + Azithromycin 250 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Broad-spectrum combination therapy with probiotic support.'
+            },
+            {
+                name: 'Cefpodoxime Proxetil Tablets',
+                strength: '100 mg, 200 mg',
+                form: 'Tablet',
+                packaging: '5×10, 10×10',
+                desc: 'Third-generation cephalosporin antibiotic for respiratory and urinary tract infections.'
+            },
+            {
+                name: 'Cefpodoxime Proxetil Oral Suspension',
+                strength: '50 mg / 5 ml, 100 mg / 5 ml',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric oral cephalosporin formulation.'
+            },
+            {
+                name: 'Cefpodoxime + Clavulanic Acid Tablets',
+                strength: 'Cefpodoxime 200 mg + Clavulanic Acid 125 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combination cephalosporin antibiotic with beta-lactamase inhibitor.'
+            },
+            {
+                name: 'Cefpodoxime + Clavulanic Acid Oral Suspension',
+                strength: 'Cefpodoxime 50 mg + Clavulanic Acid 31.25 mg, Cefpodoxime 100 mg + Clavulanic Acid 62.5 mg',
+                form: 'Dry Syrup',
+                packaging: '30 ml',
+                desc: 'Paediatric combination cephalosporin suspension.'
+            },
+            {
+                name: 'Cefpodoxime + Ofloxacin Tablets',
+                strength: 'Cefpodoxime 200 mg + Ofloxacin 500 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Combination antibiotic for complicated bacterial infections.'
+            },
+            {
+                name: 'Cefoperazone + Sulbactam Injection',
+                strength: 'Cefoperazone 1000 mg + Sulbactam 500 mg',
+                form: 'Injection',
+                packaging: '1.5 g Vial, 20×1×1.5 g',
+                desc: 'Broad-spectrum injectable cephalosporin with beta-lactamase inhibitor.'
+            },
+            {
+                name: 'Cefotaxime Injection',
+                strength: '1 g',
+                form: 'Injection',
+                packaging: '20×1×1 g Vial',
+                desc: 'Third-generation cephalosporin injection for serious bacterial infections.'
+            },
+            {
+                name: 'Ceftazidime Injection',
+                strength: '1 g',
+                form: 'Injection',
+                packaging: '10×1×1 g',
+                desc: 'Broad-spectrum injectable cephalosporin for severe hospital-acquired infections.'
+            },
+            {
+                name: 'Ceftazidime + Avibactam Injection',
+                strength: 'Ceftazidime 2 g + Avibactam 500 mg',
+                form: 'Injection',
+                packaging: '9×1×2.5 g',
+                desc: 'Advanced combination therapy for multidrug-resistant Gram-negative infections.'
+            },
+            {
+                name: 'Ceftriaxone Injection',
+                strength: '500 mg, 1 g',
+                form: 'Injection',
+                packaging: 'Vial, 25×1×1 g',
+                desc: 'Third-generation cephalosporin injection for a wide range of bacterial infections.'
+            },
+            {
+                name: 'Ceftriaxone + Sulbactam Injection',
+                strength: 'Ceftriaxone 250 mg + Sulbactam 125 mg, Ceftriaxone 1 g + Sulbactam 500 mg',
+                form: 'Injection',
+                packaging: 'Vial, 10×1×1.5 g',
+                desc: 'Combination injectable antibiotic for resistant bacterial infections.'
             }
         ]
     },
