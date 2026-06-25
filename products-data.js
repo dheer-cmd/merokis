@@ -1216,19 +1216,98 @@ const catalogueDB = {
         ]
     },
     'antiviral': {
-        title: 'Antiviral Portfolio',
+        title: 'Antiviral',
         tag: 'Antiviral',
-        desc: 'High-efficacy antiviral formulations targeting replication pathways and viral loads.',
+        desc: 'High-quality antiviral pharmaceutical formulations for the treatment and management of viral infections, manufactured according to international quality standards.',
         icon: '🛡️',
         coverClass: 'grad-green-dark',
-        count: '25 Items',
+        count: '12 Items',
         downloadMsg: 'Antiviral Specification Booklet',
         samples: [
-            { name: 'Tenofovir Alafenamide', strength: '25mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Indicated for chronic hepatitis B infection in adult patients.' },
-            { name: 'Sofosbuvir Tablets', strength: '400mg', form: 'Tablets', packaging: 'Bottles', desc: 'Direct-acting antiviral agent used in combination therapy for chronic Hepatitis C.' },
-            { name: 'Entecavir Tablets USP', strength: '0.5mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Guanosine nucleoside analogue for chronic hepatitis B virus infection.' },
-            { name: 'Acyclovir Capsules', strength: '400mg', form: 'Capsules', packaging: '10×15 Strips', desc: 'Antiviral drug active against herpes simplex and varicella-zoster viruses.' },
-            { name: 'Oseltamivir Capsules', strength: '75mg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Neuraminidase inhibitor for treatment and prevention of influenza A and B.' }
+            {
+                name: 'Tenofovir Disoproxil Fumarate + Lamivudine + Dolutegravir Tablets IP',
+                shortBadge: 'TLD',
+                form: 'Tablet',
+                strength: 'Tenofovir Disoproxil Fumarate 300 mg, Lamivudine 300 mg, Dolutegravir 50 mg',
+                desc: 'Fixed-dose triple antiretroviral therapy indicated for the treatment of HIV infection.'
+            },
+            {
+                name: 'Lamivudine + Tenofovir Disoproxil Fumarate Tablets IP',
+                shortBadge: 'LAMI+TENO',
+                form: 'Tablet',
+                strength: 'Lamivudine 300 mg, Tenofovir Disoproxil Fumarate 300 mg',
+                desc: 'Dual antiretroviral therapy for HIV management.'
+            },
+            {
+                name: 'Atazanavir + Ritonavir Tablets IP',
+                shortBadge: 'ATA+RITO',
+                form: 'Tablet',
+                strength: 'Atazanavir 300 mg, Ritonavir 100 mg',
+                desc: 'Protease inhibitor combination used in antiretroviral therapy.'
+            },
+            {
+                name: 'Lopinavir + Ritonavir Tablets IP',
+                shortBadge: 'LOPI+RITO',
+                form: 'Tablet',
+                strength: 'Lopinavir 200 mg, Ritonavir 50 mg',
+                desc: 'Combination antiviral therapy for HIV infection.'
+            },
+            {
+                name: 'Abacavir + Lamivudine Tablets IP',
+                shortBadge: 'ABA+LAMI',
+                form: 'Tablet',
+                strength: 'Abacavir 600 mg, Lamivudine 300 mg',
+                desc: 'Fixed-dose nucleoside reverse transcriptase inhibitor combination.'
+            },
+            {
+                name: 'Dolutegravir Tablets IP',
+                shortBadge: 'DOLUTEGRAVIR',
+                form: 'Tablet',
+                strength: '50 mg',
+                desc: 'Integrase inhibitor indicated for HIV treatment.'
+            },
+            {
+                name: 'Abacavir Tablets IP',
+                shortBadge: 'ABACAVIR',
+                form: 'Tablet',
+                strength: '300 mg',
+                desc: 'Nucleoside reverse transcriptase inhibitor used in HIV therapy.'
+            },
+            {
+                name: 'Entecavir Tablets IP',
+                shortBadge: 'ENTECAVIR',
+                form: 'Tablet',
+                strength: '0.5 mg, 1 mg',
+                desc: 'Antiviral medicine indicated for chronic Hepatitis B infection.'
+            },
+            {
+                name: 'Lamivudine Tablets IP',
+                shortBadge: 'LAMIVUDINE',
+                form: 'Tablet',
+                strength: '100 mg',
+                desc: 'Antiviral medication used in the treatment of HIV and Hepatitis B.'
+            },
+            {
+                name: 'Darunavir Tablets IP',
+                shortBadge: 'DARUNAVIR',
+                form: 'Tablet',
+                strength: '600 mg',
+                desc: 'Protease inhibitor indicated for HIV treatment.'
+            },
+            {
+                name: 'Valganciclovir Tablets',
+                shortBadge: 'VALGANCICLOVIR',
+                form: 'Tablet',
+                strength: '450 mg',
+                desc: 'Antiviral medicine indicated for cytomegalovirus (CMV) infections.'
+            },
+            {
+                name: 'Tenofovir Disoproxil Fumarate Tablets IP',
+                shortBadge: 'TENOFOVIR',
+                form: 'Tablet',
+                strength: '300 mg',
+                desc: 'Nucleotide reverse transcriptase inhibitor used in HIV and Hepatitis B treatment.'
+            }
         ]
     },
     'cardiovascular-drugs': {

@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal and Antipsychotic Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic and Antiviral Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -183,7 +183,7 @@ Thank you.`;
                             <span class="onc-spec-label">Available Strengths</span>
                             <span class="onc-spec-value" id="onc-modal-strength">-</span>
                         </div>
-                        <div class="onc-spec-row" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                        <div class="onc-spec-row" id="onc-modal-pack-row" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
                             <span class="onc-spec-label">Available Pack Sizes</span>
                             <span class="onc-spec-value" id="onc-modal-pack">-</span>
                         </div>
@@ -213,15 +213,25 @@ Thank you.`;
             const product = catData.samples.find(p => p.name === productName);
             if (!product) return;
 
-            const productMessage = `Hello Mérokis,\n\nI am interested in the following product:\n\nProduct: ${product.name}\nCategory: ${catData.title}\nForm: ${product.form}\nPackaging: ${product.packaging}\n\nPlease share product details, availability, export options, MOQ, and pricing.\n\nThank you.`;
+            const packagingText = product.packaging ? `\nPackaging: ${product.packaging}` : '';
+            const productMessage = `Hello Mérokis,\n\nI am interested in the following product:\n\nProduct: ${product.name}\nCategory: ${catData.title}\nForm: ${product.form}${packagingText}\n\nPlease share product details, availability, export options, MOQ, and pricing.\n\nThank you.`;
             const encodedProductMessage = encodeURIComponent(productMessage);
             const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
             document.getElementById('onc-modal-title').textContent = product.name;
             document.getElementById('onc-modal-form').textContent = product.form;
             document.getElementById('onc-modal-strength').textContent = product.strength;
-            document.getElementById('onc-modal-pack').textContent = product.packaging;
+            document.getElementById('onc-modal-pack').textContent = product.packaging || '-';
             document.getElementById('onc-modal-desc').textContent = product.desc;
+            
+            const packRow = document.getElementById('onc-modal-pack-row');
+            if (packRow) {
+                if (catKey === 'antiviral') {
+                    packRow.style.display = 'none';
+                } else {
+                    packRow.style.display = 'flex';
+                }
+            }
             
             document.getElementById('onc-modal-enquire-btn').href = `/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})`;
             document.getElementById('onc-modal-whatsapp-btn').href = productWhatsappUrl;
@@ -268,6 +278,9 @@ Thank you.`;
     } else if (catKey === 'antipsychotic') {
         formsList = ['Tablet', 'Capsule', 'Injection', 'Extended Release Tablet', 'Dispersible Tablet'];
         packagingsList = ['20×10 Tablets', '10×10 Tablets', '12×1×60 mg', '10×1×10×2 ml', '25×1×2 ml', '25×1×4 ml', '20×10 Capsules', '10×10 Capsules', '10×1×10×1 ml', '20×1×5 ml'];
+    } else if (catKey === 'antiviral') {
+        formsList = ['Tablet'];
+        packagingsList = [];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -276,6 +289,15 @@ Thank you.`;
         const formMobile = document.getElementById('mobile-filter-form');
         const pkgDesktop = document.getElementById('desktop-filter-packaging');
         const mobilePkg = document.getElementById('mobile-filter-packaging');
+
+        const pkgCard = pkgDesktop ? pkgDesktop.closest('.filter-card') : null;
+        if (pkgCard) {
+            pkgCard.style.display = (catKey === 'antiviral') ? 'none' : 'block';
+        }
+        const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
+        if (pkgMobileSection) {
+            pkgMobileSection.style.display = (catKey === 'antiviral') ? 'none' : 'block';
+        }
 
         // Render Forms
         formsList.forEach(form => {
@@ -500,15 +522,23 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic') {
-                        card.innerHTML = `
-                            <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
-                                <div class="product-badges">
-                                    <span class="product-badge badge-form">${product.form}</span>
-                                </div>
-                                <h3 style="margin-top: 10px;">${product.name}</h3>
-                                
-                                <div class="onc-specs">
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral') {
+                        const badgeHtml = catKey === 'antiviral'
+                            ? `<span class="product-badge" style="background: #003A99; color: #ffffff; text-transform: uppercase; border-radius: 30px;">${product.shortBadge || ''}</span>`
+                            : `<span class="product-badge badge-form">${product.form}</span>`;
+                        
+                        const specRowsHtml = catKey === 'antiviral'
+                            ? `
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Dosage Form:</span>
+                                        <span class="onc-spec-value">${product.form}</span>
+                                    </div>
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Available Strengths:</span>
+                                        <span class="onc-spec-value">${product.strength}</span>
+                                    </div>
+                              `
+                            : `
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Dosage Form:</span>
                                         <span class="onc-spec-value">${product.form}</span>
@@ -521,6 +551,17 @@ Thank you.`;
                                         <span class="onc-spec-label">Available Pack Sizes:</span>
                                         <span class="onc-spec-value">${product.packaging}</span>
                                     </div>
+                              `;
+
+                        card.innerHTML = `
+                            <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
+                                <div class="product-badges">
+                                    ${badgeHtml}
+                                </div>
+                                <h3 style="margin-top: 10px;">${product.name}</h3>
+                                
+                                <div class="onc-specs">
+                                    ${specRowsHtml}
                                 </div>
                                 <p class="product-desc-short" style="font-size: 0.9rem; line-height: 1.5; color: #4b5563; margin-bottom: 20px;">${product.desc}</p>
                             </div>
