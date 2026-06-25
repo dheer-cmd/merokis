@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia and Analgesic Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic and Anti Malaria Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -253,6 +253,9 @@ Thank you.`;
     } else if (catKey === 'analgesic-antipyretic') {
         formsList = ['Tablet', 'Capsule', 'Injection', 'Syrup', 'Gel', 'Oil', 'Suppository', 'Infusion'];
         packagingsList = ['10×10', '20×10', '20×15', '10×20', '10×1×2×5', '1 ml', '3 ml', '30 g', '55 g', '60 ml', '100 ml', '1×100 ml', '20×5×1 ml', '10×1×10×2 ml'];
+    } else if (catKey === 'anti-malaria') {
+        formsList = ['Tablet', 'Injection', 'Dry Syrup'];
+        packagingsList = ['10×1×60 mg', '10×1×120 mg', '10×1×6×1 ml', '1×6', '60 ml', '10×10'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -485,7 +488,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria') {
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">

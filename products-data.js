@@ -295,17 +295,54 @@ const catalogueDB = {
     'anti-malaria': {
         title: 'Anti Malaria Portfolio',
         tag: 'Anti Malaria',
-        desc: 'Advanced antimalarial formulations for the prevention and treatment of plasmodium infections.',
+        desc: 'Comprehensive antimalarial pharmaceutical solutions formulated for the prevention and treatment of malaria, manufactured in accordance with international quality standards.',
         icon: '🦟',
         coverClass: 'grad-purple',
-        count: '12 Items',
+        count: '6 Items',
         downloadMsg: 'Anti Malaria Specification Booklet',
         samples: [
-            { name: 'Artemether & Lumefantrine', strength: '80mg/480mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Fixed-dose combination antimalarial for acute uncomplicated plasmodium falciparum malaria.' },
-            { name: 'Artesunate Injection', strength: '60mg', form: 'Injectables', packaging: 'Bottles', desc: 'Intravenous or intramuscular artesunate for severe malaria therapy.' },
-            { name: 'Chloroquine Phosphate', strength: '250mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Aminoquinoline agent for the treatment and prophylaxis of susceptible malaria strains.' },
-            { name: 'Quinine Sulfate Tablets', strength: '300mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Cinchona alkaloid indicated for the treatment of uncomplicated malaria.' },
-            { name: 'Primaquine Phosphate', strength: '15mg', form: 'Tablets', packaging: '10×10 Strips', desc: '8-aminoquinoline indicated for radical cure of vivax and ovale malaria.' }
+            {
+                name: 'Artesunate Injection',
+                strength: '60 mg, 120 mg',
+                form: 'Injection',
+                packaging: '10×1×60 mg, 10×1×120 mg',
+                desc: 'Intravenous or intramuscular Artesunate injection, highly effective for rapid clearance of parasitemia in severe and complicated plasmodium falciparum malaria.'
+            },
+            {
+                name: 'Artemether Injection',
+                strength: '80 mg/ml',
+                form: 'Injection',
+                packaging: '10×1×6×1 ml',
+                desc: 'Fast-acting lipid formulation of Artemether administered intramuscularly for the treatment of severe, chloroquine-resistant malaria.'
+            },
+            {
+                name: 'Artemether + Lumefantrine Tablets',
+                strength: '20 mg + 120 mg',
+                form: 'Tablet',
+                packaging: '1×6',
+                desc: 'Fixed-dose combination artemisinin-based combination therapy (ACT) indicated for the oral treatment of acute, uncomplicated malaria infections.'
+            },
+            {
+                name: 'Artemether + Lumefantrine Dry Syrup',
+                strength: 'Pediatric formulation',
+                form: 'Dry Syrup',
+                packaging: '60 ml',
+                desc: 'Pediatric oral suspension formulation designed for child-friendly administration to treat uncomplicated plasmodium infections.'
+            },
+            {
+                name: 'Quinine Sulphate Tablets',
+                strength: '300 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Cinchona alkaloid medication used to treat uncomplicated malaria when artemisinin-based combination therapies are unavailable or not tolerated.'
+            },
+            {
+                name: 'Primaquine Tablets',
+                strength: '7.5 mg, 15 mg',
+                form: 'Tablet',
+                packaging: '10×10',
+                desc: 'Used for radical cure and preventing relapse of vivax and ovale malaria by targeting the latent liver stages (hypnozoites) of the parasite.'
+            }
         ]
     },
     'antibiotics': {
