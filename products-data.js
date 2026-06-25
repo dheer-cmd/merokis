@@ -283,7 +283,7 @@ const catalogueDB = {
         desc: 'Comprehensive oncology pharmaceutical solutions designed for cancer treatment and supportive care, manufactured to international quality standards.',
         icon: '🎗️',
         coverClass: 'grad-orange',
-        count: '19 Items',
+        count: '13 Items',
         downloadMsg: 'Oncology Drugs Specification Booklet',
         samples: [
             { name: 'Abiraterone Acetate Tablets IP', strength: '250 mg', form: 'Tablet', packaging: '1×120', desc: 'Androgen biosynthesis inhibitor indicated for use in combination with prednisone for the treatment of metastatic castration-resistant prostate cancer.' },
