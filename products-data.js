@@ -5,19 +5,98 @@
 
 const catalogueDB = {
     'anaesthesia': {
-        title: 'Anaesthesia Portfolio',
+        title: 'Anaesthesia',
         tag: 'Anaesthesia',
-        desc: 'Specialized anesthetics, neuromuscular blockers, and pre-medications for clinical surgery.',
+        desc: 'High-quality anaesthesia and perioperative pharmaceutical solutions designed for surgical procedures, pain management, and critical care, manufactured to international quality standards.',
         icon: '💤',
         coverClass: 'grad-teal',
-        count: '15 Items',
+        count: '12 Items',
         downloadMsg: 'Anaesthesia Specification Booklet',
         samples: [
-            { name: 'Propofol Injection', strength: '10mg/ml', form: 'Injectables', packaging: 'IV Bags', desc: 'Intravenous sedative-hypnotic agent for induction and maintenance of anesthesia.' },
-            { name: 'Bupivacaine Hydrochloride', strength: '0.5%', form: 'Injectables', packaging: 'Bottles', desc: 'Local anesthetic indicated for local infiltration, peripheral nerve block, and epidural block.' },
-            { name: 'Lidocaine Hydrochloride Jelly', strength: '2%', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Topical anesthetic jelly providing rapid and profound anesthesia for mucous membranes.' },
-            { name: 'Vecuronium Bromide Injection', strength: '10mg', form: 'Injectables', packaging: 'Bottles', desc: 'Nondepolarizing neuromuscular blocking agent indicated as an adjunct to general anesthesia.' },
-            { name: 'Isoflurane Liquid', strength: '100ml', form: 'Injectables', packaging: 'Bottles', desc: 'Inhalation anesthetic for induction and maintenance of general anesthesia.' }
+            {
+                name: 'Bupivacaine & Dextrose Injection USP',
+                strength: 'Bupivacaine 20 mg + Dextrose 320 mg',
+                form: 'Injection',
+                packaging: '4 ml',
+                desc: 'Local anesthetic indicated for spinal anesthesia during surgical procedures.'
+            },
+            {
+                name: 'Bupivacaine Injection IP',
+                strength: '100 mg / 20 ml',
+                form: 'Injection',
+                packaging: '20 ml',
+                desc: 'Long-acting local anesthetic for regional block, infiltration, and epidural anesthesia.'
+            },
+            {
+                name: 'Dexmedetomidine Injection USP',
+                strength: '100 mg/ml',
+                form: 'Injection',
+                packaging: '1 ml',
+                desc: 'Selective alpha-2 adrenergic agonist indicated for sedation of intubated and mechanically ventilated patients.'
+            },
+            {
+                name: 'Glycopyrrolate Injection IP',
+                strength: '0.2 mg/ml',
+                form: 'Injection',
+                packaging: '1 ml',
+                desc: 'Anticholinergic agent indicated for use as a preoperative medication to reduce salivary and respiratory secretions.'
+            },
+            {
+                name: 'Lidocaine & Prilocaine Cream IP',
+                strength: 'Standard formulation',
+                form: 'Cream',
+                packaging: '30 g',
+                desc: 'Topical anesthetic cream indicated for local anesthesia of intact skin prior to superficial procedures.'
+            },
+            {
+                name: 'Lidocaine & Adrenaline Injection IP',
+                strength: 'Lidocaine 20 mg + Adrenaline 22.5 mcg',
+                form: 'Injection',
+                packaging: '1.8 ml',
+                desc: 'Anesthetic injection indicated for local infiltration, dental procedures, and nerve blocks.'
+            },
+            {
+                name: 'Lidocaine Spray IP',
+                strength: '100 mg/ml',
+                form: 'Spray',
+                packaging: '50 ml',
+                desc: 'Topical anesthetic spray indicated for temporary anesthesia of mucosal membranes during minor procedures.'
+            },
+            {
+                name: 'Lignocaine & Adrenaline Injection IP',
+                strength: 'Lignocaine 2% w/v + Adrenaline 0.001% w/v',
+                form: 'Injection',
+                packaging: '30 ml',
+                desc: 'Local anesthetic combination indicated for local infiltration and peripheral nerve blocks.'
+            },
+            {
+                name: 'Lignocaine HCl Gel IP',
+                strength: '2% w/v',
+                form: 'Gel',
+                packaging: '30 g',
+                desc: 'Topical anesthetic gel indicated for anesthesia of mucosal membranes of the urethra and lubrication.'
+            },
+            {
+                name: 'Lignocaine Injection IP',
+                strength: '2%',
+                form: 'Injection',
+                packaging: '30 ml',
+                desc: 'Standard local anesthetic indicated for infiltration, nerve blocks, and epidural anesthesia.'
+            },
+            {
+                name: 'Propofol Injection IP',
+                strength: '100 mg / 10 ml',
+                form: 'Injection',
+                packaging: '10 ml / 20 ml',
+                desc: 'Short-acting intravenous sedative-hypnotic agent indicated for induction and maintenance of general anesthesia.'
+            },
+            {
+                name: 'Thiopentone Injection IP',
+                strength: '500 mg / 1000 mg',
+                form: 'Injection',
+                packaging: '500 mg / 1 g',
+                desc: 'Ultra-short-acting barbiturate anesthetic indicated for induction of general anesthesia and management of intracranial pressure.'
+            }
         ]
     },
     'analgesic-antipyretic': {

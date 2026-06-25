@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology Drugs
-    if (catKey === 'oncology-drugs') {
+    // Dynamic Modal and Style Injection for Oncology and Anaesthesia Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -247,6 +247,9 @@ Thank you.`;
     if (catKey === 'oncology-drugs') {
         formsList = ['Tablet', 'Capsule', 'Injection'];
         packagingsList = ['1×120', '1×60', '10×10', '3×10', '1×30', '25×1×2 ml', '20×1×40 mg', '25×1×125 mg', '16×1×500 mg', '10×1×1 g', '12×1×4 mg'];
+    } else if (catKey === 'anaesthesia') {
+        formsList = ['Injection', 'Cream', 'Gel', 'Spray'];
+        packagingsList = ['4 ml', '20 ml', '1 ml', '30 g', '1.8 ml', '50 ml', '30 ml', '10 ml', '500 mg', '1 g'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -477,7 +480,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia') {
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">
