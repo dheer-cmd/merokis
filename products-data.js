@@ -1746,19 +1746,210 @@ const catalogueDB = {
         ]
     },
     'gastro-intestinal': {
-        title: 'Gastro-Intestinal Care',
+        title: 'Gastrointestinal Drugs',
         tag: 'Gastro-Intestinal',
-        desc: 'Proton pump inhibitors, antacids, and anti-emetics for stomach and digestive health.',
+        desc: 'Comprehensive gastrointestinal pharmaceutical solutions for acid reflux, ulcers, digestive disorders, constipation, nausea, liver care, gastrointestinal infections, and supportive digestive health, manufactured to international quality standards.',
         icon: '🍽️',
         coverClass: 'grad-purple',
-        count: '30 Items',
+        count: '28 Items',
         downloadMsg: 'Gastro-Intestinal Specification Booklet',
         samples: [
-            { name: 'Omeprazole Capsules', strength: '20mg', form: 'Capsules', packaging: 'Bottles', desc: 'Proton pump inhibitor (PPI) suppressing gastric acid secretion.' },
-            { name: 'Pantoprazole Sodium', strength: '40mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Irreversible PPI for treating gastroesophageal reflux disease and ulcers.' },
-            { name: 'Domperidone Tablets', strength: '10mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Dopamine receptor antagonist acting as a gastroprokinetic and antiemetic.' },
-            { name: 'Ondansetron Injection', strength: '2mg/ml', form: 'Injectables', packaging: 'IV Bags', desc: 'Serotonin 5-HT3 receptor antagonist preventing severe nausea and vomiting.' },
-            { name: 'Rabeprazole & Domperidone', strength: '20mg/30mg', form: 'Capsules', packaging: '10×15 Strips', desc: 'Combination PPI and prokinetic capsules for complex acid reflux relief.' }
+            {
+                name: 'Activated Dimethicone + Magnesium Hydroxide + Dried Aluminium Hydroxide Gel',
+                form: 'Oral Suspension',
+                strength: '-',
+                packaging: '170 ml',
+                desc: 'Antacid suspension indicated for the relief of hyperacidity, gas, and indigestion.'
+            },
+            {
+                name: 'Antacid Sachet',
+                form: 'Sachet',
+                strength: '-',
+                packaging: '5 g',
+                desc: 'Fast-acting antacid powder to neutralize stomach acid and relieve heartburn.'
+            },
+            {
+                name: 'Bacillus Clausii Spores Suspension',
+                form: 'Oral Suspension',
+                strength: '-',
+                packaging: '5 ml',
+                desc: 'Probiotic suspension used for restoring intestinal microflora balance.'
+            },
+            {
+                name: 'Betahistine Hydrochloride Tablets',
+                form: 'Tablet',
+                strength: '8 mg, 16 mg',
+                packaging: '10×10',
+                desc: 'Antivertigo medication used to treat symptoms of Meniere\'s disease.'
+            },
+            {
+                name: 'Bisacodyl Suppositories IP',
+                form: 'Suppository',
+                strength: '5 mg, 10 mg',
+                packaging: '10×1×2×5',
+                desc: 'Stimulant laxative suppository indicated for the relief of constipation.'
+            },
+            {
+                name: 'Cinnarizine Tablets',
+                form: 'Tablet',
+                strength: 'Cinnarizine 25 mg | Cinnarizine 20 mg + Domperidone 15 mg',
+                packaging: '10×10',
+                desc: 'Antihistamine and calcium channel blocker used for motion sickness, vertigo, and vestibular disorders.'
+            },
+            {
+                name: 'Clarithromycin + Pantoprazole + Amoxycillin Kit',
+                form: 'Tablet Kit',
+                strength: '-',
+                packaging: '10×1×10',
+                desc: 'Combination kit indicated for the eradication of H. pylori infection in peptic ulcer disease.'
+            },
+            {
+                name: 'Lactulose Solutions',
+                form: 'Oral Solution',
+                strength: 'Lactulose | Lactulose + Wheat Dextrin + Fructo Oligosaccharides + Polydextrose',
+                packaging: '200 ml, 500 ml',
+                desc: 'Osmotic laxative solution indicated for the treatment of constipation and hepatic encephalopathy.'
+            },
+            {
+                name: 'Cyproheptadine + Tricholine Citrate Syrup',
+                form: 'Syrup',
+                strength: '-',
+                packaging: '200 ml',
+                desc: 'Appetite stimulant syrup indicated for loss of appetite and weight gain support.'
+            },
+            {
+                name: 'Digestive Enzyme Preparations',
+                form: 'Syrup / Drops / Tablet',
+                strength: 'Diastase + Pepsin | Fungal Diastase + Papain + Alpha Amylase + Lactase + Pancreatin',
+                packaging: '30 ml, 200 ml, 225 ml, 20×15',
+                desc: 'Enzyme supplements indicated for indigestion, bloating, and gas relief.'
+            },
+            {
+                name: 'Disodium Hydrogen Citrate Syrup',
+                form: 'Syrup',
+                strength: '-',
+                packaging: '100 ml',
+                desc: 'Systemic alkalizer syrup indicated for relief from urinary tract infections and acidosis.'
+            },
+            {
+                name: 'Antacid Suspension',
+                form: 'Oral Suspension',
+                strength: 'Aluminium Hydroxide + Magnesium Hydroxide + Simethicone | Magaldrate + Simethicone + Domperidone',
+                packaging: '170 ml',
+                desc: 'Antacid suspension for the relief of acid indigestion, heartburn, and flatulence.'
+            },
+            {
+                name: 'Ranitidine',
+                form: 'Syrup / Tablet / Injection',
+                strength: 'Syrup: 75 mg / 5 ml | Tablet: 75 mg | Injection: 50 mg / 2 ml',
+                packaging: '60 ml, 100 ml, 5×10×2 ml',
+                desc: 'H2-receptor antagonist indicated for the treatment of peptic ulcers and gastroesophageal reflux disease.'
+            },
+            {
+                name: 'Ondansetron Syrup',
+                form: 'Syrup',
+                strength: '2 mg / 5 ml',
+                packaging: '30 ml',
+                desc: 'Antiemetic syrup indicated for the prevention of nausea and vomiting.'
+            },
+            {
+                name: 'Rabeprazole',
+                form: 'Tablet / Capsule / Injection',
+                strength: 'Rabeprazole 20 mg | Rabeprazole + Domperidone | Rabeprazole + Domperidone ER | Rabeprazole + Levosulpiride | Rabeprazole Injection',
+                packaging: '-',
+                desc: 'Proton pump inhibitor (PPI) and prokinetic formulations indicated for acid reflux, ulcers, and GERD management.'
+            },
+            {
+                name: 'Esomeprazole',
+                form: 'Tablet / Capsule / Injection',
+                strength: 'Esomeprazole 40 mg | Esomeprazole + Domperidone | Esomeprazole + Levosulpiride | Esomeprazole Injection',
+                packaging: '-',
+                desc: 'Proton pump inhibitor (PPI) formulations indicated for treatment of erosive esophagitis and acid reflux.'
+            },
+            {
+                name: 'Omeprazole',
+                form: 'Tablet / Capsule / Injection',
+                strength: 'Omeprazole 20 mg | Omeprazole + Domperidone | Omeprazole Capsule | Omeprazole Injection',
+                packaging: '-',
+                desc: 'Antisecretory PPI indicated for short-term treatment of active duodenal ulcers and gastroesophageal reflux.'
+            },
+            {
+                name: 'Pantoprazole',
+                form: 'Tablet / Capsule / Injection',
+                strength: 'Pantoprazole 20 mg, 40 mg | Pantoprazole + Domperidone | Pantoprazole + Domperidone SR | Pantoprazole + Cinitapride | Pantoprazole Injection',
+                packaging: '-',
+                desc: 'Proton pump inhibitor (PPI) indicated for short-term treatment of GERD and pathological hypersecretory conditions.'
+            },
+            {
+                name: 'Flunarizine Tablets',
+                form: 'Tablet',
+                strength: '10 mg',
+                packaging: '10×10',
+                desc: 'Calcium channel antagonist used for prophylaxis of migraine and treatment of vestibular disorders.'
+            },
+            {
+                name: 'Hyoscine Butylbromide Injection',
+                form: 'Injection',
+                strength: '20 mg/ml',
+                packaging: '10×1×10×1 ml',
+                desc: 'Antispasmodic injection indicated for acute gastrointestinal or biliary spasm.'
+            },
+            {
+                name: 'Herbal Liver Care Tablets',
+                form: 'Tablet',
+                strength: 'Herbal Ingredients',
+                packaging: '10×10',
+                desc: 'Ayurvedic hepatoprotective formulation supporting liver detoxification and overall digestive health.'
+            },
+            {
+                name: 'Levosulpiride',
+                form: 'Injection',
+                strength: '25 mg / 2 ml',
+                packaging: '10×1×10×2 ml',
+                desc: 'Atypical antipsychotic and prokinetic agent indicated for dyspepsia, gastroesophageal reflux, and nausea.'
+            },
+            {
+                name: 'L-Ornithine L-Aspartate',
+                form: 'Sachet / Ampoule / Injection',
+                strength: '3 g, 5 g | 5000 mg / 10 ml',
+                packaging: '-',
+                desc: 'Hepatoprotective agent used for the treatment of hepatic encephalopathy and chronic liver diseases.'
+            },
+            {
+                name: 'Metoclopramide Injection',
+                form: 'Injection',
+                strength: '10 mg / 2 ml',
+                packaging: '20×5×2 ml',
+                desc: 'Antiemetic and prokinetic agent indicated for diabetic gastroparesis and gastroesophageal reflux.'
+            },
+            {
+                name: 'Sodium Alginate + Sodium Bicarbonate + Calcium Carbonate Suspension',
+                form: 'Oral Suspension',
+                strength: '-',
+                packaging: '150 ml',
+                desc: 'Alginate-based suspension providing rapid relief from heartburn and acid reflux.'
+            },
+            {
+                name: 'Sodium Bicarbonate Injection',
+                form: 'Injection',
+                strength: '7.5%, 8.4%',
+                packaging: '-',
+                desc: 'Injectable systemic alkalizer indicated for cardiac arrest and metabolic acidosis.'
+            },
+            {
+                name: 'Sodium Picosulfate + Liquid Paraffin + Milk of Magnesia Suspension',
+                form: 'Oral Suspension',
+                strength: '-',
+                packaging: '170 ml',
+                desc: 'Combination laxative suspension indicated for constipation and bowel clearance.'
+            },
+            {
+                name: 'Sucralfate + Oxetacaine Suspension',
+                form: 'Oral Suspension',
+                strength: '-',
+                packaging: '100 ml, 200 ml',
+                desc: 'Cytoprotective agent and local anesthetic suspension indicated for the treatment of peptic ulcers and gastritis.'
+            }
         ]
     },
     'general-medicine': {
