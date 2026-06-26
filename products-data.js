@@ -1532,19 +1532,217 @@ const catalogueDB = {
         ]
     },
     'dermatology-drugs': {
-        title: 'Dermatology Catalogue',
+        title: 'Dermatology Drugs',
         tag: 'Dermatology',
-        desc: 'Therapeutic creams, topical steroids, and advanced formulations for dermatological conditions.',
+        desc: 'Premium dermatology formulations for acne management, fungal infections, skin care, pigmentation, wound care, scalp health, and topical therapeutic applications manufactured to international quality standards.',
         icon: '🧴',
         coverClass: 'grad-orange',
-        count: '35 Items',
+        count: '29 Items',
         downloadMsg: 'Dermatology Drugs Specification Booklet',
         samples: [
-            { name: 'Clobetasol Propionate Cream', strength: '0.05% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'High-potency topical corticosteroid reducing eczema and psoriasis inflammation.' },
-            { name: 'Mupirocin Ointment USP', strength: '2% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Topical monoxycarbolic acid antibiotic treating impetigo and skin infections.' },
-            { name: 'Adapalene Gel', strength: '0.1% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Third-generation topical retinoid for mild-to-moderate acne vulgaris.' },
-            { name: 'Hydrocortisone Cream', strength: '1% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Mild corticosteroid relieving skin itching, redness, and swelling.' },
-            { name: 'Benzoyl Peroxide Gel', strength: '2.5% w/w', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Topical antibacterial agent indicated for mild-to-moderate acne.' }
+            {
+                name: 'Benzoyl Peroxide + Adapalene',
+                form: 'Gel',
+                strength: 'Benzoyl Peroxide 2.5% w/w + Adapalene',
+                packaging: '15 g',
+                desc: 'Topical gel combining benzoyl peroxide and adapalene for the treatment of acne vulgaris.'
+            },
+            {
+                name: 'Biotin + N-Acetyl Cysteine Multivitamin Tablets',
+                form: 'Tablet',
+                strength: '-',
+                packaging: '10×10',
+                desc: 'Multivitamin supplement formulated to support hair, skin, and nail health.'
+            },
+            {
+                name: 'Calamine + Aloe Vera Lotion',
+                form: 'Lotion',
+                strength: '-',
+                packaging: '90 ml',
+                desc: 'Soothing lotion combining calamine and aloe vera to relieve skin irritation and sunburn.'
+            },
+            {
+                name: 'Calamine + Diphenhydramine + Camphor Lotion',
+                form: 'Lotion',
+                strength: '-',
+                packaging: '90 ml',
+                desc: 'Antipruritic and soothing lotion for the relief of itching and skin discomfort.'
+            },
+            {
+                name: 'Calamine + Light Liquid Paraffin Lotion',
+                form: 'Lotion',
+                strength: '-',
+                packaging: '100 ml, 400 ml',
+                desc: 'Emollient and protective lotion for dry, irritated skin.'
+            },
+            {
+                name: 'Chlorhexidine Gluconate Solution',
+                form: 'Solution',
+                strength: '0.2%',
+                packaging: '150 ml',
+                desc: 'Antiseptic solution for wound cleansing and skin disinfection.'
+            },
+            {
+                name: 'Choline Salicylate + Lignocaine Oral Gel',
+                form: 'Gel',
+                strength: '-',
+                packaging: '20 g',
+                desc: 'Topical gel indicated for the relief of pain associated with mouth ulcers.'
+            },
+            {
+                name: 'Clindamycin Capsules',
+                form: 'Capsule',
+                strength: '300 mg',
+                packaging: '10×10',
+                desc: 'Lincosamide antibiotic used for the treatment of serious bacterial infections.'
+            },
+            {
+                name: 'Clindamycin Gel',
+                form: 'Gel',
+                strength: '1%',
+                packaging: '20 g',
+                desc: 'Topical antibiotic gel used for the treatment of acne vulgaris.'
+            },
+            {
+                name: 'Clindamycin + Adapalene Gel',
+                form: 'Gel',
+                strength: '-',
+                packaging: '15 g',
+                desc: 'Combination gel containing clindamycin and adapalene for acne treatment.'
+            },
+            {
+                name: 'Clindamycin + Nicotinamide Gel',
+                form: 'Gel',
+                strength: '-',
+                packaging: '20 g',
+                desc: 'Topical gel combining clindamycin and nicotinamide for inflammatory acne.'
+            },
+            {
+                name: 'Clobetasol + Ketoconazole Cream',
+                form: 'Cream',
+                strength: '-',
+                packaging: '20 g',
+                desc: 'Combination cream containing a corticosteroid and antifungal agent for dermatological infections.'
+            },
+            {
+                name: 'Clobetasol + Neomycin + Miconazole Cream',
+                form: 'Cream',
+                strength: '-',
+                packaging: '20 g',
+                desc: 'Triple-action cream combining corticosteroid, antibacterial, and antifungal agents.'
+            },
+            {
+                name: 'Clotrimazole + Beclomethasone Ear Drops',
+                form: 'Drops',
+                strength: '-',
+                packaging: '10 ml',
+                desc: 'Otic drops combining antifungal and corticosteroid agents for ear infections.'
+            },
+            {
+                name: 'Glutathione Injection',
+                form: 'Injection',
+                strength: '600 mg',
+                packaging: '-',
+                desc: 'Injectable antioxidant therapy used for skin brightening and cellular health.'
+            },
+            {
+                name: 'Isotretinoin Capsules',
+                form: 'Capsule',
+                strength: '10 mg, 20 mg',
+                packaging: '10×10, 10×1×10',
+                desc: 'Oral retinoid indicated for the treatment of severe recalcitrant nodular acne.'
+            },
+            {
+                name: 'Kojic Acid Skin Brightening Lotion',
+                form: 'Lotion',
+                strength: '-',
+                packaging: '100 ml',
+                desc: 'Topical lotion formulated to reduce hyperpigmentation and brighten skin tone.'
+            },
+            {
+                name: 'Minoxidil Topical Solution',
+                form: 'Topical Solution',
+                strength: '5%',
+                packaging: '60 ml',
+                desc: 'Topical solution indicated for the treatment of androgenetic alopecia (hair loss).'
+            },
+            {
+                name: 'Minoxidil + Finasteride Topical Solution',
+                form: 'Topical Solution',
+                strength: '-',
+                packaging: '60 ml',
+                desc: 'Combination topical solution to prevent hair loss and stimulate hair growth.'
+            },
+            {
+                name: 'Sunscreen Lotion',
+                form: 'Lotion',
+                strength: '-',
+                packaging: '100 ml',
+                desc: 'Broad-spectrum sunscreen lotion to protect the skin from harmful UV radiation.'
+            },
+            {
+                name: 'Potassium Nitrate Tooth Gel',
+                form: 'Gel',
+                strength: '-',
+                packaging: '50 g',
+                desc: 'Desensitizing tooth gel used to reduce dental hypersensitivity.'
+            },
+            {
+                name: 'Povidone Iodine Solution',
+                form: 'Solution',
+                strength: '2%',
+                packaging: '100 ml',
+                desc: 'Topical antiseptic solution used for wound care and infection prevention.'
+            },
+            {
+                name: 'Silver Sulphadiazine + Chlorhexidine Cream',
+                form: 'Cream',
+                strength: '-',
+                packaging: '25 g',
+                desc: 'Antimicrobial cream used for the prevention and treatment of wound infections in burn patients.'
+            },
+            {
+                name: 'Sucralfate + Mupirocin Cream',
+                form: 'Cream',
+                strength: '-',
+                packaging: '5 g',
+                desc: 'Combination cream used to promote wound healing and prevent bacterial infection.'
+            },
+            {
+                name: 'Tannic Acid Glycerin Ear Drops',
+                form: 'Drops',
+                strength: '-',
+                packaging: '15 ml',
+                desc: 'Astringent and soothing ear drops indicated for minor ear discomfort.'
+            },
+            {
+                name: 'Tranexamic Acid Depigmentation Cream',
+                form: 'Cream',
+                strength: '-',
+                packaging: '20 g',
+                desc: 'Depigmentation cream formulated to reduce melasma and skin discolouration.'
+            },
+            {
+                name: 'Trioxsalen Tablets',
+                form: 'Tablet',
+                strength: '25 mg',
+                packaging: '10×10',
+                desc: 'Psoralen derivative used in combination with UV light therapy for vitiligo and psoriasis.'
+            },
+            {
+                name: 'Wheat Germ Oil + Vitamin E Softgel',
+                form: 'Softgel Capsule',
+                strength: '-',
+                packaging: '10×10',
+                desc: 'Dietary supplement formulated to nourish skin and support overall skin health.'
+            },
+            {
+                name: 'White Paraffin + Liquid Paraffin Cream',
+                form: 'Cream',
+                strength: '-',
+                packaging: '100 g',
+                desc: 'Emollient cream used to treat dry, scaling, and sensitive skin conditions.'
+            }
         ]
     },
     'gastro-intestinal': {
