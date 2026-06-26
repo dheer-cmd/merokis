@@ -1953,19 +1953,203 @@ const catalogueDB = {
         ]
     },
     'general-medicine': {
-        title: 'General Medicine Spec',
+        title: 'General Medicine',
         tag: 'General Medicine',
-        desc: 'Essential primary care formulations, multi-vitamins, and daily therapeutic solutions.',
+        desc: 'Comprehensive range of general pharmaceutical formulations including respiratory care, allergy management, nutritional supplements, vitamins & minerals, corticosteroids, cough & cold preparations, hydration products, and supportive therapies manufactured according to international quality standards.',
         icon: '💊',
         coverClass: 'grad-blue',
-        count: '120 Items',
+        count: '27 Items',
         downloadMsg: 'General Medicine Specification Booklet',
         samples: [
-            { name: 'Paracetamol Infusion', strength: '1000mg/100ml', form: 'Injectables', packaging: 'IV Bags', desc: 'Intravenous paracetamol for post-operative acute pain and fever.' },
-            { name: 'Vitamin D3 Chewable', strength: '60000 IU', form: 'Tablets', packaging: '10×10 Strips', desc: 'High-strength cholecalciferol for bone health and immune support.' },
-            { name: 'Calcium & Vit D3 Tablets', strength: '500mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Bone density support formula containing calcium carbonate and vitamin D3.' },
-            { name: 'Cetirizine Hydrochloride', strength: '10mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Selective H1-antagonist for allergic rhinitis and chronic urticaria treatment.' },
-            { name: 'Azelastine Nasal Spray', strength: '137mcg', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Intranasal antihistamine for seasonal and perennial allergic rhinitis.' }
+            {
+                name: 'Calcium, Vitamin D3 & Methylcobalamin Product Range',
+                form: 'Tablet, Softgel',
+                strength: 'Calcitriol + Calcium Carbonate | Calcitriol + Calcium + Vitamin K2-7 | Calcitriol + Calcium + Zinc | Calcium + Vitamin D3 | Calcium + Vitamin D3 + Zinc | Calcium Citrate + Vitamin K2-7 + Magnesium + Zinc + Methylfolate | Calcitriol + Methylcobalamin + Vitamin B6 + Calcium + Folic Acid',
+                packaging: '10×10, 10×15',
+                desc: 'Comprehensive calcium, vitamin D3, and methylcobalamin combination range for bone density support, mineral supplementation, and nerve health.'
+            },
+            {
+                name: 'Vitamin D3 (Cholecalciferol) Range',
+                form: 'Tablet, Injection, Drops',
+                strength: '60000 IU Tablet | 60000 IU Injection | 800 IU Drops',
+                packaging: '10×10 Tablets, 1 ml Injection, 15 ml Drops',
+                desc: 'High-strength vitamin D3 formulations for prevention and treatment of Vitamin D deficiency, supporting calcium absorption and immune system health.'
+            },
+            {
+                name: 'Iron & Folic Acid Supplement Range',
+                form: 'Syrup, Tablet',
+                strength: 'Carbonyl Iron + Folic Acid + Vitamin B12 | Iron Polymaltose + Folic Acid | Ferrous Ascorbate + Folic Acid + Zinc',
+                packaging: '150 ml, 200 ml, 10×10 Tablets',
+                desc: 'Hematinic formulations containing iron in combination with folic acid, zinc, and vitamin B12 for the prevention and treatment of iron deficiency anemia.'
+            },
+            {
+                name: 'Respiratory Expectorant Range',
+                form: 'Syrup',
+                strength: 'Ambroxol + Levosalbutamol + Guaiphenesin | Ambroxol + Terbutaline + Guaiphenesin + Menthol | Bromhexine + Terbutaline + Guaiphenesin + Menthol | Dextromethorphan + Guaiphenesin + Bromhexine + CPM | Diphenhydramine + Ammonium Chloride + Sodium Citrate + Menthol',
+                packaging: '100 ml, 200 ml',
+                desc: 'Cough syrups and expectorants formulated to relieve chest congestion, bronchial asthma, and productive coughs.'
+            },
+            {
+                name: 'Anti-Allergic Product Range',
+                form: 'Tablet, Syrup, Dispersible Tablet, Injection',
+                strength: 'Fexofenadine | Fexofenadine + Montelukast | Levocetirizine | Levocetirizine + Montelukast | Hydroxyzine | Cyproheptadine | Dexchlorpheniramine | Chlorpheniramine Injection',
+                packaging: '10×10 Tablets, 60 ml Syrup, 100 ml Syrup, Ampoule',
+                desc: 'Comprehensive range of antihistamines and antiallergic agents for treatment of seasonal allergic rhinitis, urticaria, pruritus, and allergic symptoms.'
+            },
+            {
+                name: 'Corticosteroid Product Range',
+                form: 'Tablet, Injection, Syrup',
+                strength: 'Betamethasone | Betamethasone Sodium Phosphate Injection | Dexamethasone | Dexamethasone Injection | Deflazacort | Hydrocortisone | Hydrocortisone Sodium Succinate Injection',
+                packaging: '10×10 Tablets, 1 ml Ampoule, Vial, 60 ml Syrup',
+                desc: 'Potent anti-inflammatory and immunosuppressive corticosteroids indicated for allergic states, endocrine disorders, and inflammatory diseases.'
+            },
+            {
+                name: 'Caffeine Citrate Injection Range',
+                form: 'Injection',
+                strength: '20 mg / 1 ml | 40 mg / 2 ml | 60 mg / 3 ml',
+                packaging: '1 ml, 2 ml, 3 ml Ampoules',
+                desc: 'Respiratory stimulant injection indicated for the short-term treatment of apnea of prematurity in infants.'
+            },
+            {
+                name: 'Eye Lubricant Drops',
+                form: 'Eye Drops',
+                strength: 'Carboxymethylcellulose Sodium Ophthalmic Solution',
+                packaging: '10 ml Bottle',
+                desc: 'Lubricating eye drops providing temporary relief from burning, irritation, and discomfort due to dryness of the eye.'
+            },
+            {
+                name: 'Ear & Eye Anti-Infective Drops',
+                form: 'Drops',
+                strength: 'Ciprofloxacin + Chlorpheniramine + Zinc',
+                packaging: '5 ml Bottle, 10 ml Bottle',
+                desc: 'Antibacterial and anti-inflammatory eye and ear drop combination formulation.'
+            },
+            {
+                name: 'Appetite Stimulant Syrup',
+                form: 'Syrup',
+                strength: 'Cyproheptadine + Tricholine Citrate',
+                packaging: '200 ml Bottle',
+                desc: 'Combination syrup formulated as an appetite stimulant, supporting nutritional uptake and weight gain in patients with appetite loss.'
+            },
+            {
+                name: 'Anthelmintic Range',
+                form: 'Oral Suspension',
+                strength: 'Albendazole | Albendazole + Ivermectin',
+                packaging: '10 ml Bottle',
+                desc: 'Anthelmintic suspension for the treatment of single or mixed intestinal parasite infections.'
+            },
+            {
+                name: 'ORS Range',
+                form: 'Powder',
+                strength: 'Oral Rehydration Salts IP',
+                packaging: '4.2 g Sachet, 21.8 g Sachet',
+                desc: 'WHO formulation oral rehydration salts for restoration of body fluids and electrolytes lost due to dehydration from diarrhea and vomiting.'
+            },
+            {
+                name: 'Febuxostat Tablets',
+                form: 'Tablet',
+                strength: '40 mg | 80 mg',
+                packaging: '10×10 Tablets',
+                desc: 'Xanthine oxidase inhibitor indicated for the chronic management of hyperuricemia in patients with gout.'
+            },
+            {
+                name: 'Ferric Carboxymaltose Injection',
+                form: 'Injection',
+                strength: '50 mg/ml',
+                packaging: '2 ml Vial, 10 ml Vial',
+                desc: 'Intravenous iron replacement therapy indicated for the treatment of iron deficiency anemia when oral iron preparations are ineffective.'
+            },
+            {
+                name: 'Glucosamine Joint Care Range',
+                form: 'Tablet, Softgel',
+                strength: 'Glucosamine + MSM + Diacerein | Rose Hip + Collagen + Sodium Hyaluronate + Chondroitin + Vitamin C',
+                packaging: '10×10 Tablets, 30 Softgels',
+                desc: 'Advanced joint health support formulas providing glucosamine, MSM, and key nutrients to maintain cartilage integrity, joint mobility, and reduce pain.'
+            },
+            {
+                name: 'Glutathione Injection Range',
+                form: 'Injection',
+                strength: '600 mg | 1200 mg | 2000 mg',
+                packaging: 'Vial with Sterile Water',
+                desc: 'High-dose intravenous glutathione injection formulation providing powerful antioxidant properties, liver detoxification support, and cellular protection.'
+            },
+            {
+                name: 'Edaravone Injection',
+                form: 'Injection',
+                strength: '30 mg / 20 ml',
+                packaging: '20 ml Ampoule',
+                desc: 'Neuroprotective agent indicated for the treatment of amyotrophic lateral sclerosis (ALS) and acute ischemic stroke.'
+            },
+            {
+                name: 'Etamsylate Injection',
+                form: 'Injection',
+                strength: '250 mg / 2 ml',
+                packaging: '2 ml Ampoule',
+                desc: 'Hemostatic agent indicated for the prevention and treatment of capillary hemorrhages, post-operative bleeding, and menorrhagia.'
+            },
+            {
+                name: 'Methylene Blue Injection',
+                form: 'Injection',
+                strength: '1% w/v (10 mg/ml)',
+                packaging: '10 ml Ampoule',
+                desc: 'Indicated for the treatment of acquired methemoglobinemia.'
+            },
+            {
+                name: 'Sterile Water for Injection',
+                form: 'Injection',
+                strength: 'Sterile Water',
+                packaging: '5 ml, 10 ml, 15 ml Ampoules',
+                desc: 'Sterile, non-pyrogenic, solute-free water for preparation and dilution of parenteral drugs.'
+            },
+            {
+                name: 'Fluconazole Tablets',
+                form: 'Tablet',
+                strength: '150 mg | 400 mg',
+                packaging: '1×1 Tablet, 10×10 Tablets',
+                desc: 'Triazole antifungal agent indicated for the treatment of vaginal candidiasis, systemic fungal infections, and cryptococcal meningitis.'
+            },
+            {
+                name: 'Ginseng Multivitamin Syrup',
+                form: 'Syrup',
+                strength: 'Ginseng + Multivitamins + Minerals',
+                packaging: '200 ml Bottle',
+                desc: 'Nutritional supplement syrup containing ginseng extract, vitamins, and minerals to boost immunity, energy, and overall health.'
+            },
+            {
+                name: 'Griseofulvin Tablets',
+                form: 'Tablet',
+                strength: '250 mg | 500 mg',
+                packaging: '10×10 Tablets',
+                desc: 'Antifungal antibiotic indicated for the treatment of dermatophyte infections of the skin, hair, and nails.'
+            },
+            {
+                name: 'Human Placenta Extract Gel',
+                form: 'Gel',
+                strength: '0.1% w/w Extract',
+                packaging: '20 g Tube',
+                desc: 'Topical gel indicated for wound healing, tissue regeneration, chronic wounds, and burns.'
+            },
+            {
+                name: 'Drotaverine Combination Tablets',
+                form: 'Tablet',
+                strength: 'Drotaverine + Aceclofenac | Drotaverine + Mefenamic Acid',
+                packaging: '10×10 Tablets',
+                desc: 'Antispasmodic and analgesic combination tablets indicated for the treatment of smooth muscle spasms and associated pain.'
+            },
+            {
+                name: 'Acebrophylline Combination Tablets',
+                form: 'Tablet',
+                strength: 'Acebrophylline + Desloratadine + Montelukast',
+                packaging: '10×10 Tablets',
+                desc: 'Triple combination tablet for respiratory conditions like asthma and chronic obstructive pulmonary disease (COPD) with allergic rhinitis.'
+            },
+            {
+                name: 'Cold & Flu Combination Tablets',
+                form: 'Tablet',
+                strength: 'Aceclofenac + Paracetamol + Phenylephrine + Cetirizine + Caffeine',
+                packaging: '10×10 Tablets',
+                desc: 'Comprehensive cold and flu formulation for relief from fever, body aches, nasal congestion, runny nose, and sneezing.'
+            }
         ]
     },
     'gynaec': {
