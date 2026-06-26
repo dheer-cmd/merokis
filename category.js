@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic and Antiviral Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral and Cardiovascular Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -226,7 +226,7 @@ Thank you.`;
             
             const packRow = document.getElementById('onc-modal-pack-row');
             if (packRow) {
-                if (catKey === 'antiviral') {
+                if (catKey === 'antiviral' || catKey === 'cardiovascular-drugs') {
                     packRow.style.display = 'none';
                 } else {
                     packRow.style.display = 'flex';
@@ -281,6 +281,9 @@ Thank you.`;
     } else if (catKey === 'antiviral') {
         formsList = ['Tablet'];
         packagingsList = [];
+    } else if (catKey === 'cardiovascular-drugs') {
+        formsList = ['Tablet', 'Capsule', 'Injection', 'Gel'];
+        packagingsList = [];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -292,11 +295,11 @@ Thank you.`;
 
         const pkgCard = pkgDesktop ? pkgDesktop.closest('.filter-card') : null;
         if (pkgCard) {
-            pkgCard.style.display = (catKey === 'antiviral') ? 'none' : 'block';
+            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs') ? 'none' : 'block';
         }
         const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
         if (pkgMobileSection) {
-            pkgMobileSection.style.display = (catKey === 'antiviral') ? 'none' : 'block';
+            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs') ? 'none' : 'block';
         }
 
         // Render Forms
@@ -493,6 +496,7 @@ Thank you.`;
             const matchesPkg = selectedFilters.packagings.length === 0 || 
                               selectedFilters.packagings.some(filterPkg => {
                                   const normalizedFilter = filterPkg.toLowerCase().replace(/x/g, '×');
+                                  if (!product.packaging) return false;
                                   const productPkgs = product.packaging.toLowerCase().replace(/x/g, '×').split(/[,/]/).map(p => p.trim());
                                   return productPkgs.includes(normalizedFilter);
                               });
@@ -517,17 +521,18 @@ Thank you.`;
                     card.className = 'product-card';
 
                     // Product-level WhatsApp Link Setup
-                    const productMessage = `Hello Mérokis,\n\nI am interested in the following product:\n\nProduct: ${product.name}\nCategory: ${catData.title}\nForm: ${product.form}\nPackaging: ${product.packaging}\n\nPlease share product details, availability, export options, MOQ, and pricing.\n\nThank you.`;
+                    const packagingText = product.packaging ? `\nPackaging: ${product.packaging}` : '';
+                    const productMessage = `Hello Mérokis,\n\nI am interested in the following product:\n\nProduct: ${product.name}\nCategory: ${catData.title}\nForm: ${product.form}${packagingText}\n\nPlease share product details, availability, export options, MOQ, and pricing.\n\nThank you.`;
 
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs') {
                         const badgeHtml = catKey === 'antiviral'
                             ? `<span class="product-badge" style="background: #003A99; color: #ffffff; text-transform: uppercase; border-radius: 30px;">${product.shortBadge || ''}</span>`
                             : `<span class="product-badge badge-form">${product.form}</span>`;
                         
-                        const specRowsHtml = catKey === 'antiviral'
+                        const specRowsHtml = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs')
                             ? `
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Dosage Form:</span>

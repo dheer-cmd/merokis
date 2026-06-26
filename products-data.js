@@ -1311,19 +1311,224 @@ const catalogueDB = {
         ]
     },
     'cardiovascular-drugs': {
-        title: 'Cardiovascular Care',
+        title: 'Cardiovascular Drugs',
         tag: 'Cardiovascular',
-        desc: 'Cardioprotective agents, antihypertensives, and lipid-lowering drugs managing cardiac health.',
+        desc: 'High-quality cardiovascular pharmaceutical formulations for hypertension, heart failure, arrhythmias, anticoagulation, lipid management, emergency cardiac care, and critical cardiovascular conditions.',
         icon: '❤️',
         coverClass: 'grad-teal',
-        count: '45 Items',
+        count: '35 Items',
         downloadMsg: 'Cardiovascular Drugs Specification Booklet',
         samples: [
-            { name: 'Atorvastatin Tablets USP', strength: '20mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'HMG-CoA reductase inhibitor (statin) for hypercholesterolemia management.' },
-            { name: 'Amlodipine Tablets', strength: '5mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Calcium channel blocker for treating hypertension and angina pectoris.' },
-            { name: 'Losartan Potassium', strength: '50mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Angiotensin II receptor antagonist managing hypertension.' },
-            { name: 'Clopidogrel Bisulfate', strength: '75mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Antiplatelet agent preventing blood clots in post-stroke or MI patients.' },
-            { name: 'Metoprolol Succinate ER', strength: '50mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Selective beta-blocker for heart failure, angina, and systemic hypertension.' }
+            {
+                name: 'Adenosine Injection IP',
+                form: 'Injection',
+                strength: '6 mg / 2 ml',
+                desc: 'Antiarrhythmic medication used to convert paroxysmal supraventricular tachycardia (PSVT) to sinus rhythm.'
+            },
+            {
+                name: 'Adrenaline Bitartrate Injection IP',
+                form: 'Injection',
+                strength: '1 mg/ml',
+                desc: 'Sympathomimetic agent used in the emergency treatment of severe anaphylactic reactions and cardiac arrest.'
+            },
+            {
+                name: 'Amiodarone Sterile Concentrate IP',
+                form: 'Injection',
+                strength: '150 mg / 3 ml',
+                desc: 'Antiarrhythmic agent used for the treatment of severe rhythm disorders.'
+            },
+            {
+                name: 'Amlodipine Tablets',
+                form: 'Tablet',
+                strength: '5 mg',
+                desc: 'Calcium channel blocker indicated for the treatment of hypertension and coronary artery disease.'
+            },
+            {
+                name: 'Amlodipine + Atenolol Tablets',
+                form: 'Tablet',
+                strength: '5 mg + 50 mg',
+                desc: 'Combination antihypertensive therapy containing a calcium channel blocker and beta-blocker.'
+            },
+            {
+                name: 'Aspirin Gastro-Resistant Tablets IP',
+                form: 'Tablet',
+                strength: '75 mg, 150 mg',
+                desc: 'Antiplatelet agent used for the prevention of cardiovascular diseases.'
+            },
+            {
+                name: 'Atorvastatin Tablets IP',
+                form: 'Tablet',
+                strength: '10 mg, 20 mg, 40 mg',
+                desc: 'HMG-CoA reductase inhibitor used to lower cholesterol and triglycerides.'
+            },
+            {
+                name: 'Atropine Sulphate Injection IP',
+                form: 'Injection',
+                strength: '0.6 mg/ml',
+                desc: 'Anticholinergic agent used to treat bradycardia and as a pre-anaesthetic medication.'
+            },
+            {
+                name: 'Clonidine Hydrochloride Tablets IP',
+                form: 'Tablet',
+                strength: '100 mcg',
+                desc: 'Centrally acting alpha-agonist hypotensive agent used to treat high blood pressure.'
+            },
+            {
+                name: 'Digoxin',
+                form: 'Tablet / Injection',
+                strength: 'Tablet: 0.25 mg | Injection: 500 mcg / 2 ml',
+                desc: 'Cardiac glycoside used for the management of mild to moderate heart failure and control of ventricular response rate in patients with chronic atrial fibrillation.'
+            },
+            {
+                name: 'Dobutamine Injection USP',
+                form: 'Injection',
+                strength: '250 mg / 5 ml',
+                desc: 'Inotropic agent indicated for short-term inotropic support in cardiac decompensation.'
+            },
+            {
+                name: 'Dopamine Hydrochloride Injection IP',
+                form: 'Injection',
+                strength: '200 mg / 5 ml',
+                desc: 'Inotropic vasopressor indicated for the correction of hemodynamic imbalances.'
+            },
+            {
+                name: 'Electrode / Ultrasonic Gel',
+                form: 'Gel',
+                strength: '250 ml, 5000 ml',
+                desc: 'Conductive medium used in medical ultrasound procedures and electrocardiography.'
+            },
+            {
+                name: 'Enoxaparin Sodium Injection IP (Pre-filled Syringe)',
+                form: 'Injection',
+                strength: '40 mg / 0.4 ml, 60 mg / 0.6 ml, 80 mg / 0.8 ml',
+                desc: 'Low molecular weight heparin used to prevent and treat deep vein thrombosis.'
+            },
+            {
+                name: 'Esmolol Hydrochloride Injection IP',
+                form: 'Injection',
+                strength: '100 mg / 10 ml',
+                desc: 'Ultra-short-acting beta-adrenergic blocker indicated for rapid control of ventricular rate.'
+            },
+            {
+                name: 'Frusemide Injection IP',
+                form: 'Injection',
+                strength: '20 mg / 2 ml, 40 mg / 4 ml',
+                desc: 'Loop diuretic used for the treatment of edema associated with congestive heart failure, renal, or hepatic disease.'
+            },
+            {
+                name: 'Heparin Sodium Injection IP',
+                form: 'Injection',
+                strength: '5000 IU / 5 ml, 25000 IU / 5 ml',
+                desc: 'Anticoagulant indicated for the prevention and treatment of thromboembolic disorders.'
+            },
+            {
+                name: 'Hydralazine Hydrochloride Injection USP',
+                form: 'Injection',
+                strength: '20 mg/ml',
+                desc: 'Direct-acting vasodilator indicated for severe essential hypertension.'
+            },
+            {
+                name: 'Hydrochlorothiazide + Olmesartan Medoxomil Tablets',
+                form: 'Tablet',
+                strength: '12.5 mg + 20 mg',
+                desc: 'Combination antihypertensive agent containing a thiazide diuretic and angiotensin II receptor antagonist.'
+            },
+            {
+                name: 'Ivabradine Tablets',
+                form: 'Tablet',
+                strength: '5 mg',
+                desc: 'Hyperpolarization-activated cyclic nucleotide-gated channel blocker indicated for stable chronic heart failure.'
+            },
+            {
+                name: 'Labetalol',
+                form: 'Tablet / Injection',
+                strength: 'Tablet: 100 mg | Injection: 20 mg / 4 ml, 100 mg / 20 ml',
+                desc: 'Adrenergic receptor blocking agent used for the control of blood pressure in severe hypertension.'
+            },
+            {
+                name: 'Methyldopa Tablets IP',
+                form: 'Tablet',
+                strength: '250 mg',
+                desc: 'Centrally acting antihypertensive agent indicated for the treatment of hypertension.'
+            },
+            {
+                name: 'Metolazone Tablets IP',
+                form: 'Tablet',
+                strength: '2.5 mg, 5 mg',
+                desc: 'Quinetazone diuretic indicated for the treatment of salt and water retention.'
+            },
+            {
+                name: 'Metoprolol',
+                form: 'Tablet / Extended Release Tablet / Injection',
+                strength: 'Succinate ER: 50 mg | Tartrate: 25 mg, 50 mg | Injection: 1 mg/ml',
+                desc: 'Selective beta-blocker used for hypertension, angina, and heart failure.'
+            },
+            {
+                name: 'Milrinone Lactate Injection',
+                form: 'Injection',
+                strength: '10 mg / 10 ml',
+                desc: 'Inodilator indicated for the short-term intravenous treatment of patients with acute decompensated heart failure.'
+            },
+            {
+                name: 'Nitroglycerin Injection IP',
+                form: 'Injection',
+                strength: '25 mg / 5 ml, 50 mg / 5 ml',
+                desc: 'Vasodilator indicated for the treatment of perioperative hypertension and congestive heart failure associated with acute myocardial infarction.'
+            },
+            {
+                name: 'Phenylephrine HCl Injection IP',
+                form: 'Injection',
+                strength: '10 mg/ml',
+                desc: 'Alpha-1 adrenergic receptor agonist used to treat hypotension during anesthesia.'
+            },
+            {
+                name: 'Propranolol Hydrochloride Tablets IP',
+                form: 'Tablet',
+                strength: '10 mg, 20 mg, 40 mg',
+                desc: 'Non-selective beta-blocker indicated for hypertension, angina pectoris, and cardiac arrhythmias.'
+            },
+            {
+                name: 'Rosuvastatin + Aspirin + Clopidogrel Capsules',
+                form: 'Capsule',
+                strength: 'Rosuvastatin 10 mg + Aspirin 75 mg + Clopidogrel 75 mg, Rosuvastatin 20 mg + Aspirin 75 mg + Clopidogrel 75 mg',
+                desc: 'Triple combination therapy indicated for the secondary prevention of cardiovascular events.'
+            },
+            {
+                name: 'Rosuvastatin Tablets IP',
+                form: 'Tablet',
+                strength: '10 mg, 20 mg',
+                desc: 'HMG-CoA reductase inhibitor indicated for hyperlipidemia and cardiovascular risk reduction.'
+            },
+            {
+                name: 'Sacubitril + Valsartan Tablets',
+                form: 'Tablet',
+                strength: '24 mg / 26 mg, 49 mg / 51 mg',
+                desc: 'Angiotensin receptor-neprilysin inhibitor indicated to reduce the risk of cardiovascular death and hospitalization in patients with chronic heart failure.'
+            },
+            {
+                name: 'Sterile Noradrenaline Concentrate Injection IP',
+                form: 'Injection',
+                strength: '4 mg / 2 ml',
+                desc: 'Vasopressor indicated for blood pressure control in acute hypotensive states.'
+            },
+            {
+                name: 'Telmisartan + Amlodipine Tablets',
+                form: 'Tablet',
+                strength: '40 mg + 5 mg',
+                desc: 'Combination therapy containing an angiotensin receptor blocker and a calcium channel blocker.'
+            },
+            {
+                name: 'Telmisartan + Hydrochlorothiazide Tablets',
+                form: 'Tablet',
+                strength: '40 mg + 12.5 mg',
+                desc: 'Combination therapy containing an angiotensin receptor blocker and a thiazide diuretic.'
+            },
+            {
+                name: 'Telmisartan Tablets IP',
+                form: 'Tablet',
+                strength: '40 mg',
+                desc: 'Angiotensin II receptor antagonist indicated for the treatment of hypertension.'
+            }
         ]
     },
     'dermatology-drugs': {
