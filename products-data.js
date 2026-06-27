@@ -2834,5 +2834,15 @@ const catalogueDB = {
                 desc: 'Short-acting beta-agonist for relief of bronchospasm and asthma symptoms.'
             }
         ]
+    },
+    'veterinary-products': {
+        title: 'Veterinary Products',
+        tag: 'Veterinary',
+        desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
+        icon: '🐾',
+        coverClass: 'grad-red',
+        count: '0 Items',
+        downloadMsg: 'Veterinary Products Specification Booklet',
+        samples: []
     }
 };

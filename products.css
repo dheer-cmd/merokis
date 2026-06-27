@@ -540,6 +540,7 @@ html {
 .grad-green { background: linear-gradient(135deg, #134e5e 0%, #71b280 100%); }
 .grad-green-dark { background: linear-gradient(135deg, #114b1f 0%, #1e8238 100%); }
 .grad-gold { background: linear-gradient(135deg, #8a5a00 0%, #e0a300 100%); }
+.grad-red { background: linear-gradient(135deg, #d31027 0%, #ea384d 100%); }
 
 /* Info Area */
 .catalogue-info {
@@ -565,6 +566,7 @@ html {
 .tag-orange { color: #d35400; }
 .tag-green { color: var(--accent); }
 .tag-gold { color: #c0392b; }
+.tag-red { color: #d31027; }
 
 .catalogue-info h3 {
     font-family: var(--font-heading);

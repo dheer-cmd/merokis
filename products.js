@@ -115,15 +115,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Build sample product rows
         mTableRows.innerHTML = '';
-        data.samples.forEach(row => {
+        if (data.samples.length === 0) {
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td><strong>${row.name}</strong></td>
-                <td>${row.strength}</td>
-                <td>${row.form}</td>
+                <td colspan="3" style="text-align: center; color: rgba(255,255,255,0.4); padding: 20px;">
+                    Products will be added soon...
+                </td>
             `;
             mTableRows.appendChild(tr);
-        });
+        } else {
+            data.samples.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${row.name}</strong></td>
+                    <td>${row.strength}</td>
+                    <td>${row.form}</td>
+                `;
+                mTableRows.appendChild(tr);
+            });
+        }
 
         // Setup download alert binding
         mDownloadBtn.onclick = (e) => {
