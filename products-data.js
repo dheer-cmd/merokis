@@ -2713,18 +2713,126 @@ const catalogueDB = {
         ]
     },
     'respiratory-drugs': {
-        title: 'Respiratory Solutions',
+        title: 'Respiratory Drugs',
         tag: 'Respiratory',
-        desc: 'Bronchodilators, antihistamines, and inhaled therapies supporting airway function.',
+        desc: "Comprehensive respiratory pharmaceutical formulations for asthma, COPD, allergies, cough, bronchitis, respiratory infections, nebulization therapy, and airway management, manufactured according to international quality standards.",
         icon: '💨',
         coverClass: 'grad-blue',
-        count: '25 Items',
+        count: '16 Items',
         downloadMsg: 'Respiratory Drugs Specification Booklet',
         samples: [
-            { name: 'Salbutamol Inhaler', strength: '100mcg', form: 'Syrups', packaging: 'Bottles', desc: 'Short-acting beta-2 agonist indicated for immediate relief of asthma bronchospasms.' },
-            { name: 'Montelukast & Levocetirizine', strength: '10mg/5mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Combination leukotriene receptor antagonist and antihistamine for allergic asthma.' },
-            { name: 'Budesonide Respules', strength: '0.5mg/2ml', form: 'Injectables', packaging: 'Bottles', desc: 'Inhaled corticosteroid suspension for nebulization in chronic asthma.' },
-            { name: 'Fluticasone Nasal Spray', strength: '50mcg', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Topical nasal corticosteroid indicated for seasonal and perennial allergic rhinitis.' }
+            {
+                name: 'Acebrophylline + N-Acetylcysteine Tablets',
+                form: 'Tablet',
+                strength: 'Acebrophylline 100 mg + N-Acetylcysteine 600 mg',
+                packaging: '10×10',
+                desc: 'Bronchodilator and mucolytic combination for chronic respiratory disorders.'
+            },
+            {
+                name: 'Ambroxol HCl Product Range',
+                form: 'Tablet, Syrup, Respirator Solution',
+                strength: 'Tablet: 30 mg | Syrup: 30 mg/5 ml | Respirator Solution: 15 mg/2 ml',
+                packaging: '10×10, 100 ml, 2 ml',
+                desc: 'Mucolytic formulation for productive cough and respiratory tract disorders.'
+            },
+            {
+                name: 'Aminophylline Injection IP',
+                form: 'Injection',
+                strength: '250 mg / 10 ml',
+                packaging: '10 ml',
+                desc: 'Bronchodilator used for acute asthma and COPD management.'
+            },
+            {
+                name: 'Bilastine Product Range',
+                form: 'Tablet, Syrup',
+                strength: 'Bilastine 20 mg | Bilastine + Montelukast',
+                packaging: '10×10, 60 ml',
+                desc: 'Modern anti-allergic therapy for allergic rhinitis and chronic urticaria.'
+            },
+            {
+                name: 'Budesonide Inhalation Suspension',
+                form: 'Respules',
+                strength: '0.5 mg',
+                packaging: '2 ml',
+                desc: 'Inhaled corticosteroid for asthma and COPD maintenance therapy.'
+            },
+            {
+                name: 'Cetirizine Product Range',
+                form: 'Tablet, Syrup',
+                strength: 'Tablet: 10 mg | Syrup: 5 mg/5 ml',
+                packaging: '25×10, 30 ml',
+                desc: 'Antihistamine for allergy symptoms and respiratory allergic conditions.'
+            },
+            {
+                name: 'Cough & Cold Combination Range',
+                form: 'Tablet, Syrup',
+                strength: 'Chlorpheniramine + Dextromethorphan + Phenylephrine | Chlorpheniramine + Dextromethorphan + Phenylephrine Syrup | Cetirizine + Dextromethorphan + Phenylephrine Syrup | Diphenhydramine + Ammonium Chloride + Sodium Citrate + Menthol | Terbutaline + Bromhexine + Guaiphenesin + Menthol | Dextromethorphan + Chlorpheniramine',
+                packaging: 'Standard Packs',
+                desc: 'Comprehensive cough, cold and upper respiratory tract symptom relief formulations.'
+            },
+            {
+                name: 'Doxofylline Injection',
+                form: 'Injection',
+                strength: '100 mg / 10 ml',
+                packaging: '5×5×10 ml',
+                desc: 'Bronchodilator indicated for asthma and chronic obstructive pulmonary disease.'
+            },
+            {
+                name: 'Montelukast + Levocetirizine Syrup',
+                form: 'Syrup',
+                strength: 'Montelukast 4 mg + Levocetirizine 2.5 mg',
+                packaging: '60 ml',
+                desc: 'Combination therapy for pediatric allergic rhinitis and asthma.'
+            },
+            {
+                name: 'Etofylline + Theophylline Injection',
+                form: 'Injection',
+                strength: 'Etofylline 169.4 mg + Theophylline 50.6 mg',
+                packaging: '5×1×10×2 ml',
+                desc: 'Bronchodilator injection for acute respiratory distress management.'
+            },
+            {
+                name: 'Fexofenadine Product Range',
+                form: 'Tablet',
+                strength: 'Fexofenadine 120 mg | Fexofenadine 180 mg | Fexofenadine + Montelukast',
+                packaging: '10×1×10',
+                desc: 'Second-generation antihistamine for allergic respiratory disorders.'
+            },
+            {
+                name: 'Formoterol + Budesonide Product Range',
+                form: 'Rotacaps, Inhaler',
+                strength: '6 mcg + 200 mcg | 6 mcg + 400 mcg',
+                packaging: 'Rotacaps, Inhaler',
+                desc: 'Combination inhalation therapy for asthma and COPD.'
+            },
+            {
+                name: 'Glycopyrronium Inhalation Solution',
+                form: 'Respules',
+                strength: '25 mcg / 2 ml',
+                packaging: '8×5×2 ml',
+                desc: 'Long-acting muscarinic antagonist for COPD maintenance therapy.'
+            },
+            {
+                name: 'Levosalbutamol + Ipratropium Product Range',
+                form: 'Respirator Solution, Nebulizer Solution',
+                strength: 'Levosalbutamol 1.25 mg + Ipratropium 500 mcg',
+                packaging: '8×5×2.5 ml | 5×5×2.5 ml',
+                desc: 'Dual bronchodilator therapy for acute bronchospasm.'
+            },
+            {
+                name: 'Levosalbutamol Product Range',
+                form: 'Syrup, Respules',
+                strength: 'Levosalbutamol Syrup | Levosalbutamol + Budesonide',
+                packaging: '100 ml, 5×6×2 ml',
+                desc: 'Bronchodilator formulations for asthma and pediatric respiratory care.'
+            },
+            {
+                name: 'Salbutamol Product Range',
+                form: 'Nebulizer Solution, Syrup',
+                strength: 'Nebulizer: 2.5 mg/2.5 ml | Syrup: 2 mg/5 ml',
+                packaging: '8×5×2.5 ml, 100 ml',
+                desc: 'Short-acting beta-agonist for relief of bronchospasm and asthma symptoms.'
+            }
         ]
     }
 };

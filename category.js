@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral, Cardiovascular, Dermatology, Gastrointestinal, General Medicine, Gynaec, Health Supplement, Herbal, Men Health, Neurology and Orthopaedic Rehabilitation Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'orthopaedic-rehabilitation') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral, Cardiovascular, Dermatology, Gastrointestinal, General Medicine, Gynaec, Health Supplement, Herbal, Men Health, Neurology, Orthopaedic Rehabilitation and Respiratory Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'orthopaedic-rehabilitation' || catKey === 'respiratory-drugs') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -321,6 +321,9 @@ Thank you.`;
     } else if (catKey === 'orthopaedic-rehabilitation') {
         formsList = ['Orthopaedic Support Device'];
         packagingsList = ['Large (L)', 'Extra Large (XL)'];
+    } else if (catKey === 'respiratory-drugs') {
+        formsList = ['Tablet', 'Syrup', 'Injection', 'Respules', 'Nebulizer Solution', 'Respirator Solution', 'Rotacaps', 'Inhaler'];
+        packagingsList = [];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -332,11 +335,11 @@ Thank you.`;
 
         const pkgCard = pkgDesktop ? pkgDesktop.closest('.filter-card') : null;
         if (pkgCard) {
-            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology') ? 'none' : 'block';
+            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs') ? 'none' : 'block';
         }
         const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
         if (pkgMobileSection) {
-            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology') ? 'none' : 'block';
+            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs') ? 'none' : 'block';
         }
 
         const desktopPkgHeader = pkgDesktop ? pkgDesktop.closest('.filter-card').querySelector('h3') : null;
@@ -575,7 +578,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'orthopaedic-rehabilitation') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'orthopaedic-rehabilitation' || catKey === 'respiratory-drugs') {
                         const badgeHtml = catKey === 'antiviral'
                             ? `<span class="product-badge" style="background: #003A99; color: #ffffff; text-transform: uppercase; border-radius: 30px;">${product.shortBadge || ''}</span>`
                             : `<span class="product-badge badge-form">${product.form}</span>`;
