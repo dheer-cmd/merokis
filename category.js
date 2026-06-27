@@ -226,12 +226,18 @@ Thank you.`;
 
             const formLabel = document.getElementById('onc-modal-form-label');
             const strengthLabel = document.getElementById('onc-modal-strength-label');
+            const packLabel = document.getElementById('onc-modal-pack-label');
             if (catKey === 'orthopaedic-rehabilitation') {
                 if (formLabel) formLabel.textContent = 'Product Type';
                 if (strengthLabel) strengthLabel.textContent = 'Available Sizes';
+            } else if (catKey === 'veterinary-products') {
+                if (formLabel) formLabel.textContent = 'Dosage Form';
+                if (strengthLabel) strengthLabel.textContent = 'Composition';
+                if (packLabel) packLabel.textContent = 'Pack Size';
             } else {
                 if (formLabel) formLabel.textContent = 'Dosage Form';
                 if (strengthLabel) strengthLabel.textContent = 'Available Strengths';
+                if (packLabel) packLabel.textContent = 'Available Pack Sizes';
             }
             
             const packRow = document.getElementById('onc-modal-pack-row');
@@ -325,7 +331,7 @@ Thank you.`;
         formsList = ['Tablet', 'Syrup', 'Injection', 'Respules', 'Nebulizer Solution', 'Respirator Solution', 'Rotacaps', 'Inhaler'];
         packagingsList = [];
     } else if (catKey === 'veterinary-products') {
-        formsList = [];
+        formsList = ['Bolus', 'Injection'];
         packagingsList = [];
     }
 
@@ -336,132 +342,13 @@ Thank you.`;
         const pkgDesktop = document.getElementById('desktop-filter-packaging');
         const mobilePkg = document.getElementById('mobile-filter-packaging');
 
-        if (catKey === 'veterinary-products') {
-            const sidebar = document.querySelector('.filter-sidebar');
-            const drawerBody = document.querySelector('.drawer-body');
-            
-            const vetFiltersHtml = `
-                <div class="filter-card">
-                    <h3>Filter by Product Type</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Antibiotics</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Dewormers</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="filter-card">
-                    <h3>Filter by Dosage Form</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Injection</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Bolus</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="filter-card">
-                    <h3>Filter by Animal Type</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Livestock</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Poultry</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="filter-card">
-                    <h3>Filter by Therapeutic Category</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Nutritional Supplement</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Anti-infective</span>
-                        </label>
-                    </div>
-                </div>
-            `;
 
-            const vetDrawerHtml = `
-                <div class="drawer-filter-section">
-                    <h3>Product Type</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Antibiotics</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Dewormers</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="drawer-filter-section">
-                    <h3>Dosage Form</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Injection</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Bolus</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="drawer-filter-section">
-                    <h3>Animal Type</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Livestock</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Poultry</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="drawer-filter-section">
-                    <h3>Therapeutic Category</h3>
-                    <div class="filter-group">
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Nutritional Supplement</span>
-                        </label>
-                        <label class="filter-item" style="opacity: 0.5; cursor: not-allowed;">
-                            <input type="checkbox" disabled>
-                            <span>Anti-infective</span>
-                        </label>
-                    </div>
-                </div>
-            `;
 
-            if (sidebar) sidebar.innerHTML = vetFiltersHtml;
-            if (drawerBody) drawerBody.innerHTML = vetDrawerHtml;
-            return;
-        }
-
-        const pkgCard = pkgDesktop ? pkgDesktop.closest('.filter-card') : null;
-        if (pkgCard) {
-            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs') ? 'none' : 'block';
+            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs' || catKey === 'veterinary-products') ? 'none' : 'block';
         }
         const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
         if (pkgMobileSection) {
-            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs') ? 'none' : 'block';
+            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs' || catKey === 'veterinary-products') ? 'none' : 'block';
         }
 
         const desktopPkgHeader = pkgDesktop ? pkgDesktop.closest('.filter-card').querySelector('h3') : null;
@@ -739,6 +626,21 @@ Thank you.`;
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Available Strengths:</span>
                                         <span class="onc-spec-value">${product.strength}</span>
+                                    </div>
+                            `;
+                        } else if (catKey === 'veterinary-products') {
+                            specRowsHtml = `
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Dosage Form:</span>
+                                        <span class="onc-spec-value">${product.form}</span>
+                                    </div>
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Composition:</span>
+                                        <span class="onc-spec-value">${product.strength}</span>
+                                    </div>
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Pack Size:</span>
+                                        <span class="onc-spec-value">${product.packaging}</span>
                                     </div>
                             `;
                         } else {

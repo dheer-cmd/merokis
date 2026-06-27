@@ -2841,8 +2841,79 @@ const catalogueDB = {
         desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
         icon: '🐾',
         coverClass: 'grad-red',
-        count: '0 Items',
+        count: '10 Items',
         downloadMsg: 'Veterinary Products Specification Booklet',
-        samples: []
+        samples: [
+            {
+                name: 'Meloxivet Bolus',
+                form: 'Bolus',
+                strength: 'Meloxicam 100 mg',
+                packaging: '5 × 4 Bolus',
+                desc: 'Non-steroidal anti-inflammatory bolus indicated for pain, inflammation, musculoskeletal disorders, fever, mastitis, and post-operative recovery in large animals.'
+            },
+            {
+                name: 'Meloxivet Injection',
+                form: 'Injection',
+                strength: 'Meloxicam 5 mg/ml',
+                packaging: '30 ml',
+                desc: 'Veterinary NSAID injection providing rapid relief from inflammation, pain, lameness, fever, and surgical recovery.'
+            },
+            {
+                name: 'Meloxivet-P Bolus',
+                form: 'Bolus',
+                strength: 'Meloxicam, Paracetamol',
+                packaging: '5 × 4 Bolus',
+                desc: 'Dual-action analgesic and antipyretic bolus formulated for pain, fever, and inflammatory conditions in livestock.'
+            },
+            {
+                name: 'Meloxivet-P Injection',
+                form: 'Injection',
+                strength: 'Meloxicam, Paracetamol',
+                packaging: '30 ml',
+                desc: 'Fast-acting injectable analgesic for severe pain, fever, trauma, and inflammatory disorders.'
+            },
+            {
+                name: 'Meloxivet-SP Bolus',
+                form: 'Bolus',
+                strength: 'Meloxicam, Serratiopeptidase',
+                packaging: '5 × 4 Bolus',
+                desc: 'Anti-inflammatory enzyme combination that helps reduce swelling, inflammation, and tissue damage after injury or surgery.'
+            },
+            {
+                name: 'Nes Forte Bolus',
+                form: 'Bolus',
+                strength: 'Nimesulide',
+                packaging: '5 × 4 Bolus',
+                desc: 'Veterinary anti-inflammatory bolus for fever, pain, mastitis, musculoskeletal disorders, and post-operative care.'
+            },
+            {
+                name: 'Nes Forte Injection',
+                form: 'Injection',
+                strength: 'Nimesulide',
+                packaging: '30 ml',
+                desc: 'Rapid pain relief injection indicated for inflammatory disorders and high fever in cattle and other livestock.'
+            },
+            {
+                name: 'Neslide-SP Bolus',
+                form: 'Bolus',
+                strength: 'Nimesulide, Serratiopeptidase',
+                packaging: '5 × 4 Bolus',
+                desc: 'Combination anti-inflammatory formulation providing pain relief with enhanced reduction of swelling and inflammation.'
+            },
+            {
+                name: 'Aclonac-P Bolus',
+                form: 'Bolus',
+                strength: 'Aceclofenac, Paracetamol',
+                packaging: '5 × 4 Bolus',
+                desc: 'Veterinary analgesic bolus used for musculoskeletal pain, inflammation, fever, and orthopedic conditions.'
+            },
+            {
+                name: 'Aclonac-PS Bolus',
+                form: 'Bolus',
+                strength: 'Aceclofenac, Paracetamol, Serratiopeptidase',
+                packaging: '5 × 4 Bolus',
+                desc: 'Triple-action veterinary formulation providing pain relief, anti-inflammatory action, and faster recovery from tissue injury.'
+            }
+        ]
     }
 };
