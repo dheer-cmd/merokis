@@ -2283,19 +2283,196 @@ const catalogueDB = {
         ]
     },
     'health-supplement': {
-        title: 'Health Supplements',
+        title: 'Health Supplement',
         tag: 'Supplements',
-        desc: 'Premium vitamins, minerals, and dietary supplements supporting systemic immune wellness.',
+        desc: "Premium nutritional supplements, vitamins, minerals, antioxidants, probiotics, protein nutrition, electrolyte therapy, and wellness formulations manufactured according to international quality standards to support overall health and wellbeing.",
         icon: '🔋',
         coverClass: 'grad-green',
-        count: '48 Items',
+        count: '26 Items',
         downloadMsg: 'Health Supplement Specification Booklet',
         samples: [
-            { name: 'Multivitamin & Minerals', strength: 'Premium', form: 'Capsules', packaging: 'Bottles', desc: 'Comprehensive daily supplement supplying essential vitamins and minerals.' },
-            { name: 'Omega-3 Fish Oil', strength: '1000mg', form: 'Capsules', packaging: 'Bottles', desc: 'Rich in EPA and DHA, supporting cardiovascular health and joint functions.' },
-            { name: 'Whey Protein Isolate', strength: 'Standard', form: 'Tablets', packaging: 'Bottles', desc: 'High-purity protein supplement to support muscle recovery and synthesis.' },
-            { name: 'Zinc & Vitamin C Chew', strength: 'Standard', form: 'Tablets', packaging: '10×15 Strips', desc: 'Essential immune-boosting combination for defense against common infections.' },
-            { name: 'Coenzyme Q10 Capsules', strength: '100mg', form: 'Capsules', packaging: 'Bottles', desc: 'Important antioxidant supporting cellular energy and heart health.' }
+            {
+                name: 'Antioxidants, Minerals & Vitamins Capsules',
+                form: 'Capsule',
+                strength: 'Multivitamins + Minerals + Antioxidants',
+                packaging: '60 Capsules',
+                desc: 'Comprehensive antioxidant and multivitamin formulation for daily nutritional support.'
+            },
+            {
+                name: 'Vitamin C Product Range',
+                form: 'Tablet, Injection, Syrup',
+                strength: 'Ascorbic Acid + Sodium Ascorbate | Vitamin C Chewable | Ascorbic Acid Injection | Vitamin C + Zinc + Vitamin D3 | 500 mg | 1500 mg Injection | 500 mg Injection',
+                packaging: '10×10 Tablets, 2 ml Ampoule, 150 ml Syrup',
+                desc: 'Vitamin C supplementation range including chewable tablets, injections, and combination syrups for immune support and antioxidant defense.'
+            },
+            {
+                name: 'Hair, Skin & Nail Nutrition Range',
+                form: 'Tablet, Capsule',
+                strength: 'Biotin Multivitamin Formula | Biotin + Minerals + Amino Acids | Lycopene + Lutein + Vitamins',
+                packaging: '10×10',
+                desc: 'Advanced nutritional support for healthy hair, skin, and nails.'
+            },
+            {
+                name: 'Fruit Extract Multivitamin Syrup',
+                form: 'Syrup',
+                strength: 'Multivitamins + Minerals + Fruit Extracts',
+                packaging: '300 ml',
+                desc: 'Fruit-flavored multivitamin and multimineral syrup to support daily vitality, growth, and immune defense in children and adults.'
+            },
+            {
+                name: 'Calcium Supplement Range',
+                form: 'Injection, Tablet',
+                strength: 'Calcium Glucono-Galacto-Gluconate Injection | Calcium Supplement Formulations',
+                packaging: '10×10 Tablets, 10 ml Ampoules',
+                desc: 'Calcium supplementation range providing essential mineral support for bone density, nerve transmission, and muscular function.'
+            },
+            {
+                name: 'Carica Papaya Extract Tablets',
+                form: 'Tablet',
+                strength: 'Carica Papaya Extract + Tinospora Extract',
+                packaging: '10×10 Tablets',
+                desc: 'Papaya leaf and Tinospora extract tablets indicated to help boost blood platelet count and support immune health during viral infections.'
+            },
+            {
+                name: 'Coenzyme Q10 & Omega Supplement',
+                form: 'Capsule',
+                strength: 'Coenzyme Q10 + Omega 3 + Lycopene + Selenium',
+                packaging: '10×10 Capsules',
+                desc: 'Premium combination capsule of Coenzyme Q10, Omega 3, Lycopene, and Selenium supporting cardiovascular health, cellular energy, and antioxidant defense.'
+            },
+            {
+                name: 'Vitamin B12 Product Range',
+                form: 'Injection',
+                strength: 'Cyanocobalamin | Methylcobalamin | Vitamin B Complex with B12 | Vitamin C + Vitamin B12',
+                packaging: '5 ml Ampoules, 10 ml Vials',
+                desc: 'High-potency Vitamin B12 and combination injections to treat vitamin deficiency, neuropathies, and support red blood cell production.'
+            },
+            {
+                name: 'Energy Supplement Range',
+                form: 'Powder',
+                strength: 'Dextrose Energy Powder | Glucose C Orange | Glucose D Regular',
+                packaging: '100 g, 200 g, 500 g Packets',
+                desc: 'Fast-acting glucose energy powders to instantly replenish body fluids, restore electrolytes, and boost energy levels.'
+            },
+            {
+                name: 'Digestive Enzyme Supplement Range',
+                form: 'Syrup, Drops, Tablet',
+                strength: 'Diastase + Pepsin | Fungal Diastase + Pepsin | Fungal Diastase',
+                packaging: '200 ml Syrup, 15 ml Drops, 10×10 Tablets',
+                desc: 'Digestive enzyme supplement range containing amylase, diastase, and pepsin to relieve indigestion, bloating, and support gut health.'
+            },
+            {
+                name: 'Multivitamin + Zinc Syrup',
+                form: 'Syrup',
+                strength: 'Vitamin B Complex + Zinc + Folic Acid + Probiotics',
+                packaging: '200 ml',
+                desc: 'Nutritional syrup containing B-complex vitamins, zinc, folic acid, and probiotics to support growth, immunity, and healthy digestion.'
+            },
+            {
+                name: 'Probiotic Product Range',
+                form: 'Sachet, Capsule',
+                strength: 'Fructo-Oligosaccharides + Probiotics | Lactobacillus Formulations | Multi-strain Probiotic',
+                packaging: '10×10 Capsules, 1 g Sachets',
+                desc: 'Probiotic capsules and sachets designed to restore beneficial gut microflora, support digestive health, and enhance immune response.'
+            },
+            {
+                name: 'Ginseng Product Range',
+                form: 'Tablet, Syrup, Capsule',
+                strength: 'Ginseng Multivitamin Tablets | Ginseng Syrup | Ginseng Antioxidant Capsules',
+                packaging: '30 Tablets, 200 ml Syrup, 10×10 Capsules',
+                desc: 'Premium ginseng root extract ranges in combination with multivitamins and minerals to combat fatigue, improve focus, and build stamina.'
+            },
+            {
+                name: 'Iron Supplement Range',
+                form: 'Injection',
+                strength: 'Iron Sucrose',
+                packaging: '5 ml Ampoules',
+                desc: 'Iron sucrose injection indicated for intravenous treatment of iron deficiency anemia in patients where oral iron is ineffective.'
+            },
+            {
+                name: 'Levocarnitine Injection',
+                form: 'Injection',
+                strength: '1000 mg / 5 ml',
+                packaging: '5 ml Ampoule',
+                desc: 'Levocarnitine injection indicated for the treatment of primary and secondary carnitine deficiency.'
+            },
+            {
+                name: 'Magnesium Sulphate Injection',
+                form: 'Injection',
+                strength: '1000 mg / 2 ml',
+                packaging: '2 ml Ampoule',
+                desc: 'Magnesium sulphate injection indicated for the prevention and treatment of seizures in severe pre-eclampsia or eclampsia, and hypomagnesemia.'
+            },
+            {
+                name: 'Vitamin K Product Range',
+                form: 'Injection',
+                strength: 'Menadione Sodium Bisulphate | Phytomenadione | 1 mg | 10 mg',
+                packaging: '1 ml Ampoules',
+                desc: 'Vitamin K injection formulations indicated for the treatment of coagulation disorders and hypoprothrombinemia.'
+            },
+            {
+                name: 'Multivitamin Infusion',
+                form: 'Infusion',
+                strength: 'Standard Multivitamin Formulation',
+                packaging: '10 ml Ampoule',
+                desc: 'Concentrated multivitamin infusion containing essential water-soluble and fat-soluble vitamins for intravenous administration.'
+            },
+            {
+                name: 'Multivitamin Energy Powder',
+                form: 'Powder',
+                strength: 'Taurine + Amino Acids + L-Carnitine + Ginseng + Zinc + Vitamins',
+                packaging: '100 g, 200 g',
+                desc: 'Premium energy powder fortified with taurine, amino acids, L-carnitine, ginseng, and zinc to boost mental alertess and physical energy.'
+            },
+            {
+                name: 'Nano Curcumin Capsules',
+                form: 'Capsule',
+                strength: '500 mg',
+                packaging: '30 Capsules',
+                desc: 'Bioavailable nano-formulated curcumin capsules with enhanced absorption for powerful anti-inflammatory, antioxidant, and joint health support.'
+            },
+            {
+                name: 'Essential Fatty Acid Capsules',
+                form: 'Capsule',
+                strength: 'Omega 3 + Omega 6 + Omega 9 + Flaxseed Oil + Sea Buckthorn Oil',
+                packaging: '60 Capsules',
+                desc: 'Broad-spectrum essential fatty acid capsule containing Omega 3, 6, 9 from flaxseed and sea buckthorn oils to support heart, joint, and cognitive health.'
+            },
+            {
+                name: 'Protein Nutrition Range',
+                form: 'Powder',
+                strength: 'Protein Hydrolysate | High Protein | Protein + DHA + GLA',
+                packaging: '200 g, 400 g Tins',
+                desc: 'Premium protein supplement range fortified with vitamins, minerals, DHA, and GLA for complete nutritional and muscle recovery support.'
+            },
+            {
+                name: 'Electrolyte Product Range',
+                form: 'Sachet, Injection',
+                strength: 'ORS Powder | Potassium Chloride | Trace Elements | Zinc Chloride',
+                packaging: '4.2 g Sachets, 10 ml Ampoules',
+                desc: 'Electrolyte replacement and trace mineral supplement range to restore critical hydration and mineral balance.'
+            },
+            {
+                name: 'Vitamin B Complex Product Range',
+                form: 'Tablet, Capsule, Injection, Syrup',
+                strength: 'Vitamin B Complex Formulation',
+                packaging: '10×10 Tablets / Capsules, 10 ml Vials, 200 ml Syrup',
+                desc: 'Essential B-complex vitamins range to support energy metabolism, nerve health, red blood cell production, and overall wellness.'
+            },
+            {
+                name: 'Vitamin D3 Injection',
+                form: 'Injection',
+                strength: '600000 IU',
+                packaging: '1 ml Ampoule',
+                desc: 'High-strength Vitamin D3 (cholecalciferol) injection indicated for the treatment of severe Vitamin D deficiency and bone disorders.'
+            },
+            {
+                name: 'Complete Multivitamin & Multimineral Formulations',
+                form: 'Tablet, Syrup',
+                strength: 'Vit A + B-Complex + C + D3 + E + Zinc + Selenium + Copper + Chromium + Mg + Mn + Biotin + Folic Acid',
+                packaging: '30 Tablets, 200 ml Syrup',
+                desc: 'Comprehensive daily multivitamin and multimineral formulations containing essential micronutrients, vitamins, and minerals to support systemic health and vitality.'
+            }
         ]
     },
     'herbal': {
