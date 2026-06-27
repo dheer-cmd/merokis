@@ -2697,17 +2697,19 @@ const catalogueDB = {
     'orthopaedic-rehabilitation': {
         title: 'Orthopaedic Rehabilitation',
         tag: 'Orthopaedic',
-        desc: 'Bone density enhancers, joint lubricants, and anti-inflammatories for skeletal recovery.',
+        desc: "High-quality orthopaedic rehabilitation products designed to provide effective support, stability, comfort, and recovery for musculoskeletal injuries and post-operative rehabilitation.",
         icon: '🦴',
         coverClass: 'grad-purple',
-        count: '20 Items',
+        count: '1 Item',
         downloadMsg: 'Orthopaedic Rehabilitation Specification Booklet',
         samples: [
-            { name: 'Glucosamine & Chondroitin', strength: 'Standard', form: 'Tablets', packaging: 'Bottles', desc: 'Supplement to support joint cartilage health and slow osteoarthritis progression.' },
-            { name: 'Hyaluronic Acid Injection', strength: '20mg/2ml', form: 'Injectables', packaging: 'Bottles', desc: 'Intra-articular viscosupplementation serving as a synovial fluid replacement.' },
-            { name: 'Methylsulfonylmethane (MSM)', strength: '500mg', form: 'Tablets', packaging: 'Bottles', desc: 'Organosulfur compound used to reduce joint inflammation and support recovery.' },
-            { name: 'Calcium Citrate Maleate', strength: '250mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Highly bioavailable calcium source to support bone mineralization.' },
-            { name: 'Calcitriol Capsules USP', strength: '0.25mcg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Active form of Vitamin D3 indicated for secondary hyperparathyroidism in kidney diseases.' }
+            {
+                name: 'Ankle Support with Binder (Black Colour)',
+                form: 'Orthopaedic Support Device',
+                strength: 'Large (L) | Extra Large (XL)',
+                packaging: 'Large (L), Extra Large (XL)',
+                desc: 'Premium orthopedic ankle support with adjustable binder designed to provide superior compression, stability, and protection for ankle sprains, ligament injuries, sports recovery, and post-operative rehabilitation. Manufactured using durable, breathable, and skin-friendly materials for maximum comfort during prolonged use.'
+            }
         ]
     },
     'respiratory-drugs': {

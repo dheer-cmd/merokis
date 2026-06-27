@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral, Cardiovascular, Dermatology, Gastrointestinal, General Medicine, Gynaec, Health Supplement, Herbal, Men Health and Neurology Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral, Cardiovascular, Dermatology, Gastrointestinal, General Medicine, Gynaec, Health Supplement, Herbal, Men Health, Neurology and Orthopaedic Rehabilitation Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'orthopaedic-rehabilitation') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -176,15 +176,15 @@ Thank you.`;
                     
                     <div class="onc-details-info">
                         <div class="onc-spec-row" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
-                            <span class="onc-spec-label">Dosage Form</span>
+                            <span class="onc-spec-label" id="onc-modal-form-label">Dosage Form</span>
                             <span class="onc-spec-value" id="onc-modal-form">-</span>
                         </div>
                         <div class="onc-spec-row" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
-                            <span class="onc-spec-label">Available Strengths</span>
+                            <span class="onc-spec-label" id="onc-modal-strength-label">Available Strengths</span>
                             <span class="onc-spec-value" id="onc-modal-strength">-</span>
                         </div>
                         <div class="onc-spec-row" id="onc-modal-pack-row" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
-                            <span class="onc-spec-label">Available Pack Sizes</span>
+                            <span class="onc-spec-label" id="onc-modal-pack-label">Available Pack Sizes</span>
                             <span class="onc-spec-value" id="onc-modal-pack">-</span>
                         </div>
                         <div style="margin-top: 10px;">
@@ -223,10 +223,20 @@ Thank you.`;
             document.getElementById('onc-modal-strength').textContent = product.strength;
             document.getElementById('onc-modal-pack').textContent = product.packaging || '-';
             document.getElementById('onc-modal-desc').textContent = product.desc;
+
+            const formLabel = document.getElementById('onc-modal-form-label');
+            const strengthLabel = document.getElementById('onc-modal-strength-label');
+            if (catKey === 'orthopaedic-rehabilitation') {
+                if (formLabel) formLabel.textContent = 'Product Type';
+                if (strengthLabel) strengthLabel.textContent = 'Available Sizes';
+            } else {
+                if (formLabel) formLabel.textContent = 'Dosage Form';
+                if (strengthLabel) strengthLabel.textContent = 'Available Strengths';
+            }
             
             const packRow = document.getElementById('onc-modal-pack-row');
             if (packRow) {
-                if (catKey === 'antiviral' || catKey === 'cardiovascular-drugs') {
+                if (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'orthopaedic-rehabilitation') {
                     packRow.style.display = 'none';
                 } else {
                     packRow.style.display = 'flex';
@@ -308,6 +318,9 @@ Thank you.`;
     } else if (catKey === 'neurology') {
         formsList = ['Tablet', 'Injection', 'Injection Kit', 'Syrup'];
         packagingsList = [];
+    } else if (catKey === 'orthopaedic-rehabilitation') {
+        formsList = ['Orthopaedic Support Device'];
+        packagingsList = ['Large (L)', 'Extra Large (XL)'];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -324,6 +337,16 @@ Thank you.`;
         const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
         if (pkgMobileSection) {
             pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology') ? 'none' : 'block';
+        }
+
+        const desktopPkgHeader = pkgDesktop ? pkgDesktop.closest('.filter-card').querySelector('h3') : null;
+        const mobilePkgHeader = mobilePkg ? mobilePkg.closest('.drawer-filter-section').querySelector('h3') : null;
+        if (catKey === 'orthopaedic-rehabilitation') {
+            if (desktopPkgHeader) desktopPkgHeader.textContent = 'Filter by Size';
+            if (mobilePkgHeader) mobilePkgHeader.textContent = 'Size';
+        } else {
+            if (desktopPkgHeader) desktopPkgHeader.textContent = 'Filter by Packaging';
+            if (mobilePkgHeader) mobilePkgHeader.textContent = 'Packaging';
         }
 
         // Render Forms
@@ -552,13 +575,25 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'orthopaedic-rehabilitation') {
                         const badgeHtml = catKey === 'antiviral'
                             ? `<span class="product-badge" style="background: #003A99; color: #ffffff; text-transform: uppercase; border-radius: 30px;">${product.shortBadge || ''}</span>`
                             : `<span class="product-badge badge-form">${product.form}</span>`;
                         
-                        const specRowsHtml = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs')
-                            ? `
+                        let specRowsHtml = '';
+                        if (catKey === 'orthopaedic-rehabilitation') {
+                            specRowsHtml = `
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Product Type:</span>
+                                        <span class="onc-spec-value">${product.form}</span>
+                                    </div>
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Available Sizes:</span>
+                                        <span class="onc-spec-value">${product.strength}</span>
+                                    </div>
+                            `;
+                        } else if (catKey === 'antiviral' || catKey === 'cardiovascular-drugs') {
+                            specRowsHtml = `
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Dosage Form:</span>
                                         <span class="onc-spec-value">${product.form}</span>
@@ -567,8 +602,9 @@ Thank you.`;
                                         <span class="onc-spec-label">Available Strengths:</span>
                                         <span class="onc-spec-value">${product.strength}</span>
                                     </div>
-                              `
-                            : `
+                            `;
+                        } else {
+                            specRowsHtml = `
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Dosage Form:</span>
                                         <span class="onc-spec-value">${product.form}</span>
@@ -581,7 +617,8 @@ Thank you.`;
                                         <span class="onc-spec-label">Available Pack Sizes:</span>
                                         <span class="onc-spec-value">${product.packaging}</span>
                                     </div>
-                              `;
+                            `;
+                        }
 
                         card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
