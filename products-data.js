@@ -2841,7 +2841,7 @@ const catalogueDB = {
         desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
         icon: '🐾',
         coverClass: 'grad-red',
-        count: '47 Items',
+        count: '62 Items',
         downloadMsg: 'Veterinary Products Specification Booklet',
         samples: [
             {
@@ -3172,6 +3172,112 @@ const catalogueDB = {
                 strength: '',
                 packaging: '100 g',
                 desc: 'Veterinary antiseptic dusting powder formulated for wound care, skin protection, and prevention of external parasitic infestations.'
+            },
+            {
+                name: 'Synthocef Injection',
+                form: 'Injection',
+                strength: 'Synthocef 3 g, Synthocef-SB 4.5 g, Synthocef-Tazo 4.5 g',
+                isVariant: true,
+                packaging: '',
+                desc: 'Broad-spectrum injectable cephalosporin antibiotic for severe bacterial infections, respiratory infections, mastitis, septicemia, urinary tract infections, and post-operative infection control.'
+            },
+            {
+                name: 'Ivonex Injection',
+                form: 'Injection',
+                strength: 'Ivermectin',
+                packaging: '100 ml',
+                desc: 'Broad-spectrum antiparasitic injection effective against gastrointestinal worms, lungworms, lice, mites, ticks, and other internal and external parasites.'
+            },
+            {
+                name: 'P-Vil Injection',
+                form: 'Injection',
+                strength: 'Vitamin B Complex',
+                packaging: '30 ml',
+                desc: 'Veterinary multivitamin injection formulated to improve metabolism, appetite, growth, fertility, and recovery from nutritional deficiencies.'
+            },
+            {
+                name: 'Atropic Injection',
+                form: 'Injection',
+                strength: 'Atropine Sulphate',
+                packaging: '30 ml',
+                desc: 'Emergency veterinary injection used for organophosphate poisoning, anesthesia support, respiratory emergencies, and cardiac management.'
+            },
+            {
+                name: 'Dolopic Plus Injection',
+                form: 'Injection',
+                strength: 'Diclofenac Sodium',
+                packaging: '30 ml',
+                desc: 'Fast-acting veterinary anti-inflammatory and analgesic injection for pain, fever, arthritis, lameness, musculoskeletal disorders, and post-operative recovery.'
+            },
+            {
+                name: 'Calcipic Gold Suspension',
+                form: 'Oral Suspension',
+                strength: '',
+                packaging: '1 Litre',
+                desc: 'Premium calcium, phosphorus, magnesium, and vitamin supplement for improving bone strength, milk production, fertility, and metabolic health.'
+            },
+            {
+                name: 'Calcipic Gold Powder',
+                form: 'Powder',
+                strength: '',
+                packaging: '1 kg',
+                desc: 'Veterinary mineral supplement formulated to support skeletal development, lactation, and overall animal health.'
+            },
+            {
+                name: 'Calcipic Gold Gel',
+                form: 'Oral Gel',
+                strength: '',
+                packaging: '300 g',
+                desc: 'High-energy calcium gel providing immediate nutritional support during calving, lactation, and metabolic stress.'
+            },
+            {
+                name: 'Doodh Shakti Gold Bolus',
+                form: 'Bolus',
+                strength: '',
+                packaging: '5 × 4 Bolus',
+                desc: 'Veterinary nutritional bolus specially formulated to improve milk production, udder health, appetite, and overall productivity in dairy animals.'
+            },
+            {
+                name: 'D Booster Bolus',
+                form: 'Bolus',
+                strength: '',
+                packaging: '5 × 4 Bolus',
+                desc: 'Performance-enhancing veterinary nutritional supplement supporting growth, immunity, fertility, and productivity.'
+            },
+            {
+                name: 'I-LIV Vet Syrup',
+                form: 'Syrup',
+                strength: '',
+                packaging: '500 ml',
+                desc: 'Herbal liver tonic supporting liver function, digestion, appetite, detoxification, and recovery after illness.'
+            },
+            {
+                name: 'I-LIV DS Syrup',
+                form: 'Syrup',
+                strength: '',
+                packaging: '500 ml',
+                desc: 'Double-strength veterinary liver tonic formulated for animals with severe hepatic stress and metabolic disorders.'
+            },
+            {
+                name: 'Vimax Liquid',
+                form: 'Oral Liquid',
+                strength: '',
+                packaging: '1 Litre',
+                desc: 'Comprehensive multivitamin and mineral liquid supplement promoting growth, immunity, fertility, and productivity.'
+            },
+            {
+                name: 'Utranex Tonic',
+                form: 'Tonic',
+                strength: '',
+                packaging: '500 ml',
+                desc: 'Veterinary uterine tonic formulated to support reproductive health, postpartum recovery, and uterine function.'
+            },
+            {
+                name: 'PICBION A TO Z Syrup',
+                form: 'Multivitamin Syrup',
+                strength: '',
+                packaging: '500 ml',
+                desc: 'Complete multivitamin and mineral syrup providing essential nutrients for growth, immunity, metabolism, and overall animal health.'
             }
         ]
     }

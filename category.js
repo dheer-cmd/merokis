@@ -232,7 +232,7 @@ Thank you.`;
                 if (strengthLabel) strengthLabel.textContent = 'Available Sizes';
             } else if (catKey === 'veterinary-products') {
                 if (formLabel) formLabel.textContent = 'Dosage Form';
-                if (strengthLabel) strengthLabel.textContent = 'Composition';
+                if (strengthLabel) strengthLabel.textContent = product.isVariant ? 'Available Variants' : 'Composition';
                 if (packLabel) packLabel.textContent = 'Pack Size';
             } else {
                 if (formLabel) formLabel.textContent = 'Dosage Form';
@@ -242,7 +242,7 @@ Thank you.`;
             
             const packRow = document.getElementById('onc-modal-pack-row');
             if (packRow) {
-                if (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'orthopaedic-rehabilitation') {
+                if (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'orthopaedic-rehabilitation' || (catKey === 'veterinary-products' && !product.packaging)) {
                     packRow.style.display = 'none';
                 } else {
                     packRow.style.display = 'flex';
@@ -341,7 +341,7 @@ Thank you.`;
         formsList = ['Tablet', 'Syrup', 'Injection', 'Respules', 'Nebulizer Solution', 'Respirator Solution', 'Rotacaps', 'Inhaler'];
         packagingsList = [];
     } else if (catKey === 'veterinary-products') {
-        formsList = ['Bolus', 'Oral Suspension', 'Oral Syrup', 'Injection', 'Long Acting Injection', 'Topical Spray', 'Tick Control Spray', 'Herbal Spray', 'Topical Solution', 'Ointment', 'Pour-On Solution', 'Medicated Soap', 'Shampoo', 'Dusting Powder'];
+        formsList = ['Bolus', 'Oral Suspension', 'Oral Syrup', 'Syrup', 'Multivitamin Syrup', 'Injection', 'Long Acting Injection', 'Topical Spray', 'Tick Control Spray', 'Herbal Spray', 'Topical Solution', 'Ointment', 'Pour-On Solution', 'Medicated Soap', 'Shampoo', 'Dusting Powder', 'Powder', 'Oral Gel', 'Oral Liquid', 'Tonic'];
         packagingsList = [];
     }
 
@@ -639,10 +639,17 @@ Thank you.`;
                                     </div>
                             `;
                         } else if (catKey === 'veterinary-products') {
+                            const label = product.isVariant ? 'Available Variants' : 'Composition';
                             const compHtml = product.strength ? `
                                     <div class="onc-spec-row">
-                                        <span class="onc-spec-label">Composition:</span>
+                                        <span class="onc-spec-label">${label}:</span>
                                         <span class="onc-spec-value">${product.strength}</span>
+                                    </div>
+                            ` : '';
+                            const packHtml = product.packaging ? `
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Pack Size:</span>
+                                        <span class="onc-spec-value">${product.packaging}</span>
                                     </div>
                             ` : '';
                             specRowsHtml = `
@@ -651,10 +658,7 @@ Thank you.`;
                                         <span class="onc-spec-value">${product.form}</span>
                                     </div>
                                     ${compHtml}
-                                    <div class="onc-spec-row">
-                                        <span class="onc-spec-label">Pack Size:</span>
-                                        <span class="onc-spec-value">${product.packaging}</span>
-                                    </div>
+                                    ${packHtml}
                             `;
                         } else {
                             specRowsHtml = `
