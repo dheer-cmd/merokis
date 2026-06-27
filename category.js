@@ -249,7 +249,17 @@ Thank you.`;
                 }
             }
             
-            document.getElementById('onc-modal-enquire-btn').href = `/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})`;
+            const strengthRow = strengthLabel ? strengthLabel.closest('.onc-spec-row') : null;
+            if (strengthRow) {
+                if (catKey === 'veterinary-products' && !product.strength) {
+                    strengthRow.style.display = 'none';
+                } else {
+                    strengthRow.style.display = 'flex';
+                }
+            }
+            
+            const modalEnquiryText = product.strength ? `Product Inquiry: ${product.name} (${product.strength})` : `Product Inquiry: ${product.name}`;
+            document.getElementById('onc-modal-enquire-btn').href = `/contact.html?enquiry=${modalEnquiryText}`;
             document.getElementById('onc-modal-whatsapp-btn').href = productWhatsappUrl;
 
             const oncModal = document.getElementById('onc-product-details-modal');
@@ -331,7 +341,7 @@ Thank you.`;
         formsList = ['Tablet', 'Syrup', 'Injection', 'Respules', 'Nebulizer Solution', 'Respirator Solution', 'Rotacaps', 'Inhaler'];
         packagingsList = [];
     } else if (catKey === 'veterinary-products') {
-        formsList = ['Bolus', 'Oral Suspension', 'Oral Syrup', 'Injection', 'Long Acting Injection'];
+        formsList = ['Bolus', 'Oral Suspension', 'Oral Syrup', 'Injection', 'Long Acting Injection', 'Topical Spray', 'Tick Control Spray', 'Herbal Spray', 'Topical Solution', 'Ointment', 'Pour-On Solution', 'Medicated Soap', 'Shampoo', 'Dusting Powder'];
         packagingsList = [];
     }
 
@@ -629,15 +639,18 @@ Thank you.`;
                                     </div>
                             `;
                         } else if (catKey === 'veterinary-products') {
+                            const compHtml = product.strength ? `
+                                    <div class="onc-spec-row">
+                                        <span class="onc-spec-label">Composition:</span>
+                                        <span class="onc-spec-value">${product.strength}</span>
+                                    </div>
+                            ` : '';
                             specRowsHtml = `
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Dosage Form:</span>
                                         <span class="onc-spec-value">${product.form}</span>
                                     </div>
-                                    <div class="onc-spec-row">
-                                        <span class="onc-spec-label">Composition:</span>
-                                        <span class="onc-spec-value">${product.strength}</span>
-                                    </div>
+                                    ${compHtml}
                                     <div class="onc-spec-row">
                                         <span class="onc-spec-label">Pack Size:</span>
                                         <span class="onc-spec-value">${product.packaging}</span>
@@ -660,7 +673,8 @@ Thank you.`;
                             `;
                         }
 
-                        card.innerHTML = `
+                            const enquiryUrlParam = product.strength ? `Product Inquiry: ${product.name} (${product.strength})` : `Product Inquiry: ${product.name}`;
+                            card.innerHTML = `
                             <div class="product-details-container" style="display: flex; flex-direction: column; height: 100%;">
                                 <div class="product-badges">
                                     ${badgeHtml}
@@ -675,7 +689,7 @@ Thank you.`;
                             <div class="product-card-actions" style="display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: auto;">
                                 <button class="btn-card-details" onclick="openProductDetailsModal('${product.name.replace(/'/g, "\\'")}')" style="font-size: 0.85rem; padding: 10px 4px; border: 1px solid #C89B2B; background: transparent; color: #C89B2B; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; height: 38px;">View Details</button>
                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                                    <a href="/contact.html?enquiry=Product Inquiry: ${product.name} (${product.strength})" class="btn-card-enquire" style="font-size: 0.85rem; padding: 10px 4px; text-align: center; height: 38px; line-height: 18px;">Send Inquiry</a>
+                                    <a href="/contact.html?enquiry=${enquiryUrlParam}" class="btn-card-enquire" style="font-size: 0.85rem; padding: 10px 4px; text-align: center; height: 38px; line-height: 18px;">Send Inquiry</a>
                                     <a href="${productWhatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn-card-whatsapp" style="font-size: 0.85rem; padding: 10px 4px; display: inline-flex; align-items: center; gap: 4px; justify-content: center; text-decoration: none; height: 38px;">
                                         <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24">
                                             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.73.001-2.597-1.006-5.04-2.834-6.87-1.827-1.828-4.26-2.833-6.853-2.834-5.437 0-9.861 4.372-9.864 9.73-.001 1.773.477 3.5 1.382 5.022L1.892 21.05l5.245-1.378-.49-.292zM17.391 14.2c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.298-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>

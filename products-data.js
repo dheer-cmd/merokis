@@ -2841,7 +2841,7 @@ const catalogueDB = {
         desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
         icon: '🐾',
         coverClass: 'grad-red',
-        count: '32 Items',
+        count: '47 Items',
         downloadMsg: 'Veterinary Products Specification Booklet',
         samples: [
             {
@@ -3067,6 +3067,111 @@ const catalogueDB = {
                 strength: 'Enrofloxacin',
                 packaging: '30 ml',
                 desc: 'Fast-acting injectable fluoroquinolone antibiotic for severe bacterial infections in cattle, sheep, goats, and other livestock.'
+            },
+            {
+                name: 'Tropical Care Spray',
+                form: 'Topical Spray',
+                strength: '',
+                packaging: '100 ml',
+                desc: 'Veterinary antiseptic wound care spray formulated to support rapid healing of cuts, wounds, abrasions, surgical sites, and skin infections in livestock and companion animals.'
+            },
+            {
+                name: 'PCI Top Grade Spray',
+                form: 'Topical Spray',
+                strength: '',
+                packaging: '100 ml',
+                desc: 'Broad-spectrum topical veterinary spray for effective protection against bacterial contamination and wound infections.'
+            },
+            {
+                name: 'Ticks All Clear Spray',
+                form: 'Tick Control Spray',
+                strength: '',
+                packaging: '100 ml',
+                desc: 'Veterinary ectoparasite control spray formulated to eliminate ticks, fleas, lice, and mites while protecting the animal\'s skin and coat.'
+            },
+            {
+                name: 'Highmax Spray',
+                form: 'Herbal Spray',
+                strength: '',
+                packaging: '100 ml',
+                desc: 'Herbal veterinary spray for skin care, wound management, and protection against external parasites.'
+            },
+            {
+                name: 'Zeetox Vet 5 ml',
+                form: 'Topical Solution',
+                strength: '',
+                packaging: '5 ml',
+                desc: 'Veterinary ectoparasitic treatment for controlling ticks, lice, mites, and other external parasites.'
+            },
+            {
+                name: 'Zeetox Vet 15 ml',
+                form: 'Topical Solution',
+                strength: '',
+                packaging: '15 ml',
+                desc: 'Medium-pack veterinary topical solution for effective parasite control and skin protection.'
+            },
+            {
+                name: 'Zeetox Vet 50 ml',
+                form: 'Topical Solution',
+                strength: '',
+                packaging: '50 ml',
+                desc: 'Large-pack veterinary topical ectoparasitic treatment for livestock and companion animals.'
+            },
+            {
+                name: 'Highmax Ointment',
+                form: 'Ointment',
+                strength: '',
+                packaging: '25 g',
+                desc: 'Veterinary herbal ointment formulated for wound healing, skin infections, cuts, abrasions, burns, and dermatological conditions.'
+            },
+            {
+                name: 'Amitick Vet 15 ml',
+                form: 'Topical Solution',
+                strength: '',
+                packaging: '15 ml',
+                desc: 'Veterinary acaricide formulation for effective control of ticks and mites in animals.'
+            },
+            {
+                name: 'Amitick Vet 50 ml',
+                form: 'Topical Solution',
+                strength: '',
+                packaging: '50 ml',
+                desc: 'Large-pack veterinary tick and mite control solution providing long-lasting protection.'
+            },
+            {
+                name: 'Fluther Pour-On',
+                form: 'Pour-On Solution',
+                strength: '',
+                packaging: '250 ml',
+                desc: 'Ready-to-use pour-on ectoparasite treatment for controlling ticks, lice, flies, and other external parasites in cattle and livestock.'
+            },
+            {
+                name: 'Pet All Clear Soap',
+                form: 'Medicated Soap',
+                strength: '',
+                packaging: 'Standard Bar',
+                desc: 'Veterinary medicated cleansing soap formulated to maintain skin hygiene and help control bacterial and fungal skin infections in pets.'
+            },
+            {
+                name: 'Ticks All Clear Soap',
+                form: 'Medicated Soap',
+                strength: '',
+                packaging: 'Standard Bar',
+                desc: 'Medicated veterinary soap designed to remove ticks, fleas, and external parasites while promoting healthy skin.'
+            },
+            {
+                name: 'Veterinary Medicated Shampoo',
+                form: 'Shampoo',
+                strength: '',
+                packaging: '200 ml',
+                desc: 'Veterinary shampoo for maintaining healthy skin and coat while helping control dandruff, itching, fungal infections, and external parasites.'
+            },
+            {
+                name: 'Veterinary Dusting Powder',
+                form: 'Dusting Powder',
+                strength: '',
+                packaging: '100 g',
+                desc: 'Veterinary antiseptic dusting powder formulated for wound care, skin protection, and prevention of external parasitic infestations.'
             }
         ]
     }
