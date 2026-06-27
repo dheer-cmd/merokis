@@ -341,7 +341,7 @@ Thank you.`;
         formsList = ['Tablet', 'Syrup', 'Injection', 'Respules', 'Nebulizer Solution', 'Respirator Solution', 'Rotacaps', 'Inhaler'];
         packagingsList = [];
     } else if (catKey === 'veterinary-products') {
-        formsList = ['Bolus', 'Oral Suspension', 'Oral Syrup', 'Syrup', 'Multivitamin Syrup', 'Injection', 'Long Acting Injection', 'Topical Spray', 'Tick Control Spray', 'Herbal Spray', 'Topical Solution', 'Ointment', 'Pour-On Solution', 'Medicated Soap', 'Shampoo', 'Dusting Powder', 'Powder', 'Oral Gel', 'Oral Liquid', 'Tonic'];
+        formsList = ['Bolus', 'Oral Suspension', 'Oral Syrup', 'Syrup', 'Multivitamin Syrup', 'Injection', 'Long Acting Injection', 'Topical Spray', 'Tick Control Spray', 'Herbal Spray', 'Topical Solution', 'Ointment', 'Pour-On Solution', 'Medicated Soap', 'Shampoo', 'Dusting Powder', 'Powder', 'Oral Gel', 'Oral Liquid', 'Tonic', 'Feed Supplement', 'Oral Powder'];
         packagingsList = [];
     }
 

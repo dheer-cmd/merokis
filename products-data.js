@@ -2841,7 +2841,7 @@ const catalogueDB = {
         desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
         icon: '🐾',
         coverClass: 'grad-red',
-        count: '62 Items',
+        count: '68 Items',
         downloadMsg: 'Veterinary Products Specification Booklet',
         samples: [
             {
@@ -3278,6 +3278,48 @@ const catalogueDB = {
                 strength: '',
                 packaging: '500 ml',
                 desc: 'Complete multivitamin and mineral syrup providing essential nutrients for growth, immunity, metabolism, and overall animal health.'
+            },
+            {
+                name: 'Veterinary Calcium & Mineral Feed Supplement',
+                form: 'Feed Supplement',
+                strength: '',
+                packaging: '1 kg',
+                desc: 'Balanced mineral supplement formulated to support healthy bone development, milk production, fertility, growth, and overall metabolic health in livestock.'
+            },
+            {
+                name: 'Veterinary Energy Booster Supplement',
+                form: 'Oral Powder',
+                strength: '',
+                packaging: '500 g',
+                desc: 'Energy-rich nutritional supplement designed to improve stamina, appetite, recovery from illness, and overall productivity in dairy and farm animals.'
+            },
+            {
+                name: 'Veterinary Electrolyte Supplement',
+                form: 'Oral Powder',
+                strength: '',
+                packaging: '100 g, 500 g',
+                desc: 'Electrolyte formulation for rapid rehydration during dehydration, heat stress, diarrhea, transportation stress, and recovery.'
+            },
+            {
+                name: 'Veterinary Digestive Tonic',
+                form: 'Oral Liquid',
+                strength: '',
+                packaging: '500 ml',
+                desc: 'Digestive stimulant formulated to improve appetite, rumen function, digestion, and feed utilization in livestock.'
+            },
+            {
+                name: 'Veterinary Immune Booster',
+                form: 'Oral Liquid',
+                strength: '',
+                packaging: '500 ml',
+                desc: 'Herbal and nutritional immune support formulation designed to improve disease resistance, vitality, and recovery.'
+            },
+            {
+                name: 'Veterinary Multimineral Supplement',
+                form: 'Oral Liquid',
+                strength: '',
+                packaging: '1 Litre',
+                desc: 'Comprehensive multimineral formulation supplying essential macro and trace minerals required for healthy growth, fertility, and productivity.'
             }
         ]
     }
