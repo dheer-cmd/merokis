@@ -2540,19 +2540,63 @@ const catalogueDB = {
         ]
     },
     'neurology': {
-        title: 'Neurology Portfolio',
+        title: 'Neurology',
         tag: 'Neurology',
-        desc: 'Neurological therapeutics managing epilepsy, neuropathic pain, and cognitive disorders.',
+        desc: "Advanced neurology pharmaceutical formulations for neuropathy, nerve regeneration, muscle relaxation, neuroprotection, and neurological wellness, manufactured according to international quality standards.",
         icon: '🧠',
         coverClass: 'grad-teal',
-        count: '22 Items',
+        count: '7 Items',
         downloadMsg: 'Neurology Specification Booklet',
         samples: [
-            { name: 'Gabapentin Tablets USP', strength: '300mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'GABA analogue indicated for postherpetic neuralgia and adjunct seizures.' },
-            { name: 'Pregabalin Capsules', strength: '75mg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Ligand for alpha2-delta subunit in CNS, for neuropathic pain and fibromyalgia.' },
-            { name: 'Levetiracetam Tablets', strength: '500mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Broad-spectrum anticonvulsant indicated for partial onset seizures.' },
-            { name: 'Sodium Valproate Chrono', strength: '500mg', form: 'Tablets', packaging: '10×15 Strips', desc: 'Antiepileptic indicated for manic episodes associated with bipolar disorder.' },
-            { name: 'Donepezil HCl Tablets', strength: '10mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Reversible acetylcholinesterase inhibitor indicated for Alzheimer dementia.' }
+            {
+                name: 'Alpha Lipoic Acid + Methylcobalamin Neuro Tablets',
+                form: 'Tablet',
+                strength: 'Alpha Lipoic Acid 100 mg | Methylcobalamin 1500 mcg | Thiamine Mononitrate 10 mg | Folic Acid 1500 mcg | Pyridoxine 3 mg',
+                packaging: '5×3×10',
+                desc: 'Comprehensive neurotropic formulation for peripheral neuropathy and nerve regeneration.'
+            },
+            {
+                name: 'Methylcobalamin Neuro Injection Kit',
+                form: 'Injection Kit',
+                strength: 'Part 1: Vitamin C 150 mg | Part 2: Methylcobalamin 1000 mcg + Folic Acid 0.7 mg + Niacinamide 12 mg',
+                packaging: 'One Kit',
+                desc: 'Dual-chamber neurovitamin injection kit for neurological deficiency management.'
+            },
+            {
+                name: 'Methylcobalamin Neuro Injection',
+                form: 'Injection',
+                strength: 'Methylcobalamin 1000 mcg + Pyridoxine 100 mg + D-Panthenol 50 mg + Nicotinamide 100 mg | Methylcobalamin 2500 mcg',
+                packaging: '1×2 ml, 5×2 ml',
+                desc: 'High-potency injectable neurotropic vitamin therapy for neuropathy and nerve repair.'
+            },
+            {
+                name: 'Methylcobalamin Neuro Tablets',
+                form: 'Tablet',
+                strength: 'Methylcobalamin 1500 mcg + Vitamin B1 10 mg + L-Lysine 150 mg + Folic Acid 1500 mcg + Calcium Pantothenate 5 mg + Vitamin B6 3 mg',
+                packaging: '10×10',
+                desc: 'Comprehensive vitamin B complex formulation supporting nerve health and regeneration.'
+            },
+            {
+                name: 'Methylcobalamin Neuro Syrup',
+                form: 'Syrup',
+                strength: 'Methylcobalamin 1500 mcg + Folic Acid 1500 mcg + Thiamine Mononitrate 10 mg + Pyridoxine 3 mg + D-Panthenol 5 mg + L-Lysine 150 mg',
+                packaging: '200 ml',
+                desc: 'Neurotropic syrup formulation designed to support nerve function and vitamin B supplementation.'
+            },
+            {
+                name: 'Methocarbamol Tablets IP',
+                form: 'Tablet',
+                strength: '500 mg',
+                packaging: '10×10',
+                desc: 'Muscle relaxant indicated for the treatment of painful musculoskeletal conditions and muscle spasms.'
+            },
+            {
+                name: 'Pregabalin + Methylcobalamin + Nortriptyline Tablets',
+                form: 'Tablet',
+                strength: 'Pregabalin 75 mg + Methylcobalamin 1500 mcg + Nortriptyline 10 mg',
+                packaging: '10×1×10',
+                desc: 'Combination therapy for neuropathic pain, diabetic neuropathy, and nerve disorders.'
+            }
         ]
     },
     'oncology-drugs': {
