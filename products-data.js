@@ -2153,19 +2153,133 @@ const catalogueDB = {
         ]
     },
     'gynaec': {
-        title: 'Gynaec Therapeutics',
+        title: 'Gynaec',
         tag: 'Gynaec',
-        desc: "Specialized obstetric and gynecological therapies supporting women's reproductive health.",
+        desc: "Comprehensive women's healthcare pharmaceutical formulations for fertility support, pregnancy care, nutritional supplementation, hormonal therapy, gynecological infections, maternal wellness, and reproductive health manufactured according to international quality standards.",
         icon: '🌸',
         coverClass: 'grad-blue-dark',
-        count: '24 Items',
+        count: '17 Items',
         downloadMsg: 'Gynaec Specification Booklet',
         samples: [
-            { name: 'Progesterone SR Tablets', strength: '300mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Sustained-release natural progesterone for hormonal and luteal support.' },
-            { name: 'Clomifene Citrate Tablets', strength: '50mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Nonsteroidal ovulatory stimulant indicated for treating ovulatory dysfunction.' },
-            { name: 'Mifepristone Tablets', strength: '200mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Progesterone receptor antagonist indicated for medical termination of pregnancy.' },
-            { name: 'Isoxsuprine HCl SR', strength: '40mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Sustained-release uterine relaxant to prevent premature labor.' },
-            { name: 'Folic Acid & Iron Tablets', strength: 'Standard', form: 'Tablets', packaging: '10×15 Strips', desc: 'Key hematinic supplement indicated during pregnancy and lactation.' }
+            {
+                name: 'Chorionic Gonadotrophin Injection IP',
+                form: 'Injection',
+                strength: '5000 IU | 10000 IU',
+                packaging: '25×1×5000 IU, 25×1×10000 IU',
+                desc: 'Hormonal therapy indicated for infertility treatment and ovulation induction.'
+            },
+            {
+                name: 'Doxylamine + Pyridoxine + Folic Acid Tablets',
+                form: 'Tablet',
+                strength: 'Doxylamine 10 mg + Pyridoxine 10 mg + Folic Acid 2.5 mg | Doxylamine 20 mg + Pyridoxine 20 mg + Folic Acid 5 mg',
+                packaging: '10×10',
+                desc: 'Combination therapy for nausea and vomiting during pregnancy.'
+            },
+            {
+                name: 'Dydrogesterone Tablets',
+                form: 'Tablet',
+                strength: '10 mg',
+                packaging: '10×1×10',
+                desc: 'Progesterone analogue indicated for luteal support and hormonal disorders.'
+            },
+            {
+                name: "Women's Herbal Uterine Tonic",
+                form: 'Herbal Syrup',
+                strength: 'Ashwagandha + Shatavari + Ashoka + Lodhra',
+                packaging: '200 ml',
+                desc: "Herbal formulation containing Ashwagandha, Shatavari, Ashoka, Lodhra and other botanical ingredients to support women's reproductive health."
+            },
+            {
+                name: 'Maternal Nutrition Protein Powder',
+                form: 'Powder',
+                strength: 'Fortified with Vitamins, Minerals, DHA & Iron',
+                packaging: '200 g',
+                desc: 'Protein-rich nutritional supplement fortified with vitamins, minerals, DHA and iron for pregnancy and lactation.'
+            },
+            {
+                name: 'Ferric Carboxymaltose Injection',
+                form: 'Injection',
+                strength: '500 mg / 10 ml | 1000 mg / 20 ml',
+                packaging: '10×1×10 ml, 10×1×20 ml',
+                desc: 'Intravenous iron therapy for iron deficiency anaemia.'
+            },
+            {
+                name: 'Ferrous Ascorbate Product Range',
+                form: 'Syrup, Tablet',
+                strength: 'Ferrous Ascorbate + Folic Acid + Zinc Syrup | Ferrous Ascorbate + Folic Acid + Zinc Tablets | Ferrous Ascorbate + Folic Acid + Adenosylcobalamin + Zinc Tablets',
+                packaging: '200 ml, 300 ml, 5×3×10, 10×1×10',
+                desc: 'Iron supplementation for pregnancy-associated nutritional deficiencies.'
+            },
+            {
+                name: 'Fluconazole + Azithromycin + Secnidazole Kit',
+                form: 'Treatment Kit',
+                strength: 'Fluconazole + Azithromycin + Secnidazole',
+                packaging: '10×1 Kit',
+                desc: 'Combination therapy for mixed gynecological infections.'
+            },
+            {
+                name: 'Fosfomycin Product Range',
+                form: 'Injection, Powder',
+                strength: 'Fosfomycin Injection 4 g | Fosfomycin Trometamol Powder 3 g',
+                packaging: '10×1×4 g, 5×1×8 g',
+                desc: 'Broad-spectrum antibacterial therapy commonly used in urinary tract infections.'
+            },
+            {
+                name: 'Iron (III) Isomaltoside Injection',
+                form: 'Injection',
+                strength: '100 mg/ml',
+                packaging: '10×1×5 ml',
+                desc: 'Intravenous iron replacement therapy.'
+            },
+            {
+                name: 'L-Arginine + Zinc + Folic Acid Sachets',
+                form: 'Granules / Sachet',
+                strength: 'L-Arginine 3 g | Zinc 10 mg | Folic Acid 2.5 mg',
+                packaging: '10×10',
+                desc: 'Nutritional supplement for pregnancy and fetal growth support.'
+            },
+            {
+                name: 'Feminine Hygiene Wash',
+                form: 'Intimate Wash',
+                strength: 'Enriched with Aloe Vera & Tea Tree Oil',
+                packaging: '100 ml',
+                desc: "Women's intimate hygiene cleanser enriched with Aloe Vera and Tea Tree Oil."
+            },
+            {
+                name: "Women's Multivitamin & Antioxidant Capsules",
+                form: 'Capsule',
+                strength: 'Multivitamins + Antioxidants',
+                packaging: '10×10',
+                desc: "Comprehensive antioxidant and micronutrient formulation for women's wellness."
+            },
+            {
+                name: 'Methylprednisolone',
+                form: 'Tablet, Injection',
+                strength: '4 mg | 8 mg | Injection 40 mg',
+                packaging: '10×10, 20×10, 1 Vial',
+                desc: 'Corticosteroid therapy for inflammatory and autoimmune conditions.'
+            },
+            {
+                name: 'Progesterone Soft Gelatin Capsules',
+                form: 'Soft Gelatin Capsule',
+                strength: '200 mg',
+                packaging: '5×1×10',
+                desc: 'Natural progesterone therapy for luteal support and pregnancy maintenance.'
+            },
+            {
+                name: 'Protein Nutritional Supplement Powder',
+                form: 'Powder',
+                strength: 'Protein + Vitamins + Minerals',
+                packaging: '200 g',
+                desc: 'Protein-rich nutritional supplement fortified with vitamins and minerals for maternal nutrition.'
+            },
+            {
+                name: 'Tranexamic Acid Injection IP',
+                form: 'Injection',
+                strength: '500 mg / 5 ml',
+                packaging: '10×1×5×5 ml',
+                desc: 'Antifibrinolytic therapy used for the management of excessive bleeding.'
+            }
         ]
     },
     'health-supplement': {

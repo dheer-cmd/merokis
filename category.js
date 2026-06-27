@@ -39,8 +39,8 @@ Thank you.`;
     document.getElementById('whatsapp-sidebar-link').href = categoryWhatsappUrl;
     document.getElementById('mobile-whatsapp-sticky-link').href = categoryWhatsappUrl;
 
-    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral, Cardiovascular, Dermatology, Gastrointestinal and General Medicine Drugs
-    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine') {
+    // Dynamic Modal and Style Injection for Oncology, Anaesthesia, Analgesic, Anti Malaria, Antibiotics, Antidiabetic, Antifungal, Antipsychotic, Antiviral, Cardiovascular, Dermatology, Gastrointestinal, General Medicine and Gynaec Drugs
+    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec') {
         const styles = `
             .onc-specs {
                 margin: 15px 0;
@@ -293,6 +293,9 @@ Thank you.`;
     } else if (catKey === 'general-medicine') {
         formsList = ['Tablet', 'Capsule', 'Softgel', 'Injection', 'Syrup', 'Eye Drops', 'Drops', 'Gel', 'Powder', 'Oral Suspension', 'Dispersible Tablet'];
         packagingsList = [];
+    } else if (catKey === 'gynaec') {
+        formsList = ['Tablet', 'Injection', 'Capsule', 'Soft Gelatin Capsule', 'Syrup', 'Powder', 'Granules / Sachet', 'Treatment Kit', 'Herbal Syrup', 'Intimate Wash'];
+        packagingsList = [];
     }
 
     // 4. Generate Filter DOM Elements (Desktop & Mobile)
@@ -304,11 +307,11 @@ Thank you.`;
 
         const pkgCard = pkgDesktop ? pkgDesktop.closest('.filter-card') : null;
         if (pkgCard) {
-            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine') ? 'none' : 'block';
+            pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec') ? 'none' : 'block';
         }
         const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
         if (pkgMobileSection) {
-            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine') ? 'none' : 'block';
+            pkgMobileSection.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec') ? 'none' : 'block';
         }
 
         // Render Forms
@@ -499,7 +502,8 @@ Thank you.`;
         const filteredProducts = catData.samples.filter(product => {
             const matchesForm = selectedFilters.forms.length === 0 || 
                                selectedFilters.forms.some(filterForm => {
-                                   return product.form.toLowerCase().split(/[,/]/).map(f => f.trim()).includes(filterForm);
+                                   const splitParts = product.form.toLowerCase().split(/[,/]/).map(f => f.trim());
+                                   return splitParts.includes(filterForm) || product.form.toLowerCase().trim() === filterForm;
                                });
             
             const matchesPkg = selectedFilters.packagings.length === 0 || 
@@ -536,7 +540,7 @@ Thank you.`;
                     const encodedProductMessage = encodeURIComponent(productMessage);
                     const productWhatsappUrl = `https://wa.me/919892133098?text=${encodedProductMessage}`;
 
-                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine') {
+                    if (catKey === 'oncology-drugs' || catKey === 'anaesthesia' || catKey === 'analgesic-antipyretic' || catKey === 'anti-malaria' || catKey === 'antibiotics' || catKey === 'antidiabetic' || catKey === 'antifungal' || catKey === 'antipsychotic' || catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec') {
                         const badgeHtml = catKey === 'antiviral'
                             ? `<span class="product-badge" style="background: #003A99; color: #ffffff; text-transform: uppercase; border-radius: 30px;">${product.shortBadge || ''}</span>`
                             : `<span class="product-badge badge-form">${product.form}</span>`;
