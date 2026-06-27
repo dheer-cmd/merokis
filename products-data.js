@@ -2841,7 +2841,7 @@ const catalogueDB = {
         desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
         icon: '🐾',
         coverClass: 'grad-red',
-        count: '23 Items',
+        count: '32 Items',
         downloadMsg: 'Veterinary Products Specification Booklet',
         samples: [
             {
@@ -3004,6 +3004,69 @@ const catalogueDB = {
                 strength: 'Metronidazole, Furazolidone, Loperamide',
                 packaging: '5 × 4 Bolus',
                 desc: 'Veterinary formulation indicated for diarrhea, enteritis, dysentery, and mixed gastrointestinal infections.'
+            },
+            {
+                name: 'Zyworm 150 Bolus',
+                form: 'Bolus',
+                strength: 'Fenbendazole 150 mg',
+                packaging: '5 × 4 Bolus',
+                desc: 'Broad-spectrum anthelmintic bolus effective against gastrointestinal roundworms, lungworms, tapeworms, and other internal parasites in livestock.'
+            },
+            {
+                name: 'Zyworm 600 Bolus',
+                form: 'Bolus',
+                strength: 'Fenbendazole 600 mg',
+                packaging: '5 × 4 Bolus',
+                desc: 'Veterinary deworming bolus formulated for medium to large animals, providing effective control of internal parasites.'
+            },
+            {
+                name: 'Zyworm 1.5 g Bolus',
+                form: 'Bolus',
+                strength: 'Fenbendazole 1.5 g',
+                packaging: '5 × 4 Bolus',
+                desc: 'High-strength anthelmintic bolus designed for cattle and buffaloes to eliminate gastrointestinal parasites.'
+            },
+            {
+                name: 'Zyworm 3 g Bolus',
+                form: 'Bolus',
+                strength: 'Fenbendazole 3 g',
+                packaging: '5 × 4 Bolus',
+                desc: 'Extra-strength veterinary deworming bolus for heavy livestock requiring higher therapeutic dosage.'
+            },
+            {
+                name: 'Zyworm Suspension',
+                form: 'Oral Suspension',
+                strength: 'Fenbendazole Suspension',
+                packaging: '30 ml',
+                desc: 'Easy-to-administer oral suspension for effective treatment of internal parasitic infections in young and adult animals.'
+            },
+            {
+                name: 'Zymentin Bolus',
+                form: 'Bolus',
+                strength: 'Oxyclozanide, Levamisole',
+                packaging: '5 × 4 Bolus',
+                desc: 'Dual-action deworming bolus effective against liver flukes, gastrointestinal worms, and lungworms.'
+            },
+            {
+                name: 'Zymentin Suspension',
+                form: 'Oral Suspension',
+                strength: 'Oxyclozanide, Levamisole',
+                packaging: '30 ml',
+                desc: 'Oral veterinary anthelmintic suspension providing broad-spectrum parasite control in livestock.'
+            },
+            {
+                name: 'Enorflox Syrup',
+                form: 'Oral Syrup',
+                strength: 'Enrofloxacin',
+                packaging: '100 ml',
+                desc: 'Broad-spectrum veterinary antibacterial syrup indicated for respiratory, gastrointestinal, urinary, and systemic bacterial infections.'
+            },
+            {
+                name: 'Enorflox Injection',
+                form: 'Injection',
+                strength: 'Enrofloxacin',
+                packaging: '30 ml',
+                desc: 'Fast-acting injectable fluoroquinolone antibiotic for severe bacterial infections in cattle, sheep, goats, and other livestock.'
             }
         ]
     }
