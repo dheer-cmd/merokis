@@ -2508,18 +2508,35 @@ const catalogueDB = {
         ]
     },
     'men-health': {
-        title: 'Men Health Portfolio',
+        title: 'Men Health',
         tag: 'Men Health',
-        desc: "Specialized formulations, hormone therapies, and selective inhibitors for men's wellness.",
+        desc: "Premium men's healthcare formulations designed to support reproductive health, hormonal therapy, sexual wellness, and overall male wellbeing, manufactured according to international quality standards.",
         icon: '💪',
         coverClass: 'grad-green-dark',
-        count: '16 Items',
+        count: '3 Items',
         downloadMsg: 'Men Health Specification Booklet',
         samples: [
-            { name: 'Sildenafil Citrate Tablets', strength: '100mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'First PDE5 inhibitor approved for medical treatment of erectile dysfunction.' },
-            { name: 'Tadalafil Tablets USP', strength: '20mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Highly selective PDE5 inhibitor boasting an extended duration of action.' },
-            { name: 'Finasteride Tablets USP', strength: '1mg', form: 'Tablets', packaging: '10×10 Strips', desc: 'Type II 5-alpha reductase inhibitor indicated for male pattern hair loss.' },
-            { name: 'Dutasteride Capsules', strength: '0.5mg', form: 'Capsules', packaging: '10×10 Strips', desc: 'Dual 5-alpha reductase inhibitor indicated for symptomatic prostatic hyperplasia.' }
+            {
+                name: 'Premium Condoms',
+                form: 'Medical Device',
+                strength: 'Ultra Thin | 1750 Dots',
+                packaging: '10 × 12',
+                desc: 'Premium quality condoms designed to provide reliable protection while enhancing comfort and sensitivity.'
+            },
+            {
+                name: 'Testosterone Cypionate USP Injection',
+                form: 'Injection',
+                strength: '250 mg / 1 ml',
+                packaging: '10 × 1 × 1 ml (Includes: Disposable Pack + Sterile Syringe + Needle)',
+                desc: 'Long-acting testosterone replacement therapy indicated for testosterone deficiency and androgen replacement.'
+            },
+            {
+                name: 'Testosterone Blend Injection',
+                form: 'Injection',
+                strength: 'Propionate 30 mg/ml | Phenylpropionate 60 mg/ml | Isocaproate 60 mg/ml | Decanoate 100 mg/ml',
+                packaging: '10 × 1 × 1 ml (Includes: Disposable Pack + Sterile Syringe + Needle)',
+                desc: 'Multi-ester testosterone formulation designed for sustained androgen replacement therapy.'
+            }
         ]
     },
     'neurology': {
