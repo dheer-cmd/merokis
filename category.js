@@ -331,7 +331,7 @@ Thank you.`;
         formsList = ['Tablet', 'Syrup', 'Injection', 'Respules', 'Nebulizer Solution', 'Respirator Solution', 'Rotacaps', 'Inhaler'];
         packagingsList = [];
     } else if (catKey === 'veterinary-products') {
-        formsList = ['Bolus', 'Injection'];
+        formsList = ['Bolus', 'Injection', 'Long Acting Injection'];
         packagingsList = [];
     }
 

@@ -2841,7 +2841,7 @@ const catalogueDB = {
         desc: "Comprehensive veterinary pharmaceutical and animal healthcare solutions including antibiotics, pain management, nutritional supplements, dewormers, injectables, pet care products, rehabilitation products, and livestock healthcare formulations manufactured to international quality standards.",
         icon: '🐾',
         coverClass: 'grad-red',
-        count: '10 Items',
+        count: '23 Items',
         downloadMsg: 'Veterinary Products Specification Booklet',
         samples: [
             {
@@ -2913,6 +2913,97 @@ const catalogueDB = {
                 strength: 'Aceclofenac, Paracetamol, Serratiopeptidase',
                 packaging: '5 × 4 Bolus',
                 desc: 'Triple-action veterinary formulation providing pain relief, anti-inflammatory action, and faster recovery from tissue injury.'
+            },
+            {
+                name: 'Synthocip-TZ Bolus',
+                form: 'Bolus',
+                strength: 'Ciprofloxacin, Tinidazole',
+                packaging: '5 × 4 Bolus',
+                desc: 'Broad-spectrum antibacterial and antiprotozoal bolus indicated for mixed bacterial and gastrointestinal infections in livestock.'
+            },
+            {
+                name: 'Microcycline Bolus',
+                form: 'Bolus',
+                strength: 'Oxytetracycline',
+                packaging: '5 × 4 Bolus',
+                desc: 'Broad-spectrum tetracycline antibiotic for respiratory, gastrointestinal, urinary tract, skin, and soft tissue infections.'
+            },
+            {
+                name: 'Microcycline Injection',
+                form: 'Injection',
+                strength: 'Oxytetracycline',
+                packaging: '30 ml',
+                desc: 'Fast-acting injectable antibiotic for severe bacterial infections in cattle, buffaloes, sheep, goats, and other livestock.'
+            },
+            {
+                name: 'Microcycline-LA Injection',
+                form: 'Long Acting Injection',
+                strength: 'Oxytetracycline Long Acting',
+                packaging: '30 ml',
+                desc: 'Long-acting oxytetracycline injection providing prolonged antibacterial activity and reducing repeat dosing.'
+            },
+            {
+                name: 'Amoxipen 1.5 g Bolus',
+                form: 'Bolus',
+                strength: 'Amoxicillin',
+                packaging: '5 × 4 Bolus',
+                desc: 'Broad-spectrum penicillin antibiotic for respiratory, urinary, gastrointestinal, and reproductive tract infections.'
+            },
+            {
+                name: 'Amoxipen-SB Bolus',
+                form: 'Bolus',
+                strength: 'Amoxicillin, Sulbactam',
+                packaging: '5 × 4 Bolus',
+                desc: 'Beta-lactam antibiotic combined with beta-lactamase inhibitor for resistant bacterial infections.'
+            },
+            {
+                name: 'Amoxipen-SB Injection',
+                form: 'Injection',
+                strength: 'Amoxicillin, Sulbactam',
+                packaging: '4.5 g Vial',
+                desc: 'Injectable broad-spectrum antibacterial formulation for severe systemic infections.'
+            },
+            {
+                name: 'Amoxipen-DX Injection',
+                form: 'Injection',
+                strength: 'Amoxicillin, Cloxacillin',
+                packaging: 'Vial',
+                desc: 'Combination injectable antibiotic for mastitis, respiratory infections, wound infections, and mixed bacterial diseases.'
+            },
+            {
+                name: 'Sulphadine Bolus',
+                form: 'Bolus',
+                strength: 'Sulphadimidine',
+                packaging: '5 × 4 Bolus',
+                desc: 'Sulfonamide antibacterial formulation effective against gastrointestinal, respiratory, and urinary tract infections.'
+            },
+            {
+                name: 'Sulphadine Injection',
+                form: 'Injection',
+                strength: 'Sulphadimidine Sodium',
+                packaging: '30 ml',
+                desc: 'Injectable sulfonamide antibiotic for acute bacterial infections requiring rapid treatment.'
+            },
+            {
+                name: 'Norpic-TZ Bolus',
+                form: 'Bolus',
+                strength: 'Norfloxacin, Tinidazole',
+                packaging: '5 × 4 Bolus',
+                desc: 'Combination antibacterial and antiprotozoal bolus indicated for gastrointestinal infections and enteric diseases.'
+            },
+            {
+                name: 'Sulphatrim Bolus',
+                form: 'Bolus',
+                strength: 'Sulphadiazine, Trimethoprim',
+                packaging: '5 × 4 Bolus',
+                desc: 'Broad-spectrum antibacterial combination for respiratory, urinary, and systemic bacterial infections.'
+            },
+            {
+                name: 'Dixogyl-LFM Bolus',
+                form: 'Bolus',
+                strength: 'Metronidazole, Furazolidone, Loperamide',
+                packaging: '5 × 4 Bolus',
+                desc: 'Veterinary formulation indicated for diarrhea, enteritis, dysentery, and mixed gastrointestinal infections.'
             }
         ]
     }
