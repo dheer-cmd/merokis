@@ -342,8 +342,8 @@ Thank you.`;
         const pkgDesktop = document.getElementById('desktop-filter-packaging');
         const mobilePkg = document.getElementById('mobile-filter-packaging');
 
-
-
+        const pkgCard = pkgDesktop ? pkgDesktop.closest('.filter-card') : null;
+        if (pkgCard) {
             pkgCard.style.display = (catKey === 'antiviral' || catKey === 'cardiovascular-drugs' || catKey === 'dermatology-drugs' || catKey === 'gastro-intestinal' || catKey === 'general-medicine' || catKey === 'gynaec' || catKey === 'health-supplement' || catKey === 'herbal' || catKey === 'men-health' || catKey === 'neurology' || catKey === 'respiratory-drugs' || catKey === 'veterinary-products') ? 'none' : 'block';
         }
         const pkgMobileSection = mobilePkg ? mobilePkg.closest('.drawer-filter-section') : null;
