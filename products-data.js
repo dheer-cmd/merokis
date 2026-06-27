@@ -2476,19 +2476,35 @@ const catalogueDB = {
         ]
     },
     'herbal': {
-        title: 'Herbal & Botanical',
+        title: 'Herbal',
         tag: 'Herbal',
-        desc: 'Standardized organic botanicals and natural extracts promoting holistic wellbeing.',
+        desc: "Natural Ayurvedic and herbal healthcare formulations developed using traditional botanical ingredients to support wellness, respiratory health, hair care, and pain relief while maintaining international quality standards.",
         icon: '🌿',
         coverClass: 'grad-gold',
-        count: '40 Items',
+        count: '3 Items',
         downloadMsg: 'Herbal Specification Booklet',
         samples: [
-            { name: 'Ashwagandha Capsules', strength: '500mg', form: 'Capsules', packaging: 'Bottles', desc: 'Rejuvenating adaptogen capsule supporting stress reduction and vitality.' },
-            { name: 'Curcumin Extract Tablets', strength: '95%', form: 'Tablets', packaging: 'Bottles', desc: 'Standardized turmeric extract offering advanced anti-inflammatory properties.' },
-            { name: 'Triphala Capsules', strength: '500mg', form: 'Capsules', packaging: 'Bottles', desc: 'Traditional formulation combining three fruits to assist digestion.' },
-            { name: 'Tulsi Cough Syrup', strength: 'Ayurvedic', form: 'Syrups', packaging: 'Bottles', desc: 'Non-drowsy Ayurvedic syrup with Honey, Tulsi, and Vasaka.' },
-            { name: 'Neem Purifying Gel', strength: '100g', form: 'Topicals/Creams', packaging: 'Bottles', desc: 'Purifying neem topical gel for acne-prone skin conditions.' }
+            {
+                name: 'Ayurvedic Oil with Pure Bhringraj',
+                form: 'Ayurvedic Hair Oil',
+                strength: 'Pure Bhringraj',
+                packaging: '100 ml',
+                desc: 'Traditional Ayurvedic hair oil enriched with Pure Bhringraj to nourish the scalp, strengthen hair roots, promote healthy hair growth, and help reduce hair fall.'
+            },
+            {
+                name: 'Ayurvedic Pain Relief Oil',
+                form: 'Ayurvedic Massage Oil',
+                strength: 'Mahanarayan Tel + Guggal Satva + Gandhpura Tel + Nilgiri Tel + Turpentine Oil + Kapoor Satva + Ajwain Satva + Capsicum Oil',
+                packaging: '60 ml, 100 ml',
+                desc: 'Ayurvedic pain relief oil formulated with traditional herbal ingredients to provide relief from muscular pain, joint pain, sprains, stiffness, and body aches.'
+            },
+            {
+                name: 'Honey Based Herbal Cough Syrup',
+                form: 'Herbal Syrup',
+                strength: 'Honey Base + Traditional Ayurvedic Herbs',
+                packaging: '100 ml',
+                desc: 'Herbal cough syrup prepared with a honey base and traditional Ayurvedic herbs to help soothe sore throat, reduce cough, and support respiratory wellness.'
+            }
         ]
     },
     'men-health': {
