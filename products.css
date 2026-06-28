@@ -1443,3 +1443,95 @@ html {
         display: none; /* In production, toggles with burger menu */
     }
 }
+
+/* ==========================================
+   10. SMART SEARCH BAR STYLING
+   ========================================== */
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 3rem auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.search-input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-container input {
+    width: 100%;
+    padding: 14px 20px 14px 50px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-dark, #1f2937);
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.search-input-container input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input-container input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 10px 15px -3px rgba(59, 130, 246, 0.05);
+}
+
+.search-input-container .search-icon {
+    position: absolute;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    color: #9ca3af;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.search-input-container input:focus + .search-icon {
+    color: #3b82f6;
+}
+
+/* Empty State / No Results found styling */
+.no-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 0.4s ease forwards;
+    width: 100%;
+}
+
+.no-results-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+.no-results-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark, #1f2937);
+    margin-bottom: 0.5rem;
+}
+
+.no-results-container p {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

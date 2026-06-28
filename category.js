@@ -544,16 +544,25 @@ Thank you.`;
     };
 
     // 7. Core Filtering & Render Execution
-    const applyFilters = (shouldUpdateURL = true) => {
+    const applyFilters = (shouldUpdateURL = true, instant = false) => {
         if (shouldUpdateURL) {
             updateURLParams();
         }
         renderActiveChips();
 
-        // Show Skeleton Loader (visual premium transition)
-        productsGrid.style.display = 'none';
-        emptyState.style.display = 'none';
-        skeletonGrid.style.display = 'grid';
+        if (instant) {
+            productsGrid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            skeletonGrid.style.display = 'none';
+        } else {
+            // Show Skeleton Loader (visual premium transition)
+            productsGrid.style.display = 'none';
+            emptyState.style.display = 'none';
+            skeletonGrid.style.display = 'grid';
+        }
+
+        const searchInput = document.getElementById('product-search-input');
+        const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
         // Filter operations against database
         const filteredProducts = catData.samples.filter(product => {
@@ -571,17 +580,22 @@ Thank you.`;
                                   return productPkgs.includes(normalizedFilter);
                               });
 
-            return matchesForm && matchesPkg;
+            const matchesSearch = searchQuery === '' || 
+                                  product.name.toLowerCase().includes(searchQuery) ||
+                                  (product.strength && product.strength.toLowerCase().includes(searchQuery)) ||
+                                  (product.desc && product.desc.toLowerCase().includes(searchQuery));
+
+            return matchesForm && matchesPkg && matchesSearch;
         });
 
         // Simulate short loading delay (300ms) for visual feedback
-        setTimeout(() => {
+        const renderProducts = () => {
             skeletonGrid.style.display = 'none';
             productCountText.textContent = `Showing ${filteredProducts.length} ${filteredProducts.length === 1 ? 'Product' : 'Products'}`;
 
             if (filteredProducts.length === 0) {
                 productsGrid.innerHTML = '';
-                if (catKey === 'veterinary-products') {
+                if (catKey === 'veterinary-products' && searchQuery === '') {
                     emptyState.querySelector('.empty-icon').textContent = '🐾';
                     emptyState.querySelector('h3').textContent = 'No Products Available';
                     emptyState.querySelector('p').textContent = 'Veterinary products will be added soon. Please check back later or contact our team for product enquiries.';
@@ -590,11 +604,14 @@ Thank you.`;
                 } else {
                     emptyState.querySelector('.empty-icon').textContent = '🔍';
                     emptyState.querySelector('h3').textContent = 'No Products Found';
-                    emptyState.querySelector('p').textContent = 'No products match your selected filters. Try clearing some filters or exploring other divisions.';
+                    emptyState.querySelector('p').textContent = searchQuery !== '' 
+                        ? 'No products match your search query inside this category.' 
+                        : 'No products match your selected filters. Try clearing some filters or exploring other divisions.';
                     const resetBtn = emptyState.querySelector('.btn');
-                    if (resetBtn) resetBtn.style.display = 'inline-block';
+                    if (resetBtn) resetBtn.style.display = searchQuery !== '' ? 'none' : 'inline-block';
                 }
                 emptyState.style.display = 'block';
+                productsGrid.style.display = 'none';
             } else {
                 emptyState.style.display = 'none';
                 productsGrid.innerHTML = '';
@@ -742,7 +759,13 @@ Thank you.`;
                     }
                 );
             }
-        }, 300);
+        };
+
+        if (instant) {
+            renderProducts();
+        } else {
+            setTimeout(renderProducts, 300);
+        }
     };
 
     // 8. Event Bindings
@@ -817,4 +840,12 @@ Thank you.`;
     // 11. Initial Run
     syncStateFromURL();
     applyFilters(false);
+
+    // 12. Connect Product Search Input
+    const productSearchInput = document.getElementById('product-search-input');
+    if (productSearchInput) {
+        productSearchInput.addEventListener('input', () => {
+            applyFilters(false, true); // Don't pushState to history on keystroke, run instantly
+        });
+    }
 });
